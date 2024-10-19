@@ -1,0 +1,8 @@
+Tên đề tài: Vựa Rau Sạch Việt Nam
+Thành viên: 
+Tên: Lê Trọng Duy 
+MSSV: 3123411052
+Tên: Nguyễn Tuấn Hào
+MSSV: 3123411085
+Tên: Trương Nhật Long
+MSSV: 3123411182
