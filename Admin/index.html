@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang Admin</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="../css/responsive.css" />
+    <!-- style -->
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo-section">
+        <a href="./index.html">
+          <img src="../images/logo13.png" alt="logo" width="100px" />
+        </a>
+      </div>
+      <div class="menu-section">
+        <ul class="sidebar">
+          <li class="active">
+            <a href="./index.html">Trang chủ</a>
+          </li>
+          <li><a href="">Quản lý người dùng</a></li>
+          <li><a href="">Quản lý sản phẩm</a></li>
+          <li><a href="">Quản lý đơn hàng</a></li>
+          <li><a href="">Thống kê tình hình kinh doanh</a></li>
+        </ul>
+      </div>
+      <div class="user-section">
+        <div class="notification-icon">
+          <i class="fa-regular fa-bell"></i>
+          <span>Thông báo</span>
+        </div>
+        <div class="user-info">
+          <div class="user-avatar">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <a href="./login.html"> <span>Admin</span></a>
+        </div>
+      </div>
+    </header>
+    <main class="main-content">
+      <div class="row">
+        <div class="col-6">
+          <div class="dashboard-card">
+            <div class="card-header">Tài khoản khách hàng</div>
+            <div class="card-body">
+              <p>Số lượng tài khoản: <strong>100</strong></p>
+              <p>Đang hoạt động: <strong>100</strong></p>
+              <p>Dừng hoạt động: <strong>0</strong></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="dashboard-card">
+            <div class="card-header">Sản phẩm</div>
+            <div class="card-body">
+              <p>Số lượng sản phẩm: <strong>100</strong></p>
+              <p>Số lượng sản phẩm còn: <strong>90</strong></p>
+              <p>Hết hàng: <strong>10</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="dashboard-card">
+          <div class="card-header">Đon hàng</div>
+          <div class="card-body">
+            <p>Số lượng đơn hàng đã đặt: <strong>50</strong></p>
+            <p>Số lượng đơn hàng giao thành công: <strong>45</strong></p>
+            <p>Số lượng đơn hàng bị hủy: <strong>5</strong></p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="last-content">
+      <div class="col-6">
+        <div class="card-header">Thống kê khách hàng truy cập</div>
+        <div class="card-body">
+          <p>Lượt truy cập: <strong>1000</strong></p>
+          <p>
+            Thời gian truy cập nhiều nhất trong ngày: <strong>13h-17h</strong>
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
