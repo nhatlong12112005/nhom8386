@@ -34,10 +34,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    
   </head>
 
   <body>
@@ -46,16 +43,6 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-            <div class="custom-select-box">
-              <select
-                id="basic"
-                class="selectpicker show-tick form-control"
-                data-placeholder="$ USD"
-              >
-                <option>Đ VNĐ</option>
-                <option>$ USD</option>
-              </select>
-            </div>
             <div class="right-phone-box">
               <p>Điện thoại :- <a href="#"> +84 09876543210</a></p>
             </div>
@@ -77,42 +64,6 @@
                   >
                 </li>
               </ul>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-            <div class="login-box">
-              <select
-                id="basic"
-                class="selectpicker show-tick form-control"
-                data-placeholder="Sign In"
-              >
-                <option>Đăng ký</option>
-                <option>Đăng nhập</option>
-              </select>
-            </div>
-            <div class="text-slid-box">
-              <div id="offer-box" class="carouselTicker">
-                <ul class="offer-box">
-                  <li>
-                    <i class="fab fa-opencart"></i> Giảm giá 20% cho toàn bộ
-                    giao dịch mua Mã khuyến mãi: offT80
-                  </li>
-                  <li>
-                    <i class="fab fa-opencart"></i> Giảm giá 50% - 80% cho Rau
-                  </li>
-                  <li><i class="fab fa-opencart"></i> Giảm 10%! Mua rau</li>
-                  <li><i class="fab fa-opencart"></i> Giảm 50%! Mua Ngay</li>
-                  <li><i class="fab fa-opencart"></i> Giảm 10%! Mua rau</li>
-                  <li>
-                    <i class="fab fa-opencart"></i> Giảm giá 50% - 80% cho Rau
-                  </li>
-                  <li>
-                    <i class="fab fa-opencart"></i> Giảm giá 20% cho toàn bộ
-                    giao dịch mua Mã khuyến mãi: offT30
-                  </li>
-                  <li><i class="fab fa-opencart"></i> Giảm 50%! Mua Ngay</li>
-                </ul>
-              </div>
             </div>
           </div>
         </div>
@@ -207,63 +158,23 @@
     </div>
     <!-- End Top Search -->
 
-    <!-- Start Slider -->
-    <div id="slides-shop" class="cover-slides">
-      <ul class="slides-container">
-        <li class="text-center">
-          <img src="images/banner/banner01.png" alt="" />
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12">
-                <p>
-                  <a class="btn hvr-hover" href="./gallery.html"
-                    >Khám phá ngay</a
-                  >
-                </p>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li class="text-center">
-          <img src="images/banner/banner02.png" alt="" />
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12">
-                <p>
-                  <a class="btn hvr-hover" href="./shop.html">Khám phá ngay</a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </li>
-      </ul>
-      <div class="slides-navigation">
-        <a href="#" class="next"
-          ><i class="fa fa-angle-right" aria-hidden="true"></i
-        ></a>
-        <a href="#" class="prev"
-          ><i class="fa fa-angle-left" aria-hidden="true"></i
-        ></a>
-      </div>
-    </div>
-    <!-- End Slider -->
-
-    <div class="box-add-products">
+     <!-- Start All Title Box -->
+     <div class="all-title-box">
       <div class="container">
         <div class="row">
-          <div class="col-lg-6 col-md-6 col-sm-12">
-            <div class="offer-box-products">
-              <img class="img-fluid" src="images/banner/Vuaj(1).png" alt="" />
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-6 col-sm-12">
-            <div class="offer-box-products">
-              <img class="img-fluid" src="images/banner/Vuaj.png" alt="" />
-            </div>
+          <div class="col-lg-12">
+            <h2>Trang chủ</h2>
+            <ul class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="./index.html">Trang chủ</a>
+              </li>
+              
+            </ul>
           </div>
         </div>
       </div>
     </div>
+    <!-- End All Title Box -->
 
     <!-- Start Products  -->
     <div class="products-box">
@@ -271,7 +182,7 @@
         <div class="row">
           <div class="col-lg-12">
             <div class="title-all text-center">
-              <h1>Fresh Vegetables</h1>
+              <h1>Vựa rau sạch</h1>
               <p>Tinh Hoa Thiên Nhiên, Dinh Dưỡng Tự Nhiên.</p>
             </div>
           </div>
@@ -282,7 +193,7 @@
               <div class="button-group filter-button-group">
                 <button class="active" data-filter="*">Tất cả</button>
                 <button data-filter=".top-featured">Sản phẩm nổi bật</button>
-                <button data-filter=".best-seller">Best seller</button>
+                <button data-filter=".best-seller">Bán chạy</button>
               </div>
             </div>
           </div>
@@ -292,13 +203,12 @@
           <div class="col-lg-3 col-md-6 special-grid best-seller">
             <div class="products-single fix">
               <div class="box-img-hover">
-                <div class="type-lb">
-                  <p class="sale">Sale</p>
-                </div>
+
                 <img
                   src="images/rau/bi-ngoi-huu-co.jpg"
                   class="img-fluid"
                   alt="Image"
+                  
                 />
                 <div class="mask-icon">
                   <ul>
@@ -311,26 +221,8 @@
                         ><i class="fas fa-eye"></i
                       ></a>
                     </li>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="Compare"
-                        ><i class="fas fa-sync-alt"></i
-                      ></a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="Add to Wishlist"
-                        ><i class="far fa-heart"></i
-                      ></a>
-                    </li>
                   </ul>
-                  <a class="cart" href="#">Add to Cart</a>
+                  <a class="cart" href="#">Thêm giỏ hàng</a>
                 </div>
               </div>
               <div class="why-text">
@@ -343,9 +235,6 @@
           <div class="col-lg-3 col-md-6 special-grid top-featured">
             <div class="products-single fix">
               <div class="box-img-hover">
-                <div class="type-lb">
-                  <p class="new">New</p>
-                </div>
                 <img
                   src="images/cu/ca-chua-bee-cherry-huu-co.jpg"
                   class="img-fluid"
@@ -362,26 +251,8 @@
                         ><i class="fas fa-eye"></i
                       ></a>
                     </li>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="Compare"
-                        ><i class="fas fa-sync-alt"></i
-                      ></a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="Add to Wishlist"
-                        ><i class="far fa-heart"></i
-                      ></a>
-                    </li>
                   </ul>
-                  <a class="cart" href="#">Add to Cart</a>
+                  <a class="cart" href="#">Thêm giỏ hàng</a>
                 </div>
               </div>
               <div class="why-text">
@@ -394,9 +265,6 @@
           <div class="col-lg-3 col-md-6 special-grid top-featured">
             <div class="products-single fix">
               <div class="box-img-hover">
-                <div class="type-lb">
-                  <p class="sale">Sale</p>
-                </div>
                 <img
                   src="images/cu/ca-tim-huu-co.png"
                   class="img-fluid"
@@ -413,26 +281,8 @@
                         ><i class="fas fa-eye"></i
                       ></a>
                     </li>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="Compare"
-                        ><i class="fas fa-sync-alt"></i
-                      ></a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="Add to Wishlist"
-                        ><i class="far fa-heart"></i
-                      ></a>
-                    </li>
                   </ul>
-                  <a class="cart" href="#">Add to Cart</a>
+                  <a class="cart" href="#">Thêm giỏ hàng</a>
                 </div>
               </div>
               <div class="why-text">
@@ -445,9 +295,6 @@
           <div class="col-lg-3 col-md-6 special-grid best-seller">
             <div class="products-single fix">
               <div class="box-img-hover">
-                <div class="type-lb">
-                  <p class="sale">Sale</p>
-                </div>
                 <img
                   src="images/cu/chanh-vang.jpg"
                   class="img-fluid"
@@ -464,26 +311,8 @@
                         ><i class="fas fa-eye"></i
                       ></a>
                     </li>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="Compare"
-                        ><i class="fas fa-sync-alt"></i
-                      ></a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="Add to Wishlist"
-                        ><i class="far fa-heart"></i
-                      ></a>
-                    </li>
                   </ul>
-                  <a class="cart" href="#">Add to Cart</a>
+                  <a class="cart" href="#">Thêm sản phẩm</a>
                 </div>
               </div>
               <div class="why-text">
@@ -495,9 +324,6 @@
           <div class="col-lg-3 col-md-6 special-grid top-featured">
             <div class="products-single fix">
               <div class="box-img-hover">
-                <div class="type-lb">
-                  <p class="sale">Sale</p>
-                </div>
                 <img
                   src="images/nam/nammeo.jpg"
                   class="img-fluid"
@@ -514,26 +340,8 @@
                         ><i class="fas fa-eye"></i
                       ></a>
                     </li>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="Compare"
-                        ><i class="fas fa-sync-alt"></i
-                      ></a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="Add to Wishlist"
-                        ><i class="far fa-heart"></i
-                      ></a>
-                    </li>
                   </ul>
-                  <a class="cart" href="#">Add to Cart</a>
+                  <a class="cart" href="#">Thêm sản phẩm</a>
                 </div>
               </div>
               <div class="why-text">
@@ -543,63 +351,9 @@
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6 special-grid best-seller">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                <div class="type-lb">
-                  <p class="sale">Sale</p>
-                </div>
-                <img
-                  src="images/nam/namrom.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="./products/namrom.html"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="Compare"
-                        ><i class="fas fa-sync-alt"></i
-                      ></a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="Add to Wishlist"
-                        ><i class="far fa-heart"></i
-                      ></a>
-                    </li>
-                  </ul>
-                  <a class="cart" href="#">Add to Cart</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Nấm rơm</h4>
-                <h5>40.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
           <div class="col-lg-3 col-md-6 special-grid top-featured">
             <div class="products-single fix">
               <div class="box-img-hover">
-                <div class="type-lb">
-                  <p class="sale">Sale</p>
-                </div>
                 <img
                   src="images/rau/xa-lach-bup-my.jpg"
                   class="img-fluid"
@@ -616,26 +370,8 @@
                         ><i class="fas fa-eye"></i
                       ></a>
                     </li>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="Compare"
-                        ><i class="fas fa-sync-alt"></i
-                      ></a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="Add to Wishlist"
-                        ><i class="far fa-heart"></i
-                      ></a>
-                    </li>
                   </ul>
-                  <a class="cart" href="#">Add to Cart</a>
+                  <a class="cart" href="#">Thêm sản phẩm</a>
                 </div>
               </div>
               <div class="why-text">
@@ -754,132 +490,7 @@
     </div>
     <!-- End Blog  -->
 
-    <!-- Start Instagram Feed  -->
-    <div class="instagram-box">
-      <div class="main-instagram owl-carousel owl-theme">
-        <div class="item">
-          <div class="ins-inner-box">
-            <img src="images/cu/bi_dao_huu_co.png" alt="" />
-            <div class="hov-in">
-              <a
-                href="https://www.facebook.com/profile.php?id=61567514856641"
-                target="_blank"
-                ><i class="fab fa-facebook"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="ins-inner-box">
-            <img src="images/rau/cai_ngong_huu_co.png" alt="" />
-            <div class="hov-in">
-              <a
-                href="https://www.facebook.com/profile.php?id=61567514856641"
-                target="_blank"
-                ><i class="fab fa-facebook"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="ins-inner-box">
-            <img src="images/nam/b-namduiga.jpg" alt="" />
-            <div class="hov-in">
-              <a
-                href="https://www.facebook.com/profile.php?id=61567514856641"
-                target="_blank"
-                ><i class="fab fa-facebook"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="ins-inner-box">
-            <img src="images/cu/ca-chua-bee-cherry-huu-co.jpg" alt="" />
-            <div class="hov-in">
-              <a
-                href="https://www.facebook.com/profile.php?id=61567514856641"
-                target="_blank"
-                ><i class="fab fa-facebook"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="ins-inner-box">
-            <img src="images/rau/rau-diep-ca-huu-co.jpg" alt="" />
-            <div class="hov-in">
-              <a
-                href="https://www.facebook.com/profile.php?id=61567514856641"
-                target="_blank"
-                ><i class="fab fa-facebook"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="ins-inner-box">
-            <img src="images/nam/nam-hong-ngoc.jpg" alt="" />
-            <div class="hov-in">
-              <a
-                href="https://www.facebook.com/profile.php?id=61567514856641"
-                target="_blank"
-                ><i class="fab fa-facebook"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="ins-inner-box">
-            <img src="images/cu/ot-chuong-do-huu-co.jpg" alt="" />
-            <div class="hov-in">
-              <a
-                href="https://www.facebook.com/profile.php?id=61567514856641"
-                target="_blank"
-                ><i class="fab fa-facebook"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="ins-inner-box">
-            <img src="images/rau/xa-lach-hon-hop-italian-huu-co.jpg" alt="" />
-            <div class="hov-in">
-              <a
-                href="https://www.facebook.com/profile.php?id=61567514856641"
-                target="_blank"
-                ><i class="fab fa-facebook"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="ins-inner-box">
-            <img src="images/nam/nambaonguxam.jpg" alt="" />
-            <div class="hov-in">
-              <a
-                href="https://www.facebook.com/profile.php?id=61567514856641"
-                target="_blank"
-                ><i class="fab fa-facebook"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="ins-inner-box">
-            <img src="images/cu/cu-cai-duong-huu-co.jpg" alt="" />
-            <div class="hov-in">
-              <a
-                href="https://www.facebook.com/profile.php?id=61567514856641"
-                target="_blank"
-                ><i class="fab fa-facebook"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- End Instagram Feed  -->
+
 
     <!-- Start Footer  -->
     <footer>
@@ -1016,19 +627,10 @@
 
     <!-- ALL JS FILES -->
     <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
     <!-- ALL PLUGINS -->
     <script src="js/jquery.superslides.min.js"></script>
-    <script src="js/bootstrap-select.js"></script>
-    <script src="js/inewsticker.js"></script>
-    <script src="js/bootsnav.js."></script>
     <script src="js/images-loded.min.js"></script>
     <script src="js/isotope.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/baguetteBox.min.js"></script>
-    <script src="js/form-validator.min.js"></script>
-    <script src="js/contact-form-script.js"></script>
     <script src="js/custom.js"></script>
   </body>
 </html>
