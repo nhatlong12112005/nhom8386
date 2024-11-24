@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý đơn hàng</title>
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="./css/indexadmin.css">
+    <link rel="stylesheet" href="./css/quanlydonhang.css">
+</head>
+
+<body>
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="logo">
+                            <img src="../images/logo13xoanen.png">
+                        </span>
+                        <span class="title">Vựa Rau Sạch</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./index.html">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Bảng điều khiển</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./quanlydonhang.html" id="active">
+                        <span class="icon">
+                            <ion-icon name="cart-outline"></ion-icon>
+                        </span>
+                        <span class="title">Quản lý đơn hàng</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./quanlysanpham.html">
+                        <span class="icon">
+                            <ion-icon name="book-outline"></ion-icon>
+                        </span>
+                        <span class="title">Quản lý sản phẩm</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./quanlykhachhang.html">
+                        <span class="icon">
+                            <ion-icon name="people-outline"></ion-icon>
+                        </span>
+                        <span class="title">Quản lý khách hàng</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ========================= Main ==================== -->
+        <div class="main">
+            <div class="topbar">
+                <div class="hello">
+                    <p>Trang Quản Trị Khách Hàng</p>
+                </div>
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Tìm kiếm chức năng quản trị">
+                        <a href="../html/adminnotfound.html"><ion-icon name="search-outline"></ion-icon></a>
+                    </label>
+                </div>
+            </div>
+
+            <!-- ================ LÀM QUẢN LÝ ĐƠN HÀNG Ở ĐÂY ================= -->
+            <div class="order">
+                <!-- ================ LÀM BANNER ================= -->
+                
+                <div class="order-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>STT</td>
+                                <td>Mã đơn hàng</td>
+                                <td>Người đặt</td>
+                                <td>SĐT</td>
+                                <td>Tình trạng</td>
+                                <td>Thời gian</td>
+                                <td>Trạng thái</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td><a href="../html/chitietdonhang.html"> ĐH 5728319</a></td>
+                                <td>thaihien99</td>
+                                <td>0987654321</td>
+                                <td>Chờ xác nhận</td>
+                                <td>14/10/2023</td>
+                                <td>
+                                    <button id="xoanguoidung">Chưa xử lý</button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>2</td>
+                                <td><a href="../html/chitietdonhang.html"> ĐH 5728319</a></td>
+                                <td>thaihien99</td>
+                                <td>0987654321</td>
+                                <td>Chờ xác nhận</td>
+                                <td>14/10/2023</td>
+                                <td>
+
+                                    <button id="xoanguoidung">Chưa xử lý</button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>3</td>
+                                <td><a href="../html/chitietdonhang.html"> ĐH 5728319</a></td>
+                                <td>thaihien99</td>
+                                <td>0987654321</td>
+                                <td>Chờ xác nhận</td>
+                                <td>14/10/2023</td>
+                                <td>
+
+                                    <button id="xoanguoidung">Chưa xử lý</button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>4</td>
+                                <td><a href="../html/chitietdonhang.html"> ĐH 5728319</a></td>
+                                <td>thaihien99</td>
+                                <td>0987654321</td>
+                                <td>Đang giao</td>
+                                <td>14/10/2023</td>
+                                <td>
+                                    <button id="suanguoidung">Đã xử lý</button>
+
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>5</td>
+                                <td><a href="../html/chitietdonhang.html"> ĐH 5728319</a></td>
+                                <td>thaihien99</td>
+                                <td>0987654321</td>
+                                <td>Đang giao</td>
+                                <td>14/10/2023</td>
+                                <td>
+                                    <button id="suanguoidung">Đã xử lý</button>
+
+                                </td>
+                            </tr>
+
+
+
+
+                        </tbody>
+                    </table>
+                    <div class="pagination">
+                        <li class="hientai">1</li>
+                        <li><a href="#" style="color: black;">2</a></li></a> 
+                        <li><a href="#" style="color: black;" >NEXT</a></li>
+                    </div>
+                </div>
+
+
+
+                <!-- ================ Add Charts JS ================= -->
+
+
+            </div>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

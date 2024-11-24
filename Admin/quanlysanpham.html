@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý sản phẩm</title>
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="./css/indexadmin.css">
+    <link rel="stylesheet" href="./css/quanlysanpham.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- =============== Navigation ================ -->
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="logo">
+                            <img src="../images/logo13xoanen.png">
+                        </span>
+                        <span class="title">Vựa Rau Sạch</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./index.html">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Bảng điều khiển</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./quanlydonhang.html">
+                        <span class="icon">
+                            <ion-icon name="cart-outline"></ion-icon>
+                        </span>
+                        <span class="title">Quản lý đơn hàng</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./quanlysanpham.html" id="active">
+                        <span class="icon">
+                            <ion-icon name="book-outline"></ion-icon>
+                        </span>
+                        <span class="title">Quản lý sản phẩm</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./quanlykhachhang.html">
+                        <span class="icon">
+                            <ion-icon name="people-outline"></ion-icon>
+                        </span>
+                        <span class="title">Quản lý khách hàng</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- ========================= Main ==================== -->
+        <div class="main">
+            <div class="topbar">
+                <div class="hello">
+                    <p>Trang Quản Trị Khách Hàng</p>
+                </div>
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Tìm kiếm chức năng quản trị">
+                        <a href="../html/adminnotfound.html"><ion-icon name="search-outline"></ion-icon></a>
+                    </label>
+                </div>
+            </div>
+            <!-- ================ LÀM QUẢN LÝ SẢN PHẨM Ở ĐÂY ================= -->
+            <div class="user">
+                <div class="banner">
+                    <button id="adduser"><a href="../html/themsanpham.html">+ Thêm sản phẩm</a></button>
+                    <div class="finder">
+                        <select id="contentBox">
+                            <option value="rau">Rau tươi</option>
+                            <option value="cu">Củ tươi</option>
+                            <option value="nam">Nấm tươi</option>
+                        </select>
+                    </div>
+                    <div><input id="timnguoidung" type="text" placeholder="Tên sản phẩm cần tìm">
+                        <a href="#"><button >Tìm</button></a>
+                </div>
+                </div>
+                <!-- ================ Add Charts JS ================= -->
+                <div class="user-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>STT</td>
+                                <td>Mã SP</td>
+                                <td>Ảnh</td>
+                                <td>Tên SP </td>
+                                <td>Danh mục</td>
+                                <td>Giá</td>
+                                <td>Tồn kho</td>
+                                <td>Ngày cập nhật</td>
+                                <td>Thao tác</td>
+                            </tr>
+                        </thead>
+                        <!-- ================ bảng sửa sản phẩm  ================= -->
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>KNS49</td>
+                                <td><img src="../images/rau/BongcaiXanh.jpg"></td>
+                                <td>Bông cải xanh</td>
+                                <td>KNS-PTCN</td>
+                                <td>200.000đ</td>
+                                <td>1000</td>
+                                <td>29/7/2023 11:11</td>
+                                <td>
+                                    <button class="suanguoidung" onclick="hienBoxSuaUser()">Sửa</button>
+                                    <button onclick="myFunction()" class="xoanguoidung">Xóa</button>
+                                    <script>
+                                        function myFunction() {
+                                            const confirmation = confirm("Bạn có chắc chắn xóa sách này không?");
+                                            if (confirmation) {
+                                                alert("Đã xóa sản phẩm thành công!");
+                                            }
+                                        }
+                                    </script>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>1</td>
+                                <td>KNS49</td>
+                                <td><img src="../images/rau/BongcaiXanh.jpg"></td>
+                                <td>Bông cải xanh</td>
+                                <td>KNS-PTCN</td>
+                                <td>200.000đ</td>
+                                <td>1000</td>
+                                <td>29/7/2023 11:11</td>
+                                <td>
+                                    <button class="suanguoidung" onclick="hienBoxSuaUser()">Sửa</button>
+                                    <button onclick="myFunction()" class="xoanguoidung">Xóa</button>
+                                    <script>
+                                        function myFunction() {
+                                            const confirmation = confirm("Bạn có chắc chắn xóa sách này không?");
+                                            if (confirmation) {
+                                                alert("Đã xóa sản phẩm thành công!");
+                                            }
+                                        }
+                                    </script>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>1</td>
+                                <td>KNS49</td>
+                                <td><img src="../images/rau/BongcaiXanh.jpg"></td>
+                                <td>Bông cải xanh</td>
+                                <td>KNS-PTCN</td>
+                                <td>200.000đ</td>
+                                <td>1000</td>
+                                <td>29/7/2023 11:11</td>
+                                <td>
+                                    <button class="suanguoidung" onclick="hienBoxSuaUser()">Sửa</button>
+                                    <button onclick="myFunction()" class="xoanguoidung">Xóa</button>
+                                    <script>
+                                        function myFunction() {
+                                            const confirmation = confirm("Bạn có chắc chắn xóa sách này không?");
+                                            if (confirmation) {
+                                                alert("Đã xóa sản phẩm thành công!");
+                                            }
+                                        }
+                                    </script>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>KNS49</td>
+                                <td><img src="../images/rau/BongcaiXanh.jpg"></td>
+                                <td>Bông cải xanh</td>
+                                <td>KNS-PTCN</td>
+                                <td>200.000đ</td>
+                                <td>1000</td>
+                                <td>29/7/2023 11:11</td>
+                                <td>
+                                    <button class="suanguoidung" onclick="hienBoxSuaUser()">Sửa</button>
+                                    <button onclick="myFunction()" class="xoanguoidung">Xóa</button>
+                                    <script>
+                                        function myFunction() {
+                                            const confirmation = confirm("Bạn có chắc chắn xóa sách này không?");
+                                            if (confirmation) {
+                                                alert("Đã xóa sản phẩm thành công!");
+                                            }
+                                        }
+                                    </script>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>KNS49</td>
+                                <td><img src="../images/rau/BongcaiXanh.jpg"></td>
+                                <td>Bông cải xanh</td>
+                                <td>KNS-PTCN</td>
+                                <td>200.000đ</td>
+                                <td>1000</td>
+                                <td>29/7/2023 11:11</td>
+                                <td>
+                                    <button class="suanguoidung" onclick="hienBoxSuaUser()">Sửa</button>
+                                    <button onclick="myFunction()" class="xoanguoidung">Xóa</button>
+                                    <script>
+                                        function myFunction() {
+                                            const confirmation = confirm("Bạn có chắc chắn xóa sách này không?");
+                                            if (confirmation) {
+                                                alert("Đã xóa sản phẩm thành công!");
+                                            }
+                                        }
+                                    </script>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                
+
+                             
+                </div>
+                <div class="pagination">
+                    <li class="hientai">1</li>
+                    <li><a href="quanlysanpham1.html" style="color: black;">2</a></li></a>
+                    <li><a href="quanlysanpham1.html" style="color: black;">NEXT</a></li>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
