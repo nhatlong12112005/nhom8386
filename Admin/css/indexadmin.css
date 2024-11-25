@@ -37,7 +37,7 @@ body {
   transition: 0.5s;
   overflow: hidden;
 }
-a{
+a {
   text-decoration: none;
 }
 .navigation ul {
@@ -45,9 +45,10 @@ a{
   top: 20px;
   left: 20px;
   width: 100%;
+  list-style-type: none;
 }
 
-.navigation #active{
+.navigation #active {
   background-color: #fff;
   color: #b0b435;
   font-size: 18px;
@@ -138,7 +139,6 @@ a{
   border: 1px solid var(--black2);
 }
 
-
 .search label ion-icon {
   position: absolute;
   top: 0;
@@ -156,7 +156,6 @@ a{
   font-size: 20px;
   color: rgb(0, 0, 0);
 }
-
 
 /* ======================= Cards ====================== */
 .cardBox {
@@ -365,10 +364,10 @@ a{
   margin-left: 20px;
   border-collapse: collapse;
   border: 1px solid #ddd;
-  
 }
 
-#reportResult th, #reportResult td {
+#reportResult th,
+#reportResult td {
   border: 1px solid #ddd;
   padding: 8px;
   text-align: left;
@@ -410,53 +409,52 @@ a{
   color: red;
 }
 
-.filter{
-width: 90%;
+.filter {
+  width: 90%;
   align-items: center;
   margin: 20px;
   font-size: 16px;
 }
 
-.filter input[type='radio'] {
+.filter input[type="radio"] {
   width: 15px;
   height: 15px;
   cursor: pointer;
 }
 
-.filter span{
+.filter span {
   margin-right: 20px;
-  
 }
-.flex{
+.flex {
   display: flex;
   align-items: center;
 }
 
-.filter input, .filter select{
+.filter input,
+.filter select {
   margin-right: 10px;
   margin-left: 10px;
   font-size: 16px;
   padding: 3px;
 }
 
-.filter select{
-display: none;
-
+.filter select {
+  display: none;
 }
 
-.filter .date{
+.filter .date {
   margin: 20px 0;
 }
-.thongke{
+.thongke {
   padding: 10px;
   background-color: #000000;
   border: 2px solid black;
   border-radius: 3px;
 }
-.thongke a{
+.thongke a {
   color: #fff;
 }
-.thongke:hover{
-  background-color: #C92127;
-  border: 2px solid #C92127;
+.thongke:hover {
+  background-color: #c92127;
+  border: 2px solid #c92127;
 }
