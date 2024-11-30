@@ -107,16 +107,25 @@
               data-in="fadeInDown"
               data-out="fadeOutUp"
             >
-              <li class="nav-item">
+              <li class="nav-item active">
                 <a class="nav-link" href="index.html">Trang Chủ</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="about.html">Về chúng tôi</a>
               </li>
-             
-              <li class="nav-item active">
-                <a class="nav-link" href="gallery.html">Cửa hàng</a>
+      
+              <li class="nav-item">
+                <a class="nav-link" href="./gallery.html">Rau tươi</a>
               </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="./gallery.html">Củ tươi</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="./gallery.html">Nấm tươi</a>
+              </li>
+
               <li class="nav-item">
                 <a class="nav-link" href="contact-us.html">Hỗ trợ</a>
               </li>
@@ -127,9 +136,17 @@
           <!-- Start Atribute Navigation -->
           <div class="attr-nav">
             <ul>
+              <!-- Icon tìm kiếm -->
               <li class="search">
-                <a href="#"><i class="fa fa-search"></i></a>
+                <a href="./gallery.html" class="search-toggle">
+                  <i class="fa fa-search"></i>
+                </a>
+                <!-- Thanh tìm kiếm ẩn -->
+                <div class="search-bar">
+                  <input type="text" class="form-control" placeholder="Tìm kiếm..." />
+                </div>
               </li>
+              <!-- Icon giỏ hàng -->
               <li class="side-menu">
                 <a href="./cart.html">
                   <i class="fa fa-shopping-bag"></i>
@@ -147,19 +164,7 @@
     </header>
     <!-- End Main Top -->
 
-    <!-- Start Top Search -->
-    <div class="top-search">
-      <div class="container">
-        <div class="input-group">
-          <span class="input-group-addon"><i class="fa fa-search"></i></span>
-          <input type="text" class="form-control" placeholder="Search" />
-          <span class="input-group-addon close-search"
-            ><i class="fa fa-times"></i
-          ></span>
-        </div>
-      </div>
-    </div>
-    <!-- End Top Search -->
+
 
     <!-- Start All Title Box -->
     <div class="all-title-box">
@@ -179,2633 +184,768 @@
     </div>
     <!-- End All Title Box -->
 
-    <!-- Start Gallery  -->
-    <div class="products-box">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="title-all text-center">
-              <h1>Cửa hàng</h1>
-              <p>
-                Dưới đây là các sản phẩm được nhập trực tiếp từ các nông trại
-                hữu cơ trên toàn quốc. Đảm bảo an toàn về vệ sinh và thực phẩm
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="special-menu text-center">
-              <div class="button-group filter-button-group">
-                <button class="active" data-filter="*">Tất cả</button>
-                <button data-filter=".fruits">Rau tươi</button>
-                <button data-filter=".CuTuoi">Củ tươi</button>
-                <button data-filter=".NamTuoi">Nấm tươi</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row special-list">
-          <div class="col-lg-3 col-md-6 special-grid fruits">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                <img
-                  src="images/rau/bi-ngoi-huu-co.jpg" 
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="./products/bi-ngo-huu-co.html"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Bí ngô hữu cơ</h4>
-                <h5>40.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid CuTuoi">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/cu/ca-chua-bee-cherry-huu-co.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="./products/ca-chua-be-cherry.html"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Cà chua bé cherry</h4>
-                <h5>40.00 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid CuTuoi">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                <img
-                  src="images/cu/ca-tim-huu-co.png"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="./products/ca-tim-huu-co.html"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Cà tím</h4>
-                <h5>40.00 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid CuTuoi">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/cu/chanh-vang.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="/products/chanh-vang.html"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Chanh vàng</h4>
-                <h5>49.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid NamTuoi">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/nam/nammeo.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Nấm mèo</h4>
-                <h5>249.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid NamTuoi">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/nam/namrom.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="/products/namrom.html"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Nấm rơm</h4>
-                <h5>150.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid fruits">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/rau/xa-lach-bup-my.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    <li>
-                      <a
-                        href="/products/rau-xa-lach-bup-my.html"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="Compare"
-                        ><i class="fas fa-sync-alt"></i
-                      ></a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="Add to Wishlist"
-                        ><i class="far fa-heart"></i
-                      ></a>
-                    </li>
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Xà lách búp Mỹ</h4>
-                <h5>69.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid fruits">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="./images/rau/BongcaiXanh.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="/products/Bong-cai-xanh.html"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Bông cải xanh</h4>
-                <h5>79.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid fruits">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/rau/cai-bo-xoi-huu-co.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Cải bó xôi</h4>
-                <h5>69.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid fruits">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/rau/cai-dun-huu-co.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Cải dún</h4>
-                <h5>89.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid fruits">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/rau/cai-kale-huu-co.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Cải kale</h4>
-                <h5>69.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid fruits">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/rau/cai-mam-huu-co.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Cải mầm</h4>
-                <h5>69.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid fruits">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/rau/cai-thia-huu-co_32d27534b5824cedaed997aaf9adb451_1024x1024.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Cải thìa</h4>
-                <h5>59.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid fruits">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/rau/cai_be_trang.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Cải bẹ trắng</h4>
-                <h5>59.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid fruits">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/rau/cai_ngong_huu_co.png"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Cải ngồng</h4>
-                <h5>39.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid fruits">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/rau/cai_ro_huu_co.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Cải rổ</h4>
-                <h5>39.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid fruits">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/rau/dot_rau_lang_organic.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Rau lang </h4>
-                <h5>39.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid fruits">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/rau/hanh-la-huu-co.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Hành lá</h4>
-                <h5>39.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid fruits">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/rau/hung-lui-huu-co.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Húng lủi</h4>
-                <h5>79.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid fruits">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/rau/hung-que-huu-co.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Húng quế</h4>
-                <h5>49.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid fruits">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/rau/la-bac-ha-huu-co.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Lá bạc hà</h4>
-                <h5>99.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid fruits">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/rau/la_bo_cong_anh_huu_co.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Lá bồ công anh</h4>
-                <h5>39.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid fruits">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/rau/ngo-ri-huu-co.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Ngò rí</h4>
-                <h5>49.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid fruits">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/rau/ngo-tay-huu-co.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Ngò tây</h4>
-                <h5>39.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid fruits">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/rau/rau-diep-ca-huu-co.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Rau diếp cá</h4>
-                <h5>39.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid fruits">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/rau/rau-he-huu-co.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Hẹ</h4>
-                <h5>29.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid fruits">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/rau/rau-kinh-gioi-huu-co.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Rau kinh giới</h4>
-                <h5>79.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid fruits">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/rau/rau-ngot-nhat-huu-co.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Rau ngót  </h4>
-                <h5>69.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid fruits">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/rau/rau-rocket-arugula-huu-co.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Rau rocket arugula</h4>
-                <h5>189.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid fruits">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/rau/rau-thi-la-huu-co.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Rau thì là</h4>
-                <h5>49.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid fruits">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/rau/rau-thom.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Rau thơm</h4>
-                <h5>39.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid fruits">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/rau/rau_den.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Rau dền</h4>
-                <h5>39.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid fruits">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/rau/rau_muong_huu_co.png"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Rau muống</h4>
-                <h5>49.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid fruits">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/rau/rau_ngot_ta_huu_co.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Rau ngót ta</h4>
-                <h5>69.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid fruits">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/rau/raumongtoi.jpg"
-                  height="500"
-                  width="500"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Rau mồng tơi</h4>
-                <h5>41.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid fruits">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/rau/RauXaLach.png"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Rau xà lách</h4>
-                <h5>60.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid fruits">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/rau/rong-nho-tach-nuoc-oki-budo-nhat-ban.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Rong nho Oki-Budo Nhật</h4>
-                <h5>299.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid fruits">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/rau/suplotrang.png"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Súp lơ trắng</h4>
-                <h5>95.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid fruits">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/rau/tia-to-huu-co.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Rau tía tô</h4>
-                <h5>39.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid fruits">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/rau/xa-lach-hon-hop-italian-huu-co.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Xà lách hỗn hợp Italian</h4>
-                <h5>99.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid fruits">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/rau/xa-lach-lolo-xanh.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Xà lách lolo xanh</h4>
-                <h5>39.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid CuTuoi">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/cu/bi_dao_huu_co.png"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Bí đao</h4>
-                <h5>25.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid CuTuoi">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/cu/ca-chua-bee-chocolate-huu-co.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>cà chua bee chocolate</h4>
-                <h5>49.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid CuTuoi">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/cu/ca-chua-cherry-vang.png"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>cà chua cherry vàng</h4>
-                <h5>99.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid CuTuoi">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/cu/ca-rot-baby-huu-co.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Cà rốt baby</h4>
-                <h5>88.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid CuTuoi">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/cu/chanh-khong-hat-huu-co.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Chanh không hạt</h4>
-                <h5>25.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid CuTuoi">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/cu/cu-cai-duong-huu-co.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Củ cải đường</h4>
-                <h5>69.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid CuTuoi">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/cu/cu-cai-huu-co.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Củ cải</h4>
-                <h5>30.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid CuTuoi">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/cu/cu-den-huu-co.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Củ dền </h4>
-                <h5>60.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid CuTuoi">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/cu/cu_nghe_tuoi_huu_co.png"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Củ nghệ tươi</h4>
-                <h5>40.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid CuTuoi">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/cu/dau-bap-huu-co.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Đậu bắp</h4>
-                <h5>30.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid CuTuoi">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/cu/dau-ha-lan.jpeg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Đậu hà lan</h4>
-                <h5>89.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid CuTuoi">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/cu/dau_cove_phap.png"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Đậu cove Pháp</h4>
-                <h5>45.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid CuTuoi">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/cu/dau_nanh_slb_dong_lanh.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Đậu nành slb đông lạnh</h4>
-                <h5>95.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid CuTuoi">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/cu/gung-huu-co.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Gừng</h4>
-                <h5>60.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid CuTuoi">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/cu/hanh_tim_huu_co.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Hành tím</h4>
-                <h5>15.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid CuTuoi">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/cu/kho-qua-huu-co.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Khổ qua</h4>
-                <h5>100.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid CuTuoi">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/cu/khoai-mat-huu-co.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Khoai mật</h4>
-                <h5>49.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid CuTuoi">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/cu/khoai-mon-huu-co.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Khoai môn</h4>
-                <h5>60.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid CuTuoi">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/cu/khoai-mo-huu-co.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Khoai mỡ</h4>
-                <h5>30.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid CuTuoi">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/cu/muop-huong-huu-co.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Mướp hương</h4>
-                <h5>30.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid CuTuoi">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/cu/ngongot.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Ngô ngọt</h4>
-                <h5>25.000 VNĐ/h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid CuTuoi">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/cu/ot-chuong-do-huu-co.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Ớt chuông đỏ</h4>
-                <h5>60.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid CuTuoi">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/cu/ot-chuong-vang-huu-co.png"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Ớt chuông vàng</h4>
-                <h5>60.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid CuTuoi">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/cu/ot-chuong-xanh-huu-co.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Ót chuông xanh</h4>
-                <h5>60.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid CuTuoi">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/cu/ot-hiem-huu-co.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Ót hiểm </h4>
-                <h5>120.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid CuTuoi">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/cu/sa-huu-co.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Sả</h4>
-                <h5>80.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid CuTuoi">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/cu/su-hao-huu-co.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Su hào</h4>
-                <h5>40.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid CuTuoi">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/cu/su-su-huu-co.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Su Su</h4>
-                <h5>40.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid CuTuoi">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/cu/toi-tep-huu-co.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>tỏi tép</h4>
-                <h5>140.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid NamTuoi">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/nam/b-namduiga.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Nấm đùi gà</h4>
-                <h5>199.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid NamTuoi">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/nam/b-namlinhchinau.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Nấm linh chi</h4>
-                <h5>399.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid NamTuoi">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/nam/c-namhoangkim.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Nấm hoàng kim</h4>
-                <h5>70.000.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid NamTuoi">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/nam/nam-hong-ngoc.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Nấm hồng ngọc</h4>
-                <h5>99.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid NamTuoi">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/nam/nambaonguxam.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Nấm bào ngư xám</h4>
-                <h5>99.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid NamTuoi">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/nam/namhauthu.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Nấm hầu thủ</h4>
-                <h5>200.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid NamTuoi">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/nam/namkimchamr.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Nấm kim châm</h4>
-                <h5>100.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid NamTuoi">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/nam/namlinhchitrang.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Nấm linh chi trắng</h4>
-                <h5>1.800.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid NamTuoi">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/nam/nammoiden.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
+ <!-- Start Shop Page  -->
+ <div class="shop-box-inner">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-9 col-lg-9 col-sm-12 col-xs-12 shop-content-right">
+        <div class="right-product-box">
+          
+
+          <div class="product-categorie-box">
+            <div class="tab-content">
+              <div
+                role="tabpanel"
+                class="tab-pane fade show active"
+                id="grid-view"
+              >
+                <div class="row">
+                  <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                    <div class="products-single fix">
+                      <div class="box-img-hover">
+                        <div class="type-lb">
+                          <p class="sale">Sale</p>
+                        </div>
+                        <img
+                          src="images/img-pro-01.jpg"
+                          class="img-fluid"
+                          alt="Image"
+                        />
+                        <div class="mask-icon">
+                          <ul>
+                            <li>
+                              <a
+                                href="#"
+                                data-toggle="tooltip"
+                                data-placement="right"
+                                title="View"
+                                ><i class="fas fa-eye"></i
+                              ></a>
+                            </li>
+                            <li>
+                              <a
+                                href="#"
+                                data-toggle="tooltip"
+                                data-placement="right"
+                                title="Compare"
+                                ><i class="fas fa-sync-alt"></i
+                              ></a>
+                            </li>
+                            <li>
+                              <a
+                                href="#"
+                                data-toggle="tooltip"
+                                data-placement="right"
+                                title="Add to Wishlist"
+                                ><i class="far fa-heart"></i
+                              ></a>
+                            </li>
+                          </ul>
+                          <a class="cart" href="#">Add to Cart</a>
+                        </div>
+                      </div>
+                      <div class="why-text">
+                        <h4>Lorem ipsum dolor sit amet</h4>
+                        <h5>$9.79</h5>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                    <div class="products-single fix">
+                      <div class="box-img-hover">
+                        <div class="type-lb">
+                          <p class="new">New</p>
+                        </div>
+                        <img
+                          src="images/img-pro-02.jpg"
+                          class="img-fluid"
+                          alt="Image"
+                        />
+                        <div class="mask-icon">
+                          <ul>
+                            <li>
+                              <a
+                                href="#"
+                                data-toggle="tooltip"
+                                data-placement="right"
+                                title="View"
+                                ><i class="fas fa-eye"></i
+                              ></a>
+                            </li>
+                            <li>
+                              <a
+                                href="#"
+                                data-toggle="tooltip"
+                                data-placement="right"
+                                title="Compare"
+                                ><i class="fas fa-sync-alt"></i
+                              ></a>
+                            </li>
+                            <li>
+                              <a
+                                href="#"
+                                data-toggle="tooltip"
+                                data-placement="right"
+                                title="Add to Wishlist"
+                                ><i class="far fa-heart"></i
+                              ></a>
+                            </li>
+                          </ul>
+                          <a class="cart" href="#">Add to Cart</a>
+                        </div>
+                      </div>
+                      <div class="why-text">
+                        <h4>Lorem ipsum dolor sit amet</h4>
+                        <h5>$9.79</h5>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                    <div class="products-single fix">
+                      <div class="box-img-hover">
+                        <div class="type-lb">
+                          <p class="sale">Sale</p>
+                        </div>
+                        <img
+                          src="images/img-pro-03.jpg"
+                          class="img-fluid"
+                          alt="Image"
+                        />
+                        <div class="mask-icon">
+                          <ul>
+                            <li>
+                              <a
+                                href="#"
+                                data-toggle="tooltip"
+                                data-placement="right"
+                                title="View"
+                                ><i class="fas fa-eye"></i
+                              ></a>
+                            </li>
+                            <li>
+                              <a
+                                href="#"
+                                data-toggle="tooltip"
+                                data-placement="right"
+                                title="Compare"
+                                ><i class="fas fa-sync-alt"></i
+                              ></a>
+                            </li>
+                            <li>
+                              <a
+                                href="#"
+                                data-toggle="tooltip"
+                                data-placement="right"
+                                title="Add to Wishlist"
+                                ><i class="far fa-heart"></i
+                              ></a>
+                            </li>
+                          </ul>
+                          <a class="cart" href="#">Add to Cart</a>
+                        </div>
+                      </div>
+                      <div class="why-text">
+                        <h4>Lorem ipsum dolor sit amet</h4>
+                        <h5>$9.79</h5>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                    <div class="products-single fix">
+                      <div class="box-img-hover">
+                        <div class="type-lb">
+                          <p class="new">New</p>
+                        </div>
+                        <img
+                          src="images/img-pro-01.jpg"
+                          class="img-fluid"
+                          alt="Image"
+                        />
+                        <div class="mask-icon">
+                          <ul>
+                            <li>
+                              <a
+                                href="#"
+                                data-toggle="tooltip"
+                                data-placement="right"
+                                title="View"
+                                ><i class="fas fa-eye"></i
+                              ></a>
+                            </li>
+                            <li>
+                              <a
+                                href="#"
+                                data-toggle="tooltip"
+                                data-placement="right"
+                                title="Compare"
+                                ><i class="fas fa-sync-alt"></i
+                              ></a>
+                            </li>
+                            <li>
+                              <a
+                                href="#"
+                                data-toggle="tooltip"
+                                data-placement="right"
+                                title="Add to Wishlist"
+                                ><i class="far fa-heart"></i
+                              ></a>
+                            </li>
+                          </ul>
+                          <a class="cart" href="#">Add to Cart</a>
+                        </div>
+                      </div>
+                      <div class="why-text">
+                        <h4>Lorem ipsum dolor sit amet</h4>
+                        <h5>$9.79</h5>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                    <div class="products-single fix">
+                      <div class="box-img-hover">
+                        <div class="type-lb">
+                          <p class="sale">Sale</p>
+                        </div>
+                        <img
+                          src="images/img-pro-02.jpg"
+                          class="img-fluid"
+                          alt="Image"
+                        />
+                        <div class="mask-icon">
+                          <ul>
+                            <li>
+                              <a
+                                href="#"
+                                data-toggle="tooltip"
+                                data-placement="right"
+                                title="View"
+                                ><i class="fas fa-eye"></i
+                              ></a>
+                            </li>
+                            <li>
+                              <a
+                                href="#"
+                                data-toggle="tooltip"
+                                data-placement="right"
+                                title="Compare"
+                                ><i class="fas fa-sync-alt"></i
+                              ></a>
+                            </li>
+                            <li>
+                              <a
+                                href="#"
+                                data-toggle="tooltip"
+                                data-placement="right"
+                                title="Add to Wishlist"
+                                ><i class="far fa-heart"></i
+                              ></a>
+                            </li>
+                          </ul>
+                          <a class="cart" href="#">Add to Cart</a>
+                        </div>
+                      </div>
+                      <div class="why-text">
+                        <h4>Lorem ipsum dolor sit amet</h4>
+                        <h5>$9.79</h5>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                    <div class="products-single fix">
+                      <div class="box-img-hover">
+                        <div class="type-lb">
+                          <p class="sale">Sale</p>
+                        </div>
+                        <img
+                          src="images/img-pro-03.jpg"
+                          class="img-fluid"
+                          alt="Image"
+                        />
+                        <div class="mask-icon">
+                          <ul>
+                            <li>
+                              <a
+                                href="#"
+                                data-toggle="tooltip"
+                                data-placement="right"
+                                title="View"
+                                ><i class="fas fa-eye"></i
+                              ></a>
+                            </li>
+                            <li>
+                              <a
+                                href="#"
+                                data-toggle="tooltip"
+                                data-placement="right"
+                                title="Compare"
+                                ><i class="fas fa-sync-alt"></i
+                              ></a>
+                            </li>
+                            <li>
+                              <a
+                                href="#"
+                                data-toggle="tooltip"
+                                data-placement="right"
+                                title="Add to Wishlist"
+                                ><i class="far fa-heart"></i
+                              ></a>
+                            </li>
+                          </ul>
+                          <a class="cart" href="#">Add to Cart</a>
+                        </div>
+                      </div>
+                      <div class="why-text">
+                        <h4>Lorem ipsum dolor sit amet</h4>
+                        <h5>$9.79</h5>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                    <div class="products-single fix">
+                      <div class="box-img-hover">
+                        <div class="type-lb">
+                          <p class="sale">Sale</p>
+                        </div>
+                        <img
+                          src="images/img-pro-01.jpg"
+                          class="img-fluid"
+                          alt="Image"
+                        />
+                        <div class="mask-icon">
+                          <ul>
+                            <li>
+                              <a
+                                href="#"
+                                data-toggle="tooltip"
+                                data-placement="right"
+                                title="View"
+                                ><i class="fas fa-eye"></i
+                              ></a>
+                            </li>
+                            <li>
+                              <a
+                                href="#"
+                                data-toggle="tooltip"
+                                data-placement="right"
+                                title="Compare"
+                                ><i class="fas fa-sync-alt"></i
+                              ></a>
+                            </li>
+                            <li>
+                              <a
+                                href="#"
+                                data-toggle="tooltip"
+                                data-placement="right"
+                                title="Add to Wishlist"
+                                ><i class="far fa-heart"></i
+                              ></a>
+                            </li>
+                          </ul>
+                          <a class="cart" href="#">Add to Cart</a>
+                        </div>
+                      </div>
+                      <div class="why-text">
+                        <h4>Lorem ipsum dolor sit amet</h4>
+                        <h5>$9.79</h5>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                    <div class="products-single fix">
+                      <div class="box-img-hover">
+                        <div class="type-lb">
+                          <p class="sale">Sale</p>
+                        </div>
+                        <img
+                          src="images/img-pro-02.jpg"
+                          class="img-fluid"
+                          alt="Image"
+                        />
+                        <div class="mask-icon">
+                          <ul>
+                            <li>
+                              <a
+                                href="#"
+                                data-toggle="tooltip"
+                                data-placement="right"
+                                title="View"
+                                ><i class="fas fa-eye"></i
+                              ></a>
+                            </li>
+                            <li>
+                              <a
+                                href="#"
+                                data-toggle="tooltip"
+                                data-placement="right"
+                                title="Compare"
+                                ><i class="fas fa-sync-alt"></i
+                              ></a>
+                            </li>
+                            <li>
+                              <a
+                                href="#"
+                                data-toggle="tooltip"
+                                data-placement="right"
+                                title="Add to Wishlist"
+                                ><i class="far fa-heart"></i
+                              ></a>
+                            </li>
+                          </ul>
+                          <a class="cart" href="#">Add to Cart</a>
+                        </div>
+                      </div>
+                      <div class="why-text">
+                        <h4>Lorem ipsum dolor sit amet</h4>
+                        <h5>$9.79</h5>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                    <div class="products-single fix">
+                      <div class="box-img-hover">
+                        <div class="type-lb">
+                          <p class="new">New</p>
+                        </div>
+                        <img
+                          src="images/img-pro-03.jpg"
+                          class="img-fluid"
+                          alt="Image"
+                        />
+                        <div class="mask-icon">
+                          <ul>
+                            <li>
+                              <a
+                                href="#"
+                                data-toggle="tooltip"
+                                data-placement="right"
+                                title="View"
+                                ><i class="fas fa-eye"></i
+                              ></a>
+                            </li>
+                            <li>
+                              <a
+                                href="#"
+                                data-toggle="tooltip"
+                                data-placement="right"
+                                title="Compare"
+                                ><i class="fas fa-sync-alt"></i
+                              ></a>
+                            </li>
+                            <li>
+                              <a
+                                href="#"
+                                data-toggle="tooltip"
+                                data-placement="right"
+                                title="Add to Wishlist"
+                                ><i class="far fa-heart"></i
+                              ></a>
+                            </li>
+                          </ul>
+                          <a class="cart" href="#">Add to Cart</a>
+                        </div>
+                      </div>
+                      <div class="why-text">
+                        <h4>Lorem ipsum dolor sit amet</h4>
+                        <h5>$9.79</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div role="tabpanel" class="tab-pane fade" id="list-view">
+                <div class="list-view-box">
+                  <div class="row">
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                      <div class="products-single fix">
+                        <div class="box-img-hover">
+                          <div class="type-lb">
+                            <p class="new">New</p>
+                          </div>
+                          <img
+                            src="images/img-pro-01.jpg"
+                            class="img-fluid"
+                            alt="Image"
+                          />
+                          <div class="mask-icon">
+                            <ul>
+                              <li>
+                                <a
+                                  href="#"
+                                  data-toggle="tooltip"
+                                  data-placement="right"
+                                  title="View"
+                                  ><i class="fas fa-eye"></i
+                                ></a>
+                              </li>
+                              <li>
+                                <a
+                                  href="#"
+                                  data-toggle="tooltip"
+                                  data-placement="right"
+                                  title="Compare"
+                                  ><i class="fas fa-sync-alt"></i
+                                ></a>
+                              </li>
+                              <li>
+                                <a
+                                  href="#"
+                                  data-toggle="tooltip"
+                                  data-placement="right"
+                                  title="Add to Wishlist"
+                                  ><i class="far fa-heart"></i
+                                ></a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-8 col-xl-8">
+                      <div class="why-text full-width">
+                        <h4>Lorem ipsum dolor sit amet</h4>
+                        <h5><del>$ 60.00</del> $40.79</h5>
+                        <p>
+                          Integer tincidunt aliquet nibh vitae dictum. In
+                          turpis sapien, imperdiet quis magna nec, iaculis
+                          ultrices ante. Integer vitae suscipit nisi. Morbi
+                          dignissim risus sit amet orci porta, eget aliquam
+                          purus sollicitudin. Cras eu metus felis. Sed arcu
+                          arcu, sagittis in blandit eu, imperdiet sit amet
+                          eros. Donec accumsan nisi purus, quis euismod ex
+                          volutpat in. Vestibulum eleifend eros ac lobortis
+                          aliquet. Suspendisse at ipsum vel lacus vehicula
+                          blandit et sollicitudin quam. Praesent vulputate
+                          semper libero pulvinar consequat. Etiam ut
+                          placerat lectus.
+                        </p>
+                        <a class="btn hvr-hover" href="#">Add to Cart</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="list-view-box">
+                  <div class="row">
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                      <div class="products-single fix">
+                        <div class="box-img-hover">
+                          <div class="type-lb">
+                            <p class="sale">Sale</p>
+                          </div>
+                          <img
+                            src="images/img-pro-02.jpg"
+                            class="img-fluid"
+                            alt="Image"
+                          />
+                          <div class="mask-icon">
+                            <ul>
+                              <li>
+                                <a
+                                  href="#"
+                                  data-toggle="tooltip"
+                                  data-placement="right"
+                                  title="View"
+                                  ><i class="fas fa-eye"></i
+                                ></a>
+                              </li>
+                              <li>
+                                <a
+                                  href="#"
+                                  data-toggle="tooltip"
+                                  data-placement="right"
+                                  title="Compare"
+                                  ><i class="fas fa-sync-alt"></i
+                                ></a>
+                              </li>
+                              <li>
+                                <a
+                                  href="#"
+                                  data-toggle="tooltip"
+                                  data-placement="right"
+                                  title="Add to Wishlist"
+                                  ><i class="far fa-heart"></i
+                                ></a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-8 col-xl-8">
+                      <div class="why-text full-width">
+                        <h4>Lorem ipsum dolor sit amet</h4>
+                        <h5><del>$ 60.00</del> $40.79</h5>
+                        <p>
+                          Integer tincidunt aliquet nibh vitae dictum. In
+                          turpis sapien, imperdiet quis magna nec, iaculis
+                          ultrices ante. Integer vitae suscipit nisi. Morbi
+                          dignissim risus sit amet orci porta, eget aliquam
+                          purus sollicitudin. Cras eu metus felis. Sed arcu
+                          arcu, sagittis in blandit eu, imperdiet sit amet
+                          eros. Donec accumsan nisi purus, quis euismod ex
+                          volutpat in. Vestibulum eleifend eros ac lobortis
+                          aliquet. Suspendisse at ipsum vel lacus vehicula
+                          blandit et sollicitudin quam. Praesent vulputate
+                          semper libero pulvinar consequat. Etiam ut
+                          placerat lectus.
+                        </p>
+                        <a class="btn hvr-hover" href="#">Add to Cart</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="list-view-box">
+                  <div class="row">
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                      <div class="products-single fix">
+                        <div class="box-img-hover">
+                          <div class="type-lb">
+                            <p class="sale">Sale</p>
+                          </div>
+                          <img
+                            src="images/img-pro-03.jpg"
+                            class="img-fluid"
+                            alt="Image"
+                          />
+                          <div class="mask-icon">
+                            <ul>
+                              <li>
+                                <a
+                                  href="#"
+                                  data-toggle="tooltip"
+                                  data-placement="right"
+                                  title="View"
+                                  ><i class="fas fa-eye"></i
+                                ></a>
+                              </li>
+                              <li>
+                                <a
+                                  href="#"
+                                  data-toggle="tooltip"
+                                  data-placement="right"
+                                  title="Compare"
+                                  ><i class="fas fa-sync-alt"></i
+                                ></a>
+                              </li>
+                              <li>
+                                <a
+                                  href="#"
+                                  data-toggle="tooltip"
+                                  data-placement="right"
+                                  title="Add to Wishlist"
+                                  ><i class="far fa-heart"></i
+                                ></a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-8 col-xl-8">
+                      <div class="why-text full-width">
+                        <h4>Lorem ipsum dolor sit amet</h4>
+                        <h5><del>$ 60.00</del> $40.79</h5>
+                        <p>
+                          Integer tincidunt aliquet nibh vitae dictum. In
+                          turpis sapien, imperdiet quis magna nec, iaculis
+                          ultrices ante. Integer vitae suscipit nisi. Morbi
+                          dignissim risus sit amet orci porta, eget aliquam
+                          purus sollicitudin. Cras eu metus felis. Sed arcu
+                          arcu, sagittis in blandit eu, imperdiet sit amet
+                          eros. Donec accumsan nisi purus, quis euismod ex
+                          volutpat in. Vestibulum eleifend eros ac lobortis
+                          aliquet. Suspendisse at ipsum vel lacus vehicula
+                          blandit et sollicitudin quam. Praesent vulputate
+                          semper libero pulvinar consequat. Etiam ut
+                          placerat lectus.
+                        </p>
+                        <a class="btn hvr-hover" href="#">Add to Cart</a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="why-text">
-                <h4>Nấm mối đen</h4>
-                <h5>400.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid fruits">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                
-                <img
-                  src="images/rau/BapCaiTim.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="Compare"
-                        ><i class="fas fa-sync-alt"></i
-                      ></a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="Add to Wishlist"
-                        ><i class="far fa-heart"></i
-                      ></a>
-                    </li>
-                  </ul>
-                  <a class="cart" href="#">Thêm vào giỏ</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Bắp cải tím</h4>
-                <h5>18.000 VNĐ</h5>
-              </div>
             </div>
           </div>
-
         </div>
       </div>
+      <div class="col-xl-3 col-lg-3 col-sm-12 col-xs-12 sidebar-shop-left">
+        <div class="product-categori">
+          <div class="search-container">
+            <h2><b>TÌM KIẾM NÂNG CAO</b></h2>
+            <form action="#">
+                <label for="product-name"><b>Tên sản phẩm</b></label>
+                <input type="text" id="product-name" name="product-name" placeholder="Aa">
+                
+                <label for="product-type"><b>Loại sản phẩm</b></label>
+                <select id="product-type" name="product-type">
+                    <option value="all">Tất cả</option>
+                    <option value="type1">Rau tươi</option>
+                    <option value="type2">Củ tươi</option>
+                    <option value="type3">Nấm tươi</option>
+                </select>
+                
+                <label for="price-range">Giá (VND)</label>
+                <div class="price-range">
+                    <input type="number" id="price-min" name="price-min" value="">
+                    <input type="number" id="price-max" name="price-max" value="">
+                </div>
+                
+                <button type="submit">TÌM KIẾM</button>
+            </form>
+        </div>
+
+          <!-- <div class="filter-sidebar-left">
+            <div class="title-left">
+              <h3>Bộ sưu tập</h3>
+            </div>
+            <div
+              class="list-group list-group-collapse list-group-sm list-group-tree"
+              id="list-group-men"
+              data-children=".sub-men"
+            >
+              <div class="list-group-collapse sub-men">
+                <a
+                  class="list-group-item list-group-item-action"
+                  href="#sub-men1"
+                  data-toggle="collapse"
+                  aria-expanded="true"
+                  aria-controls="sub-men1"
+                  >Sản phẩm <small class="text-muted">(100)</small>
+                </a>
+                <div
+                  class="collapse show"
+                  id="sub-men1"
+                  data-parent="#list-group-men"
+                >
+                  <div class="list-group">
+                    <a
+                      href="#"
+                      class="list-group-item list-group-item-action active"
+                      >Rau tươi <small class="text-muted">(50)</small></a
+                    >
+                    <a
+                      href="#"
+                      class="list-group-item list-group-item-action"
+                      >Củ tươi<small class="text-muted">(10)</small></a
+                    >
+                    <a
+                      href="#"
+                      class="list-group-item list-group-item-action"
+                      >Nấm tươi <small class="text-muted">(10)</small></a
+                    >
+                 
+                    
+                  </div>
+                </div>
+              </div>
+              `
+          </div>
+        </div> -->
+      </div>
     </div>
-    <!-- End Gallery  -->
-
-
+  </div>
+</div>
+<!-- End Shop Page -->
 
     <!-- Start Footer  -->
     <footer>

@@ -43,12 +43,14 @@
         <div class="row">
           <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
             <div class="right-phone-box">
-            <p>Điện thoại :- <a href="#"> +84 09876543210</a></p>~
+              <p>Điện thoại :- <a href="#"> +84 09876543210</a></p>
             </div>
             <div class="our-link">
               <ul>
                 <li>
-                  <a href="./signupsignin.html"><i class="fa fa-user s_color"></i> Tài Khoản </a>
+                  <a href="signupsignin.html"
+                    ><i class="fa fa-user s_color"></i> Tài Khoản
+                  </a>
                 </li>
                 <li>
                   <a
@@ -109,15 +111,19 @@
               <li class="nav-item">
                 <a class="nav-link" href="about.html">Về chúng tôi</a>
               </li>
+      
+              <li class="nav-item">
+                <a class="nav-link" href="./gallery.html">Rau tươi</a>
+              </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="gallery.html">Cửa hàng</a>
+                <a class="nav-link" href="./gallery.html">Củ tươi</a>
               </li>
+
               <li class="nav-item">
-                <a class="nav-link" href="./products/bi-ngo-huu-co.html"
-                  >Chi tiết</a
-                >
+                <a class="nav-link" href="./gallery.html">Nấm tươi</a>
               </li>
+
               <li class="nav-item">
                 <a class="nav-link" href="contact-us.html">Hỗ trợ</a>
               </li>
@@ -128,9 +134,17 @@
           <!-- Start Atribute Navigation -->
           <div class="attr-nav">
             <ul>
+              <!-- Icon tìm kiếm -->
               <li class="search">
-                <a href="#"><i class="fa fa-search"></i></a>
+                <a href="./gallery.html" class="search-toggle">
+                  <i class="fa fa-search"></i>
+                </a>
+                <!-- Thanh tìm kiếm ẩn -->
+                <div class="search-bar">
+                  <input type="text" class="form-control" placeholder="Tìm kiếm..." />
+                </div>
               </li>
+              <!-- Icon giỏ hàng -->
               <li class="side-menu">
                 <a href="./cart.html">
                   <i class="fa fa-shopping-bag"></i>
@@ -178,213 +192,8 @@
     </div>
     <!-- End All Title Box -->
 
-    <!-- Start Products  -->
-    <div class="products-box">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="title-all text-center">
-              <h1>Vựa rau sạch</h1>
-              <p>Tinh Hoa Thiên Nhiên, Dinh Dưỡng Tự Nhiên.</p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="special-menu text-center">
-              <div class="button-group filter-button-group">
-                <button class="active" data-filter="*">Tất cả</button>
-                <button data-filter=".top-featured">Sản phẩm nổi bật</button>
-                <button data-filter=".best-seller">Bán chạy</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row special-list">
-          <div class="col-lg-3 col-md-6 special-grid best-seller">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                <img
-                  src="images/rau/bi-ngoi-huu-co.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="./products/bi-ngo-huu-co.html"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                  </ul>
-                  <a class="cart" href="#">Thêm giỏ hàng</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Bí ngòi hữu cơ</h4>
-                <h5>40.0 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid top-featured">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                <img
-                  src="images/cu/ca-chua-bee-cherry-huu-co.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="./products/ca-chua-be-cherry.html"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                  </ul>
-                  <a class="cart" href="#">Thêm giỏ hàng</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Cà chua bé cherry</h4>
-                <h5>40.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid top-featured">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                <img
-                  src="images/cu/ca-tim-huu-co.png"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="./products/ca-tim-huu-co.html"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                  </ul>
-                  <a class="cart" href="#">Thêm giỏ hàng</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Cà tím</h4>
-                <h5>40.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid best-seller">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                <img
-                  src="images/cu/chanh-vang.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="./products/chanh-vang.html"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                  </ul>
-                  <a class="cart" href="#">Thêm sản phẩm</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Chanh vàng</h4>
-                <h5>40.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 special-grid top-featured">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                <img
-                  src="images/nam/nammeo.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="./products/nammeo.html"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                  </ul>
-                  <a class="cart" href="#">Thêm sản phẩm</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Nấm mèo</h4>
-                <h5>40.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 special-grid top-featured">
-            <div class="products-single fix">
-              <div class="box-img-hover">
-                <img
-                  src="images/rau/xa-lach-bup-my.jpg"
-                  class="img-fluid"
-                  alt="Image"
-                />
-                <div class="mask-icon">
-                  <ul>
-                    <li>
-                      <a
-                        href="./products/rau-xa-lach-bup-my.html"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="View"
-                        ><i class="fas fa-eye"></i
-                      ></a>
-                    </li>
-                  </ul>
-                  <a class="cart" href="#">Thêm sản phẩm</a>
-                </div>
-              </div>
-              <div class="why-text">
-                <h4>Xa lách búp Mỹ</h4>
-                <h5>40.000 VNĐ</h5>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- End Products  -->
-
+    
+ 
     <!-- Start Blog  -->
     <div class="latest-blog">
       <div class="container">
