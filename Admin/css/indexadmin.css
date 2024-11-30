@@ -376,7 +376,7 @@ a{
 }
 
 #reportResult thead:not(:nth-child(2)) {
-  background-color: #000000;
+  background-color: #b0b435;
   color: white;
 }
 
