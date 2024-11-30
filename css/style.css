@@ -2779,3 +2779,31 @@ button:hover {
 .search:focus-within .search-bar {
   display: block;
 }
+.featured-products-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+.products-single {
+  padding: 0; /* Xóa padding */
+  background: none; /* Xóa nền */
+  border: none; /* Xóa viền */
+  box-shadow: none; /* Loại bỏ bóng đổ */
+}
+.box-img-hover {
+  position: relative;
+  text-align: center;
+}
+.mask-icon {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  display: none;
+}
+.box-img-hover:hover .mask-icon {
+  display: block;
+}
+
