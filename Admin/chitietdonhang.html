@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ quản trị</title>
+    <link rel="shortcut icon" href="../images/logo13.png" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="../images/logo13.png" />
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="./css/indexadmin.css">
+</head>
+
+<body>
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="../index.html">
+                        <span class="logo">
+                            <img src="../images/logo13xoanen.png">
+                        </span>
+                        <span class="title">Vựa rau sạch</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./index.html" >
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Bảng điều khiển</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./quanlydonhang.html">
+                        <span class="icon">
+                            <ion-icon name="cart-outline"></ion-icon>
+                        </span>
+                        <span class="title">Quản lý đơn hàng</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./quanlysanpham.html">
+                        <span class="icon">
+                            <ion-icon name="book-outline"></ion-icon>
+                        </span>
+                        <span class="title">Quản lý sản phẩm</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./quanlykhachhang.html">
+                        <span class="icon">
+                            <ion-icon name="people-outline"></ion-icon>
+                        </span>
+                        <span class="title">Quản lý khách hàng</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ========================= Main ==================== -->
+        <div class="main">
+            <div class="topbar">
+                <div class="hello">
+                    <p>Trang Quản Trị Khách Hàng</p>
+                </div>
+                <div class="search" >
+                    <label>
+                        <input type="text" placeholder="Tìm kiếm ">
+                       <a href="#" onclick="find()"><ion-icon name="search-outline"></ion-icon></a>
+                    </label>
+                </div>
+            </div>
+            <!-- ======================= Cards ================== -->
+
+            <div class="order-details" style="max-width: 800px; margin: 20px auto; padding: 20px; background-color: white; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <h1 style="text-align: center; color: #333; margin-bottom: 20px;"><b>Chi tiết đơn hàng</b></h1>
+                
+                <div class="order-info" style="margin-bottom: 15px; border: 1px solid #ddd; padding: 15px; border-radius: 5px;">
+                  <p style="margin: 0; font-weight: bold;">Tình trạng đơn hàng: <span style="color: green;">Đang giao</span></p>
+                  <p style="margin: 0;">Thời gian đặt hàng: Thời gian: 2:53 2024/11/04</p>
+                </div>
+              
+                <div class="recipient-info" style="margin-bottom: 15px; border: 1px solid #ddd; padding: 15px; border-radius: 5px;">
+                  <h3 style="margin-bottom: 10px; color: #b0b435;">Thông tin người nhận</h3>
+                  <p style="margin: 0;">Tên người nhận: Donal Trum</p>
+                  <p style="margin: 0;">Số điện thoại: <a href="tel:09876543210" style="color: #b0b435;">09876543210</a></p>
+                  <p style="margin: 0;">Địa chỉ giao hàng: 273 Đ. An Dương Vương, Phường 3, Quận 5, Hồ Chí Minh</p>
+                </div>
+              
+                <div class="payment-info" style="margin-bottom: 15px; border: 1px solid #ddd; padding: 15px; border-radius: 5px;">
+                  <h3 style="margin-bottom: 10px; color: #b0b435;">Phương thức thanh toán</h3>
+                  <p style="margin: 0;">Thanh toán khi nhận hàng (COD)</p>
+                </div>
+              
+                <div class="product-list" style="margin-bottom: 15px; border: 1px solid #ddd; padding: 15px; border-radius: 5px;">
+                  <h3 style="margin-bottom: 10px; color: #b0b435;">Sản phẩm trong đơn hàng</h3>
+                  <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li style="margin-bottom: 5px;">- Xà lách: 10kg</li>
+                    <li style="margin-bottom: 5px;">- Bông cải xanh:  15kg</li>
+                  </ul>
+                  <p style="font-weight: bold; margin: 0;">Tổng tiền: 200.000 VND</p>
+                </div>
+              
+                <a href="./index.html" style="display: inline-block; padding: 10px 15px; background-color: #b0b435; color: white; text-decoration: none; border-radius: 5px; text-align: center;">Quay lại </a>
+              </div>
+              <script>
+                function find() {
+                  alert('Không tìm thấy');
+                }
+              </script>
+              <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+              <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        </body>
+</html>

@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quản lý đơn hàng</title>
+    <link rel="shortcut icon" href="../images/logo13.png" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="../images/logo13.png" />
     <!-- ======= Styles ====== -->
     <link rel="stylesheet" href="./css/indexadmin.css">
     <link rel="stylesheet" href="./css/quanlydonhang.css">
@@ -72,15 +74,25 @@
                 <div class="search">
                     <label>
                         <input type="text" placeholder="Tìm kiếm chức năng quản trị">
-                        <a href="../html/adminnotfound.html"><ion-icon name="search-outline"></ion-icon></a>
+                        <a href="#" onclick="find()"><ion-icon name="search-outline"></ion-icon></a>
                     </label>
                 </div>
             </div>
-
+  
+            <div class="search-bar">
+                <input type="text" placeholder="Tìm kiếm theo mã đơn hàng" />
+                <button onclick="find()">Tìm kiếm</button>
+                <select class="filter-select">
+                    <option>Hôm nay</option>
+                    <option>Tuần này</option>
+                    <option>Tháng này</option>
+                    <option>Năm nay</option>
+                </select>
+            </div>
             <!-- ================ LÀM QUẢN LÝ ĐƠN HÀNG Ở ĐÂY ================= -->
             <div class="order">
                 <!-- ================ LÀM BANNER ================= -->
-                
+
                 <div class="order-table">
                     <table>
                         <thead>
@@ -92,38 +104,65 @@
                                 <td>Tình trạng</td>
                                 <td>Thời gian</td>
                                 <td>Trạng thái</td>
+                                <td>Chức năng</td>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>1</td>
-                                <td><a href="../html/chitietdonhang.html"> ĐH 5728319</a></td>
-                                <td>thaihien99</td>
+                                <td><a href="./chitietdonhang.html"> ĐH 5728319</a></td>
+                                <td><a href="./thongtinnnguoidung.html">Trump</a></td>
                                 <td>0987654321</td>
                                 <td>Chờ xác nhận</td>
                                 <td>14/10/2023</td>
                                 <td>
                                     <button id="xoanguoidung">Chưa xử lý</button>
+                                </td>
+                                <td>
+                                    <button id="chitiet"><a href="./chitietdonhang.html">Chi tiết</a></button>
+                                    <button onclick="myFunction1()" id="huydonhang">Hủy</button>
+                                    <script>
+                                        function myFunction1() {
+                                            const confirmation = confirm("Bạn có chắc chắn muốn đơn hàng này ??? ");
+                                            if (confirmation) {
+                                                alert("Hủy đơn thành công thành công!!")
+                                                window.location.href = '#';
+                                            }
+                                        }
+                                    </script>
                                 </td>
                             </tr>
 
                             <tr>
                                 <td>2</td>
-                                <td><a href="../html/chitietdonhang.html"> ĐH 5728319</a></td>
-                                <td>thaihien99</td>
+                                <td><a href="./chitietdonhang.html"> ĐH 5728319</a></td>
+                                <td><a href="./thongtinnnguoidung.html">Trump</a></td>
                                 <td>0987654321</td>
                                 <td>Chờ xác nhận</td>
                                 <td>14/10/2023</td>
                                 <td>
 
                                     <button id="xoanguoidung">Chưa xử lý</button>
+                                </td>
+                                <td>
+                                    <button id="chitiet"><a href="./chitietdonhang.html">Chi tiết</a></button>
+                                    <button onclick="myFunction1()" id="huydonhang">Hủy</button>
+                                    <script>
+                                        function myFunction1() {
+                                            const confirmation = confirm("Bạn có chắc chắn muốn đơn hàng này ??? ");
+                                            if (confirmation) {
+                                                alert("Hủy đơn thành công thành công!!")
+                                                window.location.href = '#';
+                                            }
+                                        }
+                                    </script>
                                 </td>
                             </tr>
 
                             <tr>
                                 <td>3</td>
-                                <td><a href="../html/chitietdonhang.html"> ĐH 5728319</a></td>
-                                <td>thaihien99</td>
+                                <td><a href="./chitietdonhang.html"> ĐH 5728319</a></td>
+                                <td><a href="./thongtinnnguoidung.html">Trump</a></td>
                                 <td>0987654321</td>
                                 <td>Chờ xác nhận</td>
                                 <td>14/10/2023</td>
@@ -131,12 +170,25 @@
 
                                     <button id="xoanguoidung">Chưa xử lý</button>
                                 </td>
+                                <td>
+                                    <button id="chitiet"><a href="./chitietdonhang.html">Chi tiết</a></button>
+                                    <button onclick="myFunction1()" id="huydonhang">Hủy</button>
+                                    <script>
+                                        function myFunction1() {
+                                            const confirmation = confirm("Bạn có chắc chắn muốn đơn hàng này ??? ");
+                                            if (confirmation) {
+                                                alert("Hủy đơn thành công thành công!!")
+                                                window.location.href = '#';
+                                            }
+                                        }
+                                    </script>
+                                </td>
                             </tr>
 
                             <tr>
                                 <td>4</td>
-                                <td><a href="../html/chitietdonhang.html"> ĐH 5728319</a></td>
-                                <td>thaihien99</td>
+                                <td><a href="./chitietdonhang.html"> ĐH 5728319</a></td>
+                                <td><a href="./thongtinnnguoidung.html">Trump</a></td>
                                 <td>0987654321</td>
                                 <td>Đang giao</td>
                                 <td>14/10/2023</td>
@@ -144,18 +196,44 @@
                                     <button id="suanguoidung">Đã xử lý</button>
 
                                 </td>
+                                <td>
+                                    <button id="chitiet"><a href="./chitietdonhang.html">Chi tiết</a></button>
+                                    <button onclick="myFunction1()" id="huydonhang">Hủy</button>
+                                    <script>
+                                        function myFunction1() {
+                                            const confirmation = confirm("Bạn có chắc chắn muốn đơn hàng này ??? ");
+                                            if (confirmation) {
+                                                alert("Hủy đơn thành công thành công!!")
+                                                window.location.href = '#';
+                                            }
+                                        }
+                                    </script>
+                                </td>
                             </tr>
 
                             <tr>
                                 <td>5</td>
-                                <td><a href="../html/chitietdonhang.html"> ĐH 5728319</a></td>
-                                <td>thaihien99</td>
+                                <td><a href="./chitietdonhang.html"> ĐH 5728319</a></td>
+                                <td><a href="./thongtinnnguoidung.html">Trump</a></td>
                                 <td>0987654321</td>
                                 <td>Đang giao</td>
                                 <td>14/10/2023</td>
                                 <td>
                                     <button id="suanguoidung">Đã xử lý</button>
 
+                                </td>
+                                <td>
+                                    <button id="chitiet"><a href="./chitietdonhang.html">Chi tiết</a></button>
+                                    <button onclick="myFunction1()" id="huydonhang">Hủy</button>
+                                    <script>
+                                        function myFunction1() {
+                                            const confirmation = confirm("Bạn có chắc chắn muốn đơn hàng này ??? ");
+                                            if (confirmation) {
+                                                alert("Hủy đơn thành công thành công!!")
+                                                window.location.href = '#';
+                                            }
+                                        }
+                                    </script>
                                 </td>
                             </tr>
 
@@ -179,6 +257,12 @@
             </div>
         </div>
     </div>
+    <script>
+        function find() {
+          alert('Không tìm thấy');
+        }
+      </script>
+      <script src="suasanpham.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
