@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quản lý sản phẩm</title>
+    <link rel="shortcut icon" href="../images/logo13.png" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="../images/logo13.png" />
     <!-- ======= Styles ====== -->
     <link rel="stylesheet" href="./css/indexadmin.css">
     <link rel="stylesheet" href="./css/quanlysanpham.css">
@@ -78,17 +80,17 @@
             <!-- ================ LÀM QUẢN LÝ SẢN PHẨM Ở ĐÂY ================= -->
             <div class="user">
                 <div class="banner">
-                    <button id="adduser"><a href="../html/themsanpham.html">+ Thêm sản phẩm</a></button>
-                    <div class="finder">
-                        <select id="contentBox">
-                            <option value="rau">Rau tươi</option>
-                            <option value="cu">Củ tươi</option>
-                            <option value="nam">Nấm tươi</option>
-                        </select>
-                    </div>
-                    <div><input id="timnguoidung" type="text" placeholder="Tên sản phẩm cần tìm">
-                        <a href="#"><button >Tìm</button></a>
+                    <button id="adduser"><a href="./themsanpham.html">+ Thêm sản phẩm</a></button>
                 </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Tìm kiếm theo mã sản phẩm" />
+                    <button onclick="find()">Tìm kiếm</button>
+                    <select class="filter-select">
+                        <option>Hôm nay</option>
+                        <option>Tuần này</option>
+                        <option>Tháng này</option>
+                        <option>Năm nay</option>
+                    </select>
                 </div>
                 <!-- ================ Add Charts JS ================= -->
                 <div class="user-table">
@@ -118,7 +120,7 @@
                                 <td>1000</td>
                                 <td>29/7/2023 11:11</td>
                                 <td>
-                                    <button class="suanguoidung" onclick="hienBoxSuaUser()">Sửa</button>
+                                    <a href="./suasanpham.html"><button class="suanguoidung" >Sửa</button></a>
                                     <button onclick="myFunction()" class="xoanguoidung">Xóa</button>
                                     <script>
                                         function myFunction() {
@@ -142,7 +144,7 @@
                                 <td>1000</td>
                                 <td>29/7/2023 11:11</td>
                                 <td>
-                                    <button class="suanguoidung" onclick="hienBoxSuaUser()">Sửa</button>
+                                    <a href="./suasanpham.html"><button class="suanguoidung" >Sửa</button></a>
                                     <button onclick="myFunction()" class="xoanguoidung">Xóa</button>
                                     <script>
                                         function myFunction() {
@@ -165,7 +167,7 @@
                                 <td>1000</td>
                                 <td>29/7/2023 11:11</td>
                                 <td>
-                                    <button class="suanguoidung" onclick="hienBoxSuaUser()">Sửa</button>
+                                    <a href="./suasanpham.html"><button class="suanguoidung" >Sửa</button></a>
                                     <button onclick="myFunction()" class="xoanguoidung">Xóa</button>
                                     <script>
                                         function myFunction() {
@@ -187,7 +189,7 @@
                                 <td>1000</td>
                                 <td>29/7/2023 11:11</td>
                                 <td>
-                                    <button class="suanguoidung" onclick="hienBoxSuaUser()">Sửa</button>
+                                    <a href="./suasanpham.html"><button class="suanguoidung" >Sửa</button></a>
                                     <button onclick="myFunction()" class="xoanguoidung">Xóa</button>
                                     <script>
                                         function myFunction() {
@@ -209,7 +211,7 @@
                                 <td>1000</td>
                                 <td>29/7/2023 11:11</td>
                                 <td>
-                                    <button class="suanguoidung" onclick="hienBoxSuaUser()">Sửa</button>
+                                    <a href="./suasanpham.html"><button class="suanguoidung" >Sửa</button></a>
                                     <button onclick="myFunction()" class="xoanguoidung">Xóa</button>
                                     <script>
                                         function myFunction() {
@@ -235,6 +237,8 @@
                 </div>
             </div>
         </div>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

@@ -364,3 +364,68 @@ input[type="file"]{
 .no-scroll {
   overflow: hidden;
 }
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Tạo khoảng cách giữa các phần tử */
+  background-color: #fff; /* Nền trắng */
+  padding: 10px 20px; /* Khoảng cách bên trong */
+  border-radius: 25px; /* Bo góc mềm mại */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng */
+  border: 1px solid #ddd; /* Đường viền nhạt */
+}
+
+.search-bar input[type="text"] {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 20px;
+  background-color: #f9f9f9; /* Nền nhạt */
+  transition: all 0.3s ease; /* Hiệu ứng chuyển đổi */
+}
+
+.search-bar input[type="text"]:focus {
+  background-color: #fff; /* Nền sáng hơn khi focus */
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.2); /* Hiệu ứng ánh sáng */
+  border: 1px solid #b0b435; /* Đường viền đổi màu */
+}
+
+.search-bar button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px;
+  background-color: #b0b435; /* Màu tím dịu */
+  color: #fff; /* Màu chữ trắng */
+  border: none;
+  border-radius: 20px; /* Bo góc mềm mại */
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Hiệu ứng mượt khi hover */
+}
+
+.search-bar button:hover {
+  background-color: #b0b435; /* Màu tối hơn khi hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bóng rõ hơn */
+}
+
+.filter-select {
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: #f9f9f9; /* Nền nhạt */
+  color: #333; /* Màu chữ đen */
+  transition: all 0.3s ease; /* Hiệu ứng chuyển đổi */
+}
+
+.filter-select:hover {
+  background-color: #f1f1f1; /* Nền sáng hơn khi hover */
+}
+
+.filter-select:focus {
+  background-color: #fff; /* Nền sáng hơn khi focus */
+  border: 1px solid #b0b435; /* Đổi màu đường viền khi focus */
+}
+

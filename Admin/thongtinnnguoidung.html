@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ quản trị</title>
+    <link rel="shortcut icon" href="../images/logo13.png" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="../images/logo13.png" />
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="./css/indexadmin.css">
+</head>
+
+<body>
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="../index.html">
+                        <span class="logo">
+                            <img src="../images/logo13xoanen.png">
+                        </span>
+                        <span class="title">Vựa rau sạch</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./index.html" >
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Bảng điều khiển</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./quanlydonhang.html">
+                        <span class="icon">
+                            <ion-icon name="cart-outline"></ion-icon>
+                        </span>
+                        <span class="title">Quản lý đơn hàng</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./quanlysanpham.html">
+                        <span class="icon">
+                            <ion-icon name="book-outline"></ion-icon>
+                        </span>
+                        <span class="title">Quản lý sản phẩm</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./quanlykhachhang.html">
+                        <span class="icon">
+                            <ion-icon name="people-outline"></ion-icon>
+                        </span>
+                        <span class="title">Quản lý khách hàng</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ========================= Main ==================== -->
+        <div class="main">
+            <div class="topbar">
+                <div class="hello">
+                    <p>Trang Quản Trị Khách Hàng</p>
+                </div>
+                <div class="search" >
+                    <label>
+                        <input type="text" placeholder="Tìm kiếm ">
+                       <a href="#" onclick="find()"><ion-icon name="search-outline"></ion-icon></a>
+                    </label>
+                </div>
+            </div>
+            <!-- ======================= Cards ================== -->
+            <div class="user-details" style="max-width: 600px; margin: 20px auto; padding: 20px; background-color: #fff; border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); font-family: Arial, sans-serif;">
+                <h1 style="text-align: center; color: #333; margin-bottom: 20px;"><b>Thông tin người dùng</b></h1>
+            
+                <!-- Thông tin người dùng -->
+                <div class="user-info" style="margin-bottom: 20px; border: 1px solid #ddd; padding: 15px; border-radius: 5px;">
+                    <p style="margin: 0; font-weight: bold; font-size: 16px;">Mã khách hàng: 1</p>
+                    <p style="margin: 10px 0 0; font-size: 14px;">Tên đăng nhập: hehehe</p>
+                    <p style="margin: 10px 0 0; font-size: 14px;">Họ và tên: Trump</p>
+                    <p style="margin: 10px 0 0; font-size: 14px;">Email: email@example.com</p>
+                    <p style="margin: 10px 0 0; font-size: 14px;">Trạng thái tài khoản: Hoạt động</p>
+                </div>
+            
+                <!-- Chuyển đến trang chỉnh sửa -->
+                <a href="./suakhachhang.html" style="display: block; text-align: center; padding: 10px 15px; background-color: #b0b435; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">Chỉnh sửa thông tin</a>
+            </div>
+            
+            
+            
+             
+              <script>
+                function find() {
+                  alert('Không tìm thấy');
+                }
+              </script>
+              <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+              <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        </body>
+</html>

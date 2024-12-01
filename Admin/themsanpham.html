@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ quản trị</title>
+    <link rel="shortcut icon" href="../images/logo13.png" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="../images/logo13.png" />
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="./css/indexadmin.css">
+</head>
+
+<body>
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="../index.html">
+                        <span class="logo">
+                            <img src="../images/logo13xoanen.png">
+                        </span>
+                        <span class="title">Vựa rau sạch</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./index.html" >
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Bảng điều khiển</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./quanlydonhang.html">
+                        <span class="icon">
+                            <ion-icon name="cart-outline"></ion-icon>
+                        </span>
+                        <span class="title">Quản lý đơn hàng</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./quanlysanpham.html">
+                        <span class="icon">
+                            <ion-icon name="book-outline"></ion-icon>
+                        </span>
+                        <span class="title">Quản lý sản phẩm</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./quanlykhachhang.html">
+                        <span class="icon">
+                            <ion-icon name="people-outline"></ion-icon>
+                        </span>
+                        <span class="title">Quản lý khách hàng</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ========================= Main ==================== -->
+        <div class="main">
+            <div class="topbar">
+                <div class="hello">
+                    <p>Trang Quản Trị Khách Hàng</p>
+                </div>
+                <div class="search" >
+                    <label>
+                        <input type="text" placeholder="Tìm kiếm ">
+                       <a href="#" onclick="find()"><ion-icon name="search-outline"></ion-icon></a>
+                    </label>
+                </div>
+            </div>
+            <!-- ======================= Cards ================== -->
+
+            <div class="order-details" style="max-width: 600px; margin: 20px auto; padding: 20px; background-color: #fff; border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); font-family: Arial, sans-serif;">
+                <h1 style="text-align: center; color: #333; margin-bottom: 20px;"><b>Thêm sản phẩm</b></h1>
+            
+                <div class="order-info" style="margin-bottom: 20px; border: 1px solid #ddd; padding: 15px; border-radius: 5px;">
+                    <p style="margin: 0; font-weight: bold; font-size: 16px;">Loại sản phẩm:</p>
+                    <select style="width: 100%; padding: 8px; margin-top: 10px; border: 1px solid #ddd; border-radius: 5px;">
+                        <option value="">Nấm</option>
+                        <option value="">Củ</option>
+                        <option value="">Rau</option>
+                    </select>
+                    <p style="margin: 10px 0 0; font-size: 14px;">Thời gian tạo:</p>
+                    <input type="datetime-local" style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ddd; border-radius: 5px;">
+                </div>
+            
+                <div class="recipient-info" style="margin-bottom: 20px; border: 1px solid #ddd; padding: 15px; border-radius: 5px;">
+                    <h3 style="margin: 0 0 10px; color: #b0b435;">Thông tin người thêm</h3>
+                    <p style="margin: 0; font-size: 14px;">Mã nhân viên:</p>
+                    <input type="text" style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ddd; border-radius: 5px;">
+                </div>
+            
+                <div class="product-list" style="margin-bottom: 20px; border: 1px solid #ddd; padding: 15px; border-radius: 5px;">
+                    <h3 style="margin: 0 0 10px; color: #b0b435;">Thông tin sản phẩm</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 10px;">
+                            <p style="margin: 0; font-size: 14px;">Số lượng:</p>
+                            <input type="text" style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ddd; border-radius: 5px;">
+                        </li>
+                        <li style="margin-bottom: 10px;">
+                            <p style="margin: 0; font-size: 14px;">Mã sản phẩm:</p>
+                            <input type="text" style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ddd; border-radius: 5px;">
+                        </li>
+                        <li>
+                            <p style="margin: 0; font-size: 14px;">Tên sản phẩm:</p>
+                            <input type="text" style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ddd; border-radius: 5px;">
+                        </li>
+                        <li>
+                            <p style="margin: 0; font-size: 14px;">Ghi chú:</p>
+                            <input type="text" style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ddd; border-radius: 5px;">
+                        </li>
+                    </ul>
+                </div>
+            
+                <a href="#" onclick="add()" style="display: block; text-align: center; padding: 10px 15px; background-color: #b0b435; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">Xác nhận</a>
+            </div>
+            
+            <script>
+                function add() {
+                    alert('Đã thêm sản phẩm!');
+                }
+            </script>
+            
+            
+             
+              <script>
+                function find() {
+                  alert('Không tìm thấy');
+                }
+              </script>
+              <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+              <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        </body>
+</html>
