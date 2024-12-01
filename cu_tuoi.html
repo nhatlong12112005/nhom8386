@@ -494,11 +494,11 @@
                 
                 <label for="price-range">Giá (VND)</label>
                 <div class="price-range">
-                    <input type="number" id="price-min" name="price-min" value="">
-                    <input type="number" id="price-max" name="price-max" value="">
+                    <input type="number" id="price-min" name="price-min" value="" placeholder="Giá nhỏ nhất">
+                    <input type="number" id="price-max" name="price-max" value="" placeholder="Giá lớn nhất">
                 </div>
                 
-                <button type="submit">TÌM KIẾM</button>
+                <button type="submit" onclick="search('')">TÌM KIẾM</button>
             </form>
         </div>
       </div>
@@ -632,6 +632,12 @@
     <a href="#" id="back-to-top" title="Back to top" style="display: none"
       >&uarr;</a
     >
+
+    <script>
+       function search(timkiem){
+        alert('Đã tìm ' + timkiem +'thấy 10 sản phẩm')
+      }
+    </script>
 
   <!-- ALL JS FILES -->
   <script src="js/jquery-3.2.1.min.js"></script>
