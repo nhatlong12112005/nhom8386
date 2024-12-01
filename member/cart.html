@@ -16,17 +16,17 @@
     <meta name="author" content="" />
 
     <!-- Site Icons -->
-    <link rel="shortcut icon" href="images/logo13.png" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="images/logo13.png" />
+    <link rel="shortcut icon" href="../images/logo13.png" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="../images/logo13.png" />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
     <!-- Site CSS -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
     <!-- Responsive CSS -->
-    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="../css/custom.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -34,10 +34,43 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <style>
+      .dropdown {
+        position: relative;
+      }
+
+      .dropdown-menu {
+        display: none; /* Ẩn danh sách theo mặc định */
+        position: absolute;
+        top: 100%; /* Hiển thị dưới nút chính */
+        left: 0;
+        background-color: #b0b435;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        padding: 10px 0;
+        margin: 0;
+        list-style: none;
+        z-index: 1000;
+        border: 1px solid #b0b435;
+      }
+
+      .dropdown-menu li {
+        padding: 5px 20px;
+      }
+
+      .dropdown-menu li a {
+        color: #333;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown-menu li a:hover {
+        background-color: #b0b435;
+      }
+
+      .dropdown:hover .dropdown-menu {
+        display: block; /* Hiển thị danh sách khi người dùng bấm hoặc di chuột */
+      }
+    </style>
   </head>
 
   <body>
@@ -46,14 +79,21 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-           
             <div class="right-phone-box">
               <p>Điện thoại :- <a href="#"> +84 09876543210</a></p>
             </div>
             <div class="our-link">
               <ul>
-                <li>
-                  <a href="#"><i class="fa fa-user s_color"></i> Tài Khoản </a>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle">
+                    <i class="fa fa-user s_color"></i> Long Duy Hào
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a href="./thongtinnguoidung.html">Thông tin cá nhân</a></li>
+                    <li><a href="./chitietdonhang.html">Lịch sử mua hàng</a></li>
+                    <li><a href="./doimatkhau.html">Đổi mật khẩu</a></li>
+                    <li><a href="../index.html">Đăng xuất</a></li>
+                  </ul>
                 </li>
                 <li>
                   <a
@@ -63,17 +103,17 @@
                   >
                 </li>
                 <li>
-                  <a href="./contact-us.html"
-                    ><i class="fas fa-headset"></i>Hỗ trợ</a
+                  <a href="./contact_uslogin.html"
+                    ><i class="fas fa-headset"></i> Hỗ trợ</a
                   >
                 </li>
               </ul>
             </div>
           </div>
-          
         </div>
       </div>
     </div>
+
     <!-- End Main Top -->
 
     <!-- Start Main Top -->
@@ -110,26 +150,26 @@
               data-out="fadeOutUp"
             >
               <li class="nav-item ">
-                <a class="nav-link" href="index.html">Trang Chủ</a>
+                <a class="nav-link" href="./indexlogin.html">Trang Chủ</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="about.html">Về chúng tôi</a>
-              </li>
-      
-              <li class="nav-item">
-                <a class="nav-link" href="./gallery.html">Rau tươi</a>
+                <a class="nav-link" href="./aboutlogin.html">Về chúng tôi</a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="./gallery.html">Củ tươi</a>
+                <a class="nav-link" href="./rautuoilogin.html">Rau tươi</a>
+              </li>
+
+              <li class="nav-item ">
+                <a class="nav-link" href="./cutuoilogin.html">Củ tươi</a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="./gallery.html">Nấm tươi</a>
+                <a class="nav-link" href="./namtuoilogin.html">Nấm tươi</a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="contact-us.html">Hỗ trợ</a>
+                <a class="nav-link" href="./contact_uslogin.html">Hỗ trợ</a>
               </li>
             </ul>
           </div>
@@ -140,12 +180,16 @@
             <ul>
               <!-- Icon tìm kiếm -->
               <li class="search">
-                <a href="./gallery.html" class="search-toggle">
+                <a href="./cutuoilogin.html" class="search-toggle">
                   <i class="fa fa-search"></i>
                 </a>
                 <!-- Thanh tìm kiếm ẩn -->
                 <div class="search-bar">
-                  <input type="text" class="form-control" placeholder="Tìm kiếm..." />
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Tìm kiếm..."
+                  />
                 </div>
               </li>
               <!-- Icon giỏ hàng -->
@@ -160,11 +204,24 @@
           </div>
           <!-- End Atribute Navigation -->
         </div>
-       
       </nav>
       <!-- End Navigation -->
     </header>
     <!-- End Main Top -->
+
+    <!-- Start Top Search -->
+    <div class="top-search">
+      <div class="container">
+        <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-search"></i></span>
+          <input type="text" class="form-control" placeholder="Search" />
+          <span class="input-group-addon close-search"
+            ><i class="fa fa-times"></i
+          ></span>
+        </div>
+      </div>
+    </div>
+    <!-- End Top Search -->
 
 
 
@@ -176,7 +233,7 @@
             <h2>Giỏ hàng</h2>
             <ul class="breadcrumb">
               <li class="breadcrumb-item">
-                <a href="./index.html">Trang chủ</a>
+                <a href="./indexlogin.html">Trang chủ</a>
               </li>
               <li class="breadcrumb-item active">Giỏ Hàng</li>
             </ul>
@@ -209,13 +266,13 @@
                       <a href="#">
                         <img
                           class="img-fluid"
-                          src="images/cu/ca-chua-bee-cherry-huu-co.jpg"
+                          src="../images/cu/ca-chua-bee-cherry-huu-co.jpg"
                           alt=""
                         />
                       </a>
                     </td>
                     <td class="name-pr">
-                      <a href="./products/ca-chua-be-cherry.html"> Cà chua bee cherry</a>
+                      <a href="../products/ca-chua-be-cherry.html"> Cà chua bee cherry</a>
                     </td>
                     <td class="price-pr">
                       <p>40.000 VNĐ</p>
@@ -244,13 +301,13 @@
                       <a href="#">
                         <img
                           class="img-fluid"
-                          src="images/rau/bi-ngoi-huu-co.jpg"
+                          src="../images/rau/bi-ngoi-huu-co.jpg"
                           alt=""
                         />
                       </a>
                     </td>
                     <td class="name-pr">
-                      <a href="./products/bi-ngo-huu-co.html"> Bí ngòi hữu cơ </a>
+                      <a href="../products/bi-ngo-huu-co.html"> Bí ngòi hữu cơ </a>
                     </td>
                     <td class="price-pr">
                       <p>40.000 VNĐ</p>
@@ -279,13 +336,13 @@
                       <a href="#">
                         <img
                           class="img-fluid"
-                          src="images/cu/chanh-vang.jpg"
+                          src="../images/cu/chanh-vang.jpg"
                           alt=""
                         />
                       </a>
                     </td>
                     <td class="name-pr">
-                      <a href="./products/chanh-vang.html"> Chanh Vàng </a>
+                      <a href="../products/chanh-vang.html"> Chanh Vàng </a>
                     </td>
                     <td class="price-pr">
                       <p>40.000 VNĐ</p>
@@ -472,14 +529,7 @@
     </footer>
     <!-- End Footer  -->
 
-    <!-- Start copyright  -->
-    <div class="footer-copyright">
-      <p class="footer-company">
-        All Rights Reserved. &copy; 2018 <a href="#">ThewayShop</a> Design By :
-        <a href="https://html.design/">html design</a>
-      </p>
-    </div>
-    <!-- End copyright  -->
+
 
     <a href="#" id="back-to-top" title="Back to top" style="display: none"
       >&uarr;</a

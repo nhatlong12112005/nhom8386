@@ -34,10 +34,43 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <style>
+      .dropdown {
+        position: relative;
+      }
+
+      .dropdown-menu {
+        display: none; /* Ẩn danh sách theo mặc định */
+        position: absolute;
+        top: 100%; /* Hiển thị dưới nút chính */
+        left: 0;
+        background-color: #b0b435;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        padding: 10px 0;
+        margin: 0;
+        list-style: none;
+        z-index: 1000;
+        border: 1px solid #b0b435;
+      }
+
+      .dropdown-menu li {
+        padding: 5px 20px;
+      }
+
+      .dropdown-menu li a {
+        color: #333;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown-menu li a:hover {
+        background-color: #b0b435;
+      }
+
+      .dropdown:hover .dropdown-menu {
+        display: block; /* Hiển thị danh sách khi người dùng bấm hoặc di chuột */
+      }
+    </style>
   </head>
 
   <body>
@@ -46,14 +79,21 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-
             <div class="right-phone-box">
               <p>Điện thoại :- <a href="#"> +84 09876543210</a></p>
             </div>
             <div class="our-link">
               <ul>
-                <li>
-                  <a href="#"><i class="fa fa-user s_color"></i> Tài Khoản </a>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle">
+                    <i class="fa fa-user s_color"></i> Long Duy Hào
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a href="../member/thongtinnguoidung.html">Thông tin cá nhân</a></li>
+                    <li><a href="../member/chitietdonhang.html">Lịch sử mua hàng</a></li>
+                    <li><a href="../member/doimatkhau.html">Đổi mật khẩu</a></li>
+                    <li><a href="../index.html">Đăng xuất</a></li>
+                  </ul>
                 </li>
                 <li>
                   <a
@@ -63,17 +103,17 @@
                   >
                 </li>
                 <li>
-                  <a href="../contact-us.html"
-                    ><i class="fas fa-headset"></i>Hỗ trợ</a
+                  <a href="./contact-us.html"
+                    ><i class="fas fa-headset"></i> Hỗ trợ</a
                   >
                 </li>
               </ul>
             </div>
           </div>
-        
         </div>
       </div>
     </div>
+
     <!-- End Main Top -->
 
     <!-- Start Main Top -->
@@ -96,8 +136,8 @@
             >
               <i class="fa fa-bars"></i>
             </button>
-            <a class="navbar-brand" href="../index.html"
-              ><img src="../images/logo.png" class="logo" alt=""
+            <a class="navbar-brand" href="index.html"
+              ><img src="images/logo.png" class="logo" alt=""
             /></a>
           </div>
           <!-- End Header Navigation -->
@@ -109,78 +149,79 @@
               data-in="fadeInDown"
               data-out="fadeOutUp"
             >
-              <li class="nav-item">
-                <a class="nav-link" href="../index.html">Trang Chủ</a>
+              <li class="nav-item ">
+                <a class="nav-link" href="../member/indexlogin.html">Trang Chủ</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="../about.html">Về chúng tôi</a>
-              </li>
-      
-              <li class="nav-item">
-                <a class="nav-link" href="../gallery.html">Rau tươi</a>
+                <a class="nav-link" href="../member/aboutlogin.html">Về chúng tôi</a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="../gallery.html">Củ tươi</a>
+                <a class="nav-link" href="../member/rautuoilogin.html">Rau tươi</a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="../gallery.html">Nấm tươi</a>
+                <a class="nav-link" href="../member/cutuoilogin.html">Củ tươi</a>
+              </li>
+
+              <li class="nav-item ">
+                <a class="nav-link" href="../member/namtuoilogin.html">Nấm tươi</a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="../contact-us.html">Hỗ trợ</a>
+                <a class="nav-link" href="../member/contact_uslogin.html">Hỗ trợ</a>
               </li>
             </ul>
           </div>
           <!-- /.navbar-collapse -->
-         <!-- Start Atribute Navigation -->
-         <div class="attr-nav">
-          <ul>
-            <!-- Icon tìm kiếm -->
-            <li class="search">
-              <a href="./gallery.html" class="search-toggle">
-                <i class="fa fa-search"></i>
-              </a>
-              <!-- Thanh tìm kiếm ẩn -->
-              <div class="search-bar">
-                <input type="text" class="form-control" placeholder="Tìm kiếm..." />
-              </div>
-            </li>
-            <!-- Icon giỏ hàng -->
-            <div class="attr-nav">
-              <ul>
-                <!-- Icon tìm kiếm -->
-                <li class="search">
-                  <a href="../cu_tuoi.html" class="search-toggle">
-                    <i class="fa fa-search"></i>
-                  </a>
-                  <!-- Thanh tìm kiếm ẩn -->
-                  <div class="search-bar">
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="Tìm kiếm..."
-                    />
-                  </div>
-                </li>
-                <!-- Icon giỏ hàng -->
-                <li class="side-menu">
-                  <a href="./cart.html">
-                    <i class="fa fa-shopping-bag"></i>
-                    <span class="badge">3</span>
-                    <p>Giỏ Hàng</p>
-                  </a>
-                </li>
-              </ul>
-            </div>
-        <!-- End Atribute Navigation -->
+
+          <!-- Start Atribute Navigation -->
+          <div class="attr-nav">
+            <ul>
+              <!-- Icon tìm kiếm -->
+              <li class="search">
+                <a href="../member/namtuoilogin.html" class="search-toggle">
+                  <i class="fa fa-search"></i>
+                </a>
+                <!-- Thanh tìm kiếm ẩn -->
+                <div class="search-bar">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Tìm kiếm..."
+                  />
+                </div>
+              </li>
+              <!-- Icon giỏ hàng -->
+              <li class="side-menu">
+                <a href="../member/cart.html">
+                  <i class="fa fa-shopping-bag"></i>
+                  <span class="badge">3</span>
+                  <p>Giỏ Hàng</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- End Atribute Navigation -->
         </div>
-       
       </nav>
       <!-- End Navigation -->
     </header>
     <!-- End Main Top -->
+
+    <!-- Start Top Search -->
+    <div class="top-search">
+      <div class="container">
+        <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-search"></i></span>
+          <input type="text" class="form-control" placeholder="Search" />
+          <span class="input-group-addon close-search"
+            ><i class="fa fa-times"></i
+          ></span>
+        </div>
+      </div>
+    </div>
+    <!-- End Top Search -->
 
 
     <!-- Start All Title Box -->
@@ -190,7 +231,7 @@
           <div class="col-lg-12">
             <h2>Chi tiết sản phẩm</h2>
             <ul class="breadcrumb">
-              <li class="breadcrumb-item"><a href="../cu_tuoi.html">Củ tươi</a></li>
+              <li class="breadcrumb-item"><a href="../member/cutuoilogin.html">Củ tươi</a></li>
               <li class="breadcrumb-item active">Chi tiết sản phẩm</li>
             </ul>
           </div>
@@ -246,10 +287,10 @@
 
               <div class="price-box-bar">
                 <div class="cart-and-bay-btn">
-                  <a class="btn hvr-hover" data-fancybox-close="" href="#"
+                  <a class="btn hvr-hover" data-fancybox-close="" href="../member/cart.html"
                     >Mua mới</a
                   >
-                  <a class="btn hvr-hover" data-fancybox-close="" href="#"
+                  <a class="btn hvr-hover" data-fancybox-close="" href="#" onclick="addToCart('')"
                     >Thêm vào giỏ hàng</a
                   >
                 </div>
@@ -367,7 +408,7 @@
                       </li>
                       
                     </ul>
-                    <a class="cart" href="#">Thêm vào giỏ hàng</a>
+                    <a class="cart" href="#" onclick="addToCart('')">Thêm vào giỏ hàng</a>
                   </div>
                 </div>
                 <div class="why-text">
@@ -399,7 +440,7 @@
                       </li>
         
                     </ul>
-                    <a class="cart" href="#">Thêm vào giỏ hàng</a>
+                    <a class="cart" href="#" onclick="addToCart('')">Thêm vào giỏ hàng</a>
                   </div>
                 </div>
                 <div class="why-text">
@@ -432,7 +473,7 @@
                       </li>
                      
                     </ul>
-                    <a class="cart" href="#">Thêm vào giỏ hàng</a>
+                    <a class="cart" href="#" onclick="addToCart('')">Thêm vào giỏ hàng</a>
                   </div>
                 </div>
                 <div class="why-text">
@@ -443,6 +484,7 @@
             </div>
           </div>
         </div>
+      </div>
     <!-- End Cart -->
 
 
@@ -566,19 +608,16 @@
     </footer>
     <!-- End Footer  -->
 
-    <!-- Start copyright  -->
-    <div class="footer-copyright">
-      <p class="footer-company">
-        All Rights Reserved. &copy; 2018 <a href="#">ThewayShop</a> Design By :
-        <a href="https://html.design/">html design</a>
-      </p>
-    </div>
-    <!-- End copyright  -->
+   
 
     <a href="#" id="back-to-top" title="Back to top" style="display: none"
       >&uarr;</a
     >
-
+  </div><script>
+    function addToCart(productName) {
+      alert('Sản phẩm ' + productName + ' đã được thêm vào giỏ hàng!');
+    }
+  </script>
       <!-- ALL JS FILES -->
       <script src="js/jquery-3.2.1.min.js"></script>
       <!-- ALL PLUGINS -->

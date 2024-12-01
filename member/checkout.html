@@ -16,17 +16,17 @@
     <meta name="author" content="" />
 
     <!-- Site Icons -->
-    <link rel="shortcut icon" href="images/logo13.png" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="images/logo13.png" />
+    <link rel="shortcut icon" href="../images/logo13.png" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="../images/logo13.png" />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
     <!-- Site CSS -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
     <!-- Responsive CSS -->
-    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="../css/custom.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -34,10 +34,43 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <style>
+      .dropdown {
+        position: relative;
+      }
+
+      .dropdown-menu {
+        display: none; /* Ẩn danh sách theo mặc định */
+        position: absolute;
+        top: 100%; /* Hiển thị dưới nút chính */
+        left: 0;
+        background-color: #b0b435;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        padding: 10px 0;
+        margin: 0;
+        list-style: none;
+        z-index: 1000;
+        border: 1px solid #b0b435;
+      }
+
+      .dropdown-menu li {
+        padding: 5px 20px;
+      }
+
+      .dropdown-menu li a {
+        color: #333;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown-menu li a:hover {
+        background-color: #b0b435;
+      }
+
+      .dropdown:hover .dropdown-menu {
+        display: block; /* Hiển thị danh sách khi người dùng bấm hoặc di chuột */
+      }
+    </style>
   </head>
 
   <body>
@@ -51,8 +84,16 @@
             </div>
             <div class="our-link">
               <ul>
-                <li>
-                  <a href="#"><i class="fa fa-user s_color"></i> Tài Khoản </a>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle">
+                    <i class="fa fa-user s_color"></i> Long Duy Hào
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a href="./thongtinnguoidung.html">Thông tin cá nhân</a></li>
+                    <li><a href="./chitietdonhang.html">Lịch sử mua hàng</a></li>
+                    <li><a href="./doimatkhau.html">Đổi mật khẩu</a></li>
+                    <li><a href="../index.html">Đăng xuất</a></li>
+                  </ul>
                 </li>
                 <li>
                   <a
@@ -62,8 +103,8 @@
                   >
                 </li>
                 <li>
-                  <a href="./contact-us.html"
-                    ><i class="fas fa-headset"></i>Hỗ trợ</a
+                  <a href="./contact_uslogin.html"
+                    ><i class="fas fa-headset"></i> Hỗ trợ</a
                   >
                 </li>
               </ul>
@@ -72,6 +113,7 @@
         </div>
       </div>
     </div>
+
     <!-- End Main Top -->
 
     <!-- Start Main Top -->
@@ -107,22 +149,60 @@
               data-in="fadeInDown"
               data-out="fadeOutUp"
             >
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Trang Chủ</a>
+              <li class="nav-item ">
+                <a class="nav-link" href="./indexlogin.html">Trang Chủ</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="about.html">Về chúng tôi</a>
+                <a class="nav-link" href="./aboutlogin.html">Về chúng tôi</a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="gallery.html">Cửa hàng</a>
+                <a class="nav-link" href="./rautuoilogin.html">Rau tươi</a>
               </li>
+
+              <li class="nav-item ">
+                <a class="nav-link" href="./cutuoilogin.html">Củ tươi</a>
+              </li>
+
               <li class="nav-item">
-                <a class="nav-link" href="contact-us.html">Hỗ trợ</a>
+                <a class="nav-link" href="./namtuoilogin.html">Nấm tươi</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="./contact_uslogin.html">Hỗ trợ</a>
               </li>
             </ul>
           </div>
           <!-- /.navbar-collapse -->
+
+          <!-- Start Atribute Navigation -->
+          <div class="attr-nav">
+            <ul>
+              <!-- Icon tìm kiếm -->
+              <li class="search">
+                <a href="./cutuoilogin.html" class="search-toggle">
+                  <i class="fa fa-search"></i>
+                </a>
+                <!-- Thanh tìm kiếm ẩn -->
+                <div class="search-bar">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Tìm kiếm..."
+                  />
+                </div>
+              </li>
+              <!-- Icon giỏ hàng -->
+              <li class="side-menu">
+                <a href="./cart.html">
+                  <i class="fa fa-shopping-bag"></i>
+                  <span class="badge">3</span>
+                  <p>Giỏ Hàng</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- End Atribute Navigation -->
         </div>
       </nav>
       <!-- End Navigation -->
@@ -644,7 +724,7 @@
                 </div>
               </div>
               <div class="col-12 d-flex shopping-box">
-                <a href="checkout.html" class="ml-auto btn hvr-hover"
+                <a href="./sucess.html" class="ml-auto btn hvr-hover"
                   >Đặt hàng</a
                 >
               </div>
@@ -777,14 +857,7 @@
     </footer>
     <!-- End Footer  -->
 
-    <!-- Start copyright  -->
-    <div class="footer-copyright">
-      <p class="footer-company">
-        All Rights Reserved. &copy; 2018 <a href="#">ThewayShop</a> Design By :
-        <a href="https://html.design/">html design</a>
-      </p>
-    </div>
-    <!-- End copyright  -->
+
 
     <a href="#" id="back-to-top" title="Back to top" style="display: none"
       >&uarr;</a
