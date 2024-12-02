@@ -104,6 +104,13 @@
     padding: 10px;
     text-align: center;
   }
+  #chuyen{
+    padding: 4px;
+  background-color: rgb(221, 200, 36);
+  color: white;
+  border-radius: 4px;
+  border-color: rgb(221, 200, 36);
+  }
   #huydonhang{
     padding: 4px;
   background-color: rgb(16, 113, 224);
@@ -123,7 +130,7 @@
   background-color: red;
   color: white;
   border-radius: 4px;
-  border-color: red;
+  border-color: rgb(248, 246, 246);
   }
   #suanguoidung{
     padding: 4px;

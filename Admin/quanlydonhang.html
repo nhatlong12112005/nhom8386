@@ -101,153 +101,145 @@
                                 <td>Mã đơn hàng</td>
                                 <td>Người đặt</td>
                                 <td>SĐT</td>
-                                <td>Tình trạng</td>
                                 <td>Thời gian</td>
                                 <td>Trạng thái</td>
                                 <td>Chức năng</td>
                             </tr>
                         </thead>
                         <tbody>
+                            <!-- Hàng 1 -->
                             <tr>
                                 <td>1</td>
                                 <td><a href="./chitietdonhang.html"> ĐH 5728319</a></td>
                                 <td><a href="./thongtinnnguoidung.html">Trump</a></td>
                                 <td>0987654321</td>
-                                <td>Chờ xác nhận</td>
                                 <td>14/10/2023</td>
                                 <td>
-                                    <button id="xoanguoidung">Chưa xử lý</button>
+                                    <button id="xoanguoidung" class="status-toggle">Chưa xử lý</button>
                                 </td>
                                 <td>
+                                    <button id= "chuyen" onclick="toggleStatus(this)" class="transfer-button">Chuyển</button>
                                     <button id="chitiet"><a href="./chitietdonhang.html">Chi tiết</a></button>
-                                    <button onclick="myFunction1()" id="huydonhang">Hủy</button>
-                                    <script>
-                                        function myFunction1() {
-                                            const confirmation = confirm("Bạn có chắc chắn muốn đơn hàng này ??? ");
-                                            if (confirmation) {
-                                                alert("Hủy đơn thành công thành công!!")
-                                                window.location.href = '#';
-                                            }
-                                        }
-                                    </script>
+                                    <button onclick="cancelOrder()" id="huydonhang">Hủy</button>
                                 </td>
                             </tr>
-
+                
+                            <!-- Hàng 2 -->
                             <tr>
                                 <td>2</td>
-                                <td><a href="./chitietdonhang.html"> ĐH 5728319</a></td>
-                                <td><a href="./thongtinnnguoidung.html">Trump</a></td>
-                                <td>0987654321</td>
-                                <td>Chờ xác nhận</td>
-                                <td>14/10/2023</td>
+                                <td><a href="./chitietdonhang.html"> ĐH 5728320</a></td>
+                                <td><a href="./thongtinnnguoidung.html">John</a></td>
+                                <td>0987654322</td>
+                                <td>15/10/2023</td>
                                 <td>
-
-                                    <button id="xoanguoidung">Chưa xử lý</button>
+                                    <button id="xoanguoidung" class="status-toggle">Chưa xử lý</button>
                                 </td>
                                 <td>
+                                    <button id= "chuyen" onclick="toggleStatus(this)" class="transfer-button">Chuyển</button>
                                     <button id="chitiet"><a href="./chitietdonhang.html">Chi tiết</a></button>
-                                    <button onclick="myFunction1()" id="huydonhang">Hủy</button>
-                                    <script>
-                                        function myFunction1() {
-                                            const confirmation = confirm("Bạn có chắc chắn muốn đơn hàng này ??? ");
-                                            if (confirmation) {
-                                                alert("Hủy đơn thành công thành công!!")
-                                                window.location.href = '#';
-                                            }
-                                        }
-                                    </script>
+                                    <button onclick="cancelOrder()" id="huydonhang">Hủy</button>
                                 </td>
                             </tr>
-
+                
+                            <!-- Hàng 3 -->
                             <tr>
                                 <td>3</td>
-                                <td><a href="./chitietdonhang.html"> ĐH 5728319</a></td>
-                                <td><a href="./thongtinnnguoidung.html">Trump</a></td>
-                                <td>0987654321</td>
-                                <td>Chờ xác nhận</td>
-                                <td>14/10/2023</td>
+                                <td><a href="./chitietdonhang.html"> ĐH 5728321</a></td>
+                                <td><a href="./thongtinnnguoidung.html">Doe</a></td>
+                                <td>0987654323</td>
+                                <td>16/10/2023</td>
                                 <td>
-
-                                    <button id="xoanguoidung">Chưa xử lý</button>
+                                    <button id="xoanguoidung" class="status-toggle">Chưa xử lý</button>
                                 </td>
                                 <td>
+                                    <button id= "chuyen" onclick="toggleStatus(this)" class="transfer-button">Chuyển</button>
                                     <button id="chitiet"><a href="./chitietdonhang.html">Chi tiết</a></button>
-                                    <button onclick="myFunction1()" id="huydonhang">Hủy</button>
-                                    <script>
-                                        function myFunction1() {
-                                            const confirmation = confirm("Bạn có chắc chắn muốn đơn hàng này ??? ");
-                                            if (confirmation) {
-                                                alert("Hủy đơn thành công thành công!!")
-                                                window.location.href = '#';
-                                            }
-                                        }
-                                    </script>
+                                    <button onclick="cancelOrder()" id="huydonhang">Hủy</button>
                                 </td>
                             </tr>
-
                             <tr>
-                                <td>4</td>
+                                <td>1</td>
                                 <td><a href="./chitietdonhang.html"> ĐH 5728319</a></td>
                                 <td><a href="./thongtinnnguoidung.html">Trump</a></td>
                                 <td>0987654321</td>
-                                <td>Đang giao</td>
                                 <td>14/10/2023</td>
                                 <td>
-                                    <button id="suanguoidung">Đã xử lý</button>
-
+                                    <button id="xoanguoidung" class="status-toggle">Chưa xử lý</button>
                                 </td>
                                 <td>
+                                    <button id= "chuyen" onclick="toggleStatus(this)" class="transfer-button">Chuyển</button>
                                     <button id="chitiet"><a href="./chitietdonhang.html">Chi tiết</a></button>
-                                    <button onclick="myFunction1()" id="huydonhang">Hủy</button>
-                                    <script>
-                                        function myFunction1() {
-                                            const confirmation = confirm("Bạn có chắc chắn muốn đơn hàng này ??? ");
-                                            if (confirmation) {
-                                                alert("Hủy đơn thành công thành công!!")
-                                                window.location.href = '#';
-                                            }
-                                        }
-                                    </script>
+                                    <button onclick="cancelOrder()" id="huydonhang">Hủy</button>
                                 </td>
                             </tr>
-
+                
+                            <!-- Hàng 2 -->
                             <tr>
-                                <td>5</td>
-                                <td><a href="./chitietdonhang.html"> ĐH 5728319</a></td>
-                                <td><a href="./thongtinnnguoidung.html">Trump</a></td>
-                                <td>0987654321</td>
-                                <td>Đang giao</td>
-                                <td>14/10/2023</td>
+                                <td>2</td>
+                                <td><a href="./chitietdonhang.html"> ĐH 5728320</a></td>
+                                <td><a href="./thongtinnnguoidung.html">John</a></td>
+                                <td>0987654322</td>
+                                <td>15/10/2023</td>
                                 <td>
-                                    <button id="suanguoidung">Đã xử lý</button>
-
+                                    <button id="xoanguoidung" class="status-toggle">Chưa xử lý</button>
                                 </td>
                                 <td>
+                                    <button id= "chuyen" onclick="toggleStatus(this)" class="transfer-button">Chuyển</button>
                                     <button id="chitiet"><a href="./chitietdonhang.html">Chi tiết</a></button>
-                                    <button onclick="myFunction1()" id="huydonhang">Hủy</button>
-                                    <script>
-                                        function myFunction1() {
-                                            const confirmation = confirm("Bạn có chắc chắn muốn đơn hàng này ??? ");
-                                            if (confirmation) {
-                                                alert("Hủy đơn thành công thành công!!")
-                                                window.location.href = '#';
-                                            }
-                                        }
-                                    </script>
+                                    <button onclick="cancelOrder()" id="huydonhang">Hủy</button>
                                 </td>
                             </tr>
-
-
-
-
+                
+                            <!-- Hàng 3 -->
+                            <tr>
+                                <td>3</td>
+                                <td><a href="./chitietdonhang.html"> ĐH 5728321</a></td>
+                                <td><a href="./thongtinnnguoidung.html">Doe</a></td>
+                                <td>0987654323</td>
+                                <td>16/10/2023</td>
+                                <td>
+                                    <button id="xoanguoidung" class="status-toggle">Chưa xử lý</button>
+                                </td>
+                                <td>
+                                    <button id= "chuyen" onclick="toggleStatus(this)" class="transfer-button">Chuyển</button>
+                                    <button id="chitiet"><a href="./chitietdonhang.html">Chi tiết</a></button>
+                                    <button onclick="cancelOrder()" id="huydonhang">Hủy</button>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                     <div class="pagination">
                         <li class="hientai">1</li>
-                        <li><a href="#" style="color: black;">2</a></li></a> 
-                        <li><a href="#" style="color: black;" >NEXT</a></li>
+                        <li><a href="#" style="color: black;">2</a></li>
+                        <li><a href="#" style="color: black;">NEXT</a></li>
                     </div>
                 </div>
+                
+                <script>
+                    // Hàm chuyển đổi trạng thái
+                    function toggleStatus(button) {
+                        const statusButton = button.parentElement.previousElementSibling.querySelector('.status-toggle');
+                        if (statusButton.innerText === "Chưa xử lý") {
+                            statusButton.innerText = "Đã xử lý";
+                            statusButton.style.backgroundColor = "green"; // Thay đổi màu sắc cho "Đã xử lý"
+                            statusButton.style.color = "white";
+                        } else {
+                            statusButton.innerText = "Chưa xử lý";
+                            statusButton.style.backgroundColor = ""; // Trả về màu mặc định
+                            statusButton.style.color = "";
+                        }
+                    }
+                
+                    // Hàm hủy đơn hàng
+                    function cancelOrder() {
+                        const confirmation = confirm("Bạn có chắc chắn muốn hủy đơn hàng này?");
+                        if (confirmation) {
+                            alert("Hủy đơn hàng thành công!");
+                            window.location.href = '#';
+                        }
+                    }
+                </script>
+                
 
 
 
