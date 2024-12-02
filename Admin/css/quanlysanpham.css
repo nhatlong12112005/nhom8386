@@ -428,4 +428,11 @@ input[type="file"]{
   background-color: #fff; /* Nền sáng hơn khi focus */
   border: 1px solid #b0b435; /* Đổi màu đường viền khi focus */
 }
+#chitiet{
+  padding: 4px;
+background-color: rgb(131, 206, 11);
+color: rgb(243, 238, 238);
+border-radius: 4px;
+border-color: rgb(150, 219, 38);
+}
 
