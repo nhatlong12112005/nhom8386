@@ -73,7 +73,7 @@
                 <div class="search" >
                     <label>
                         <input type="text" placeholder="Tìm kiếm ">
-                       <a href="#" onclick="find()"><ion-icon name="search-outline"></ion-icon></a>
+                       <a href="./find.html" ><ion-icon name="search-outline"></ion-icon></a>
                     </label>
                 </div>
             </div>
@@ -154,9 +154,70 @@
             <h2 style="margin-left: 20px;">Thống kê tình hình kinh doanh</h2>
         
 
-
+            
             <div id="reportResult">
-                
+                <div id="reportResult">
+                    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap; padding: 10px; background-color: #f9f9f9; border: 1px solid #ddd; border-radius: 5px;">
+                  
+                      <!-- Chọn filter -->
+                      <div style="display: flex; align-items: center; gap: 5px;">
+                        <label style="display: flex; align-items: center; margin-right: 10px;">
+                          <input type="radio" name="filter" value="ten" id="ten" onclick="checkTen()" checked style="margin-right: 5px;"> 
+                          Theo tên khách hàng
+                        </label>
+                        <label style="display: flex; align-items: center;">
+                          <input type="radio" name="filter" value="loai" id="loai" onclick="checkLoai()" style="margin-right: 5px;"> 
+                          Theo loại mã đơn hàng
+                        </label>
+                      </div>
+                  
+                      <!-- Tìm kiếm theo tên sản phẩm -->
+                      <input 
+                        type="text" 
+                        id="tenSp" 
+                        placeholder="Nhập tên khách hàng" 
+                        style="padding: 8px; border: 1px solid #ccc; border-radius: 4px; flex: 1 1 auto; min-width: 150px;"
+                      >
+                  
+                      <!-- Tìm kiếm theo loại sản phẩm -->
+                      <input 
+                        type="text" 
+                        id="tenSp" 
+                        placeholder="Nhập mã đơn hàng" 
+                        style="padding: 8px; border: 1px solid #ccc; border-radius: 4px; flex: 1 1 auto; min-width: 150px;"
+                      >
+                  
+                      <!-- Lọc theo ngày -->
+                      <div style="display: flex; align-items: center; gap: 5px; flex-wrap: nowrap;">
+                        <label for="start" style="margin-right: 5px;">Từ ngày:</label>
+                        <input 
+                          type="date" 
+                          id="start" 
+                          value="2023-11-24" 
+                          min="2018-01-01" 
+                          max="2023-12-31" 
+                          style="padding: 5px; border: 1px solid #ccc; border-radius: 4px; margin-right: 10px;"
+                        >
+                        <label for="end" style="margin-right: 5px;">Đến:</label>
+                        <input 
+                          type="date" 
+                          id="end" 
+                          value="2023-11-30" 
+                          min="2018-01-01" 
+                          max="2023-12-31" 
+                          style="padding: 5px; border: 1px solid #ccc; border-radius: 4px;"
+                        >
+                      </div>
+                  
+                      <!-- Nút Thống kê -->
+                      <button 
+                        style="padding: 10px 15px; background-color: #b0b435; color: white; border: none; border-radius: 4px; cursor: pointer;"
+                      >
+                        <a href="./thongke.html">Thống kê</a>
+                      </button>
+                    </div>
+                  </div>
+                  
                 <table>
                     <thead>
                         <tr>
@@ -235,21 +296,88 @@
                     </tbody>
 
                 </table>
-                <div class="pagination">
+                <div> <br></div>
+                <!-- <div class="pagination">
                     <li class="hientai">1</li>
                     <li><a href="#" style="color: black;">2</a></li></a> 
                     <li><a href="#" style="color: black;" >NEXT</a></li>
-                </div>
+                </div> -->
             </div>
             <h2 style="margin-left: 20px;">Thống kê sản phẩm</h2>
             <div id="reportResult">
-                
+                <div id="reportResult">
+                    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap; padding: 10px; background-color: #f9f9f9; border: 1px solid #ddd; border-radius: 5px;">
+                  
+                      <!-- Chọn filter -->
+                      <div style="display: flex; align-items: center; gap: 5px;">
+                        <label style="display: flex; align-items: center; margin-right: 10px;">
+                          <input type="radio" name="filter" value="ten" id="ten" onclick="checkTen()" checked style="margin-right: 5px;"> 
+                          Theo tên sản phẩm
+                        </label>
+                        <label style="display: flex; align-items: center;">
+                          <input type="radio" name="filter" value="loai" id="loai" onclick="checkLoai()" style="margin-right: 5px;"> 
+                          Theo loại sản phẩm
+                        </label>
+                      </div>
+                  
+                      <!-- Tìm kiếm theo tên sản phẩm -->
+                      <input 
+                        type="text" 
+                        id="tenSp" 
+                        placeholder="Nhập tên sản phẩm" 
+                        style="padding: 8px; border: 1px solid #ccc; border-radius: 4px; flex: 1 1 auto; min-width: 150px;"
+                      >
+                  
+                      <!-- Tìm kiếm theo loại sản phẩm -->
+                      <select 
+                        id="loaiSp" 
+                        style="padding: 8px; border: 1px solid #ccc; border-radius: 4px; flex: 1 1 auto; min-width: 150px;"
+                      >
+                        <option value="">Chọn loại sản phẩm</option>
+                        <option value="ratuoi">Rau tươi</option>
+                        <option value="cutuoi">Củ tươi</option>
+                        <option value="namtuoi">Nấm tươi</option>
+                      </select>
+                  
+                      <!-- Lọc theo ngày -->
+                      <div style="display: flex; align-items: center; gap: 5px; flex-wrap: nowrap;">
+                        <label for="start" style="margin-right: 5px;">Từ ngày:</label>
+                        <input 
+                          type="date" 
+                          id="start" 
+                          value="2023-11-24" 
+                          min="2018-01-01" 
+                          max="2023-12-31" 
+                          style="padding: 5px; border: 1px solid #ccc; border-radius: 4px; margin-right: 10px;"
+                        >
+                        <label for="end" style="margin-right: 5px;">Đến:</label>
+                        <input 
+                          type="date" 
+                          id="end" 
+                          value="2023-11-30" 
+                          min="2018-01-01" 
+                          max="2023-12-31" 
+                          style="padding: 5px; border: 1px solid #ccc; border-radius: 4px;"
+                        >
+                      </div>
+                  
+                      <!-- Nút Thống kê -->
+                      <button 
+                        onclick="move()" 
+                        style="padding: 10px 15px; background-color: #b0b435; color: white; border: none; border-radius: 4px; cursor: pointer;"
+                      >
+                        <a href="thongke.html">Thống kê</a>
+                      </button>
+                    </div>
+                  </div>
+                  
                 <table>
                     <thead>
                         <tr>
                             <th>STT</th>
                             <th>Mã sản phẩm</th>
                             <th>Tên nhân viên nhập</th>
+                            <th>Loại</th>
                             <th>Mã nhân viên nhập</th>
                             <th>Số lượng</th>
                             <th>Tồn kho</th>
@@ -263,6 +391,7 @@
                             <td>1</td>
                             <td><a href="./chitietsanpham.html"> KN S49</a></td>
                             <td><a href="./thongtinnnguoidung.html">Ptin</a></td>
+                            <td>Rau tươi</td>
                             <td>MH370</td>
                             <td >1000</td>
                             <td>500</td>
@@ -273,6 +402,7 @@
                             <td>1</td>
                             <td><a href="./chitietsanpham.html"> KN S49</a></td>
                             <td><a href="./thongtinnnguoidung.html">Ptin</a></td>
+                            <td>Rau tươi</td>
                             <td>MH370</td>
                             <td >1000</td>
                             <td>500</td>
@@ -283,6 +413,7 @@
                             <td>1</td>
                             <td><a href="./chitietsanpham.html"> KN S49</a></td>
                             <td><a href="./thongtinnnguoidung.html">Ptin</a></td>
+                            <td>Rau tươi</td>
                             <td>MH370</td>
                             <td >1000</td>
                             <td>500</td>
@@ -293,6 +424,7 @@
                             <td>1</td>
                             <td><a href="./chitietsanpham.html"> KN S49</a></td>
                             <td><a href="./thongtinnnguoidung.html">Ptin</a></td>
+                            <td>Rau tươi</td>
                             <td>MH370</td>
                             <td >1000</td>
                             <td>500</td>
@@ -303,6 +435,7 @@
                             <td>1</td>
                             <td><a href="./chitietsanpham.html"> KN S49</a></td>
                             <td><a href="./thongtinnnguoidung.html">Ptin</a></td>
+                            <td>Rau tươi</td>
                             <td>MH370</td>
                             <td >1000</td>
                             <td>500</td>
@@ -313,6 +446,7 @@
                             <td>1</td>
                             <td><a href="./chitietsanpham.html"> KN S49</a></td>
                             <td><a href="./thongtinnnguoidung.html">Ptin</a></td>
+                            <td>Rau tươi</td>
                             <td>MH370</td>
                             <td >1000</td>
                             <td>500</td>

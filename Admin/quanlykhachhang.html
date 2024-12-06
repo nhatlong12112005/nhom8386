@@ -74,8 +74,8 @@
                 </div>
                 <div class="search">
                     <label>
-                        <input type="text" placeholder="Tìm kiếm chức năng quản trị">
-                        <a href="../html/adminnotfound.html"><ion-icon name="search-outline"></ion-icon></a>
+                        <input type="text" placeholder="Tìm kiếm ">
+                        <a href="./find.html"><ion-icon name="search-outline"></ion-icon></a>
                     </label>
                 </div>
             </div>
@@ -89,153 +89,389 @@
                  
                 </div>
                 <div class="search-bar">
-                    <input type="text" placeholder="Tìm kiếm theo mã khách hàng" />
-                    <button onclick="find()">Tìm kiếm</button>
-                    <select class="filter-select">
-                        <option>Hôm nay</option>
-                        <option>Tuần này</option>
-                        <option>Tháng này</option>
-                        <option>Năm nay</option>
-                    </select>
+                    
+                    <div style="display: flex; flex-direction: row; align-items: center; gap: 0.5rem; flex: 2 1 250px;">
+                        <label for="start" style="font-size: 1rem;">Từ:</label>
+                        <input type="date" id="start" name="start" value="2023-11-24" min="2018-01-01" max="2023-12-31" style="
+                            flex: 1;
+                            padding: 0.5rem;
+                            border: 1px solid #ccc;
+                            border-radius: 4px;
+                            font-size: 1rem;
+                        ">
+                        <label for="end" style="font-size: 1rem;">đến</label>
+                        <input type="date" id="end" name="end" value="2023-11-30" min="2018-01-01" max="2023-12-31" style="
+                            flex: 1;
+                            padding: 0.5rem;
+                            border: 1px solid #ccc;
+                            border-radius: 4px;
+                            font-size: 1rem;
+                        ">
+                    </div  >
+                    <div style="display: flex; flex-direction: column; flex: 0 0 0.20px;">
+                        <!-- <label for="status" style="font-size: 1rem; margin-bottom: 0.25rem;">Trạng thái</label> -->
+                        <select id="status" name="status" style="
+                            flex: 0.5;
+                            padding: 0.5rem;
+                            border: 1px solid #ccc;
+                            border-radius: 4px;
+                            font-size: 1rem;
+                            background-color: #fff;
+                            color: #333;
+                            appearance: none;
+                            cursor: pointer;
+                        ">
+                            <option value="" disabled selected>Gói <i class="fa-solid fa-caret-down"></i></option>
+                            <option value="pending">Đồng <i class="fa-solid fa-caret-down"></i></option>
+                            <option value="shipped">Bạc <i class="fa-solid fa-caret-down"></i></option>
+                            <option value="completed">Vàng  <i class="fa-solid fa-caret-down"></i></option>
+                            <option value="cancelled">Kim Cương <i class="fa-solid fa-caret-down"></i></option>
+                        </select>
+                    </div>
+                    <input type="text" placeholder="Nhập mã khách hàng" style="
+                    flex: 15;
+                    padding: 0.5rem;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    font-size: 1rem;
+                " />
+                    <button onclick="find()">Lọc</button>
                 </div>
                 <div class="user-table">
-                    <table>
+                    <table style="border-collapse: collapse; width: 100%; text-align: center;">
                         <thead>
-                            <tr>
-                                <td>Mã khách hàng</td>
-                                <td>Tên đăng nhập </td>
-                                <td>Họ và tên</td>
-                                <td>Email</td>
-                                <td>Gói</td>
-                                <td>Ngày đăng ký</td>
-                                <td>Ghi chú</td>
+                            <tr style="background-color: #d1e7dd; color: #333;">
+                                <td style="padding: 10px; border: 1px solid #ddd;">Mã khách hàng</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">Tên đăng nhập</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">Họ và tên</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">Email</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">Gói</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">Ngày đăng ký</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">Chức năng</td>
                             </tr>
                         </thead>
-
+                    
                         <tbody>
-
                             <tr>
-
-                                <td>1</td>
-                                <td><a href="./thongtinnnguoidung.html">Trump</a></td>
-                                <td><a href="./thongtinnnguoidung.html">Trump</a></td>
-                                <td>tranthaihien02@gmail.com</td>
-                                <td id="premium">Kim cương</td>
-                                <td>14/10/2023</td>
-                                <td>
-                                    <button id="chitiet"><a href="./thongtinnnguoidung.html">Chi tiết</a></button>
-                                   <a href="./suakhachhang.html"> <button id="suanguoidung" >Sửa</button></a>
-                                    <button onclick="myFunction()" id="xoanguoidung">Khóa</button>
-                                    <script>
-                                        function myFunction() {
-                                            const confirmation = confirm("Bạn có chắc chắn muốn khóa người dùng này ??? ");
-                                            if (confirmation) {
-                                                alert("Khóa người dùng thành công!!")
-                                                window.location.href = '#';
+                                <td style="padding: 10px; border: 1px solid #ddd;">1</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;"><a href="./thongtinnnguoidung.html">Trump</a></td>
+                                <td style="padding: 10px; border: 1px solid #ddd;"><a href="./thongtinnnguoidung.html">Trump</a></td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">tranthaihien02@gmail.com</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;" id="premium">Kim cương</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">14/10/2023</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">
+                                    <div style="display: flex; justify-content: center; align-items: center; gap: 5px;">
+                                        <button style="
+                                            padding: 5px 10px;
+                                            font-size: 0.8rem;
+                                            border: none;
+                                            border-radius: 4px;
+                                            background-color: #32CD32;
+                                            color: white;
+                                            cursor: pointer;
+                                        ">
+                                            <a href="./thongtinnnguoidung.html" style="color: white; text-decoration: none;">Chi tiết</a>
+                                        </button>
+                                        <a href="./suakhachhang.html">
+                                            <button style="
+                                                padding: 5px 10px;
+                                                font-size: 0.8rem;
+                                                border: none;
+                                                border-radius: 4px;
+                                                background-color: #FFD700;
+                                                color: black;
+                                                cursor: pointer;
+                                            ">Sửa</button>
+                                        </a>
+                                        <button onclick="myFunction()" style="
+                                            padding: 5px 10px;
+                                            font-size: 0.8rem;
+                                            border: none;
+                                            border-radius: 4px;
+                                            background-color: #FF4500;
+                                            color: white;
+                                            cursor: pointer;
+                                        ">Khóa</button>
+                                        <script>
+                                            function myFunction() {
+                                                const confirmation = confirm("Bạn có chắc chắn muốn khóa người dùng này ??? ");
+                                                if (confirmation) {
+                                                    alert("Khóa người dùng thành công!!")
+                                                    window.location.href = '#';
+                                                }
                                             }
-                                        }
-                                    </script>
-                                    
+                                        </script>
+                                    </div>
                                 </td>
                             </tr>
-
+                    
                             <tr>
-                                <td>2</td>
-                                <td><a href="./thongtinnnguoidung.html">Trump</a></td>
-                                <td><a href="./thongtinnnguoidung.html">Trump</a></td>
-                                <td>vantuan123@gmail.com</td>
-                                <td id="standard">Vàng</td>
-                                <td>30/09/2023</td>
-                                <td>
-                                    <button id="chitiet"><a href="./thongtinnnguoidung.html">Chi tiết</a></button>
-                                    <a href="./suakhachhang.html"> <button id="suanguoidung" >Sửa</button></a>
-                                    <button onclick="myFunction()" id="xoanguoidung">Khóa</button>
-                                    <script>
-                                        function myFunction() {
-                                            const confirmation = confirm("Bạn có chắc chắn muốn khóa người dùng này ??? ");
-                                            if (confirmation) {
-                                                alert("Khóa người dùng thành công!!")
-                                                window.location.href = '#';
+                                <td style="padding: 10px; border: 1px solid #ddd;">2</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;"><a href="./thongtinnnguoidung.html">Trump</a></td>
+                                <td style="padding: 10px; border: 1px solid #ddd;"><a href="./thongtinnnguoidung.html">Trump</a></td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">vantuan123@gmail.com</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;" id="standard">Vàng</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">30/09/2023</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">
+                                    <div style="display: flex; justify-content: center; align-items: center; gap: 5px;">
+                                        <button style="
+                                            padding: 5px 10px;
+                                            font-size: 0.8rem;
+                                            border: none;
+                                            border-radius: 4px;
+                                            background-color: #32CD32;
+                                            color: white;
+                                            cursor: pointer;
+                                        ">
+                                            <a href="./thongtinnnguoidung.html" style="color: white; text-decoration: none;">Chi tiết</a>
+                                        </button>
+                                        <a href="./suakhachhang.html">
+                                            <button style="
+                                                padding: 5px 10px;
+                                                font-size: 0.8rem;
+                                                border: none;
+                                                border-radius: 4px;
+                                                background-color: #FFD700;
+                                                color: black;
+                                                cursor: pointer;
+                                            ">Sửa</button>
+                                        </a>
+                                        <button onclick="myFunction()" style="
+                                            padding: 5px 10px;
+                                            font-size: 0.8rem;
+                                            border: none;
+                                            border-radius: 4px;
+                                            background-color: #FF4500;
+                                            color: white;
+                                            cursor: pointer;
+                                        ">Khóa</button>
+                                        <script>
+                                            function myFunction() {
+                                                const confirmation = confirm("Bạn có chắc chắn muốn khóa người dùng này ??? ");
+                                                if (confirmation) {
+                                                    alert("Khóa người dùng thành công!!")
+                                                    window.location.href = '#';
+                                                }
                                             }
-                                        }
-                                    </script>
+                                        </script>
+                                    </div>
                                 </td>
                             </tr>
-
+                    
                             <tr>
-                                <td>3</td>
-                                <td><a href="./thongtinnnguoidung.html">Trump</a></td>
-                                <td><a href="./thongtinnnguoidung.html">Trump</a></td>
-                                <td>heoconlonton@gmail.com</td>
-                                <td id="premium">Kim cương</td>
-                                <td>07/09/2023</td>
-                                <td>
-                                    <button id="chitiet"><a href="./thongtinnnguoidung.html">Chi tiết</a></button>
-                                    <a href="./suakhachhang.html"> <button id="suanguoidung" >Sửa</button></a>
-                                    <button onclick="myFunction()" id="xoanguoidung">Khóa</button>
-                                    <script>
-                                        function myFunction() {
-                                            const confirmation = confirm("Bạn có chắc chắn muốn khóa người dùng này ??? ");
-                                            if (confirmation) {
-                                                alert("Khóa người dùng thành công!!")
-                                                window.location.href = '#';
+                                <td style="padding: 10px; border: 1px solid #ddd;">3</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;"><a href="./thongtinnnguoidung.html">Trump</a></td>
+                                <td style="padding: 10px; border: 1px solid #ddd;"><a href="./thongtinnnguoidung.html">Trump</a></td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">heoconlonton@gmail.com</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;" id="premium">Kim cương</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">07/09/2023</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">
+                                    <div style="display: flex; justify-content: center; align-items: center; gap: 5px;">
+                                        <button style="
+                                            padding: 5px 10px;
+                                            font-size: 0.8rem;
+                                            border: none;
+                                            border-radius: 4px;
+                                            background-color: #32CD32;
+                                            color: white;
+                                            cursor: pointer;
+                                        ">
+                                            <a href="./thongtinnnguoidung.html" style="color: white; text-decoration: none;">Chi tiết</a>
+                                        </button>
+                                        <a href="./suakhachhang.html">
+                                            <button style="
+                                                padding: 5px 10px;
+                                                font-size: 0.8rem;
+                                                border: none;
+                                                border-radius: 4px;
+                                                background-color: #FFD700;
+                                                color: black;
+                                                cursor: pointer;
+                                            ">Sửa</button>
+                                        </a>
+                                        <button onclick="myFunction()" style="
+                                            padding: 5px 10px;
+                                            font-size: 0.8rem;
+                                            border: none;
+                                            border-radius: 4px;
+                                            background-color: #FF4500;
+                                            color: white;
+                                            cursor: pointer;
+                                        ">Khóa</button>
+                                        <script>
+                                            function myFunction() {
+                                                const confirmation = confirm("Bạn có chắc chắn muốn khóa người dùng này ??? ");
+                                                if (confirmation) {
+                                                    alert("Khóa người dùng thành công!!")
+                                                    window.location.href = '#';
+                                                }
                                             }
-                                        }
-                                    </script>
+                                        </script>
+                                    </div>
                                 </td>
                             </tr>
-
                             <tr>
-                                <td>4</td>
-                                <td><a href="./thongtinnnguoidung.html">Trump</a></td>
-                                <td><a href="./thongtinnnguoidung.html">Trump</a></td>
-                                <td>trongdamgidepbangsen@gmail.com</td>
-                                <td id="basic">Bạc</td>
-                                <td>09/08/2023</td>
-                                <td>
-                                    <button id="chitiet"><a href="./thongtinnnguoidung.html">Chi tiết</a></button>
-                                    <a href="./suakhachhang.html"> <button id="suanguoidung" >Sửa</button></a>
-                                    <button onclick="myFunction()" id="xoanguoidung">Khóa</button>
-                                    <script>
-                                        function myFunction() {
-                                            const confirmation = confirm("Bạn có chắc chắn muốn khóa người dùng này ??? ");
-                                            if (confirmation) {
-                                                alert("Khóa người dùng thành công!!")
-                                                window.location.href = '#';
+                                <td style="padding: 10px; border: 1px solid #ddd;">1</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;"><a href="./thongtinnnguoidung.html">Trump</a></td>
+                                <td style="padding: 10px; border: 1px solid #ddd;"><a href="./thongtinnnguoidung.html">Trump</a></td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">tranthaihien02@gmail.com</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;" id="premium">Kim cương</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">14/10/2023</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">
+                                    <div style="display: flex; justify-content: center; align-items: center; gap: 5px;">
+                                        <button style="
+                                            padding: 5px 10px;
+                                            font-size: 0.8rem;
+                                            border: none;
+                                            border-radius: 4px;
+                                            background-color: #32CD32;
+                                            color: white;
+                                            cursor: pointer;
+                                        ">
+                                            <a href="./thongtinnnguoidung.html" style="color: white; text-decoration: none;">Chi tiết</a>
+                                        </button>
+                                        <a href="./suakhachhang.html">
+                                            <button style="
+                                                padding: 5px 10px;
+                                                font-size: 0.8rem;
+                                                border: none;
+                                                border-radius: 4px;
+                                                background-color: #FFD700;
+                                                color: black;
+                                                cursor: pointer;
+                                            ">Sửa</button>
+                                        </a>
+                                        <button onclick="myFunction()" style="
+                                            padding: 5px 10px;
+                                            font-size: 0.8rem;
+                                            border: none;
+                                            border-radius: 4px;
+                                            background-color: #FF4500;
+                                            color: white;
+                                            cursor: pointer;
+                                        ">Khóa</button>
+                                        <script>
+                                            function myFunction() {
+                                                const confirmation = confirm("Bạn có chắc chắn muốn khóa người dùng này ??? ");
+                                                if (confirmation) {
+                                                    alert("Khóa người dùng thành công!!")
+                                                    window.location.href = '#';
+                                                }
                                             }
-                                        }
-                                    </script>
+                                        </script>
+                                    </div>
                                 </td>
                             </tr>
-
+                    
                             <tr>
-                                <td>5</td>
-                                <td><a href="./thongtinnnguoidung.html">Trump</a></td>
-                                <td><a href="./thongtinnnguoidung.html">Trump</a></td>
-                                <td>lelananh02@gmail.com</td>
-                                <td id="basic">Bạc</td>
-                                <td>08/12/2023</td>
-                                <td>
-                                    <button id="chitiet"><a href="./thongtinnnguoidung.html">Chi tiết</a></button>
-                                    <a href="./suakhachhang.html"> <button id="suanguoidung" >Sửa</button></a>
-                                    <button onclick="myFunction()" id="xoanguoidung">Khóa</button>
-                                    <script>
-                                        function myFunction() {
-                                            const confirmation = confirm("Bạn có chắc chắn muốn khóa người dùng này ??? ");
-                                            if (confirmation) {
-                                                alert("Khóa người dùng thành công!!")
-                                                window.location.href = '#';
+                                <td style="padding: 10px; border: 1px solid #ddd;">2</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;"><a href="./thongtinnnguoidung.html">Trump</a></td>
+                                <td style="padding: 10px; border: 1px solid #ddd;"><a href="./thongtinnnguoidung.html">Trump</a></td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">vantuan123@gmail.com</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;" id="standard">Vàng</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">30/09/2023</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">
+                                    <div style="display: flex; justify-content: center; align-items: center; gap: 5px;">
+                                        <button style="
+                                            padding: 5px 10px;
+                                            font-size: 0.8rem;
+                                            border: none;
+                                            border-radius: 4px;
+                                            background-color: #32CD32;
+                                            color: white;
+                                            cursor: pointer;
+                                        ">
+                                            <a href="./thongtinnnguoidung.html" style="color: white; text-decoration: none;">Chi tiết</a>
+                                        </button>
+                                        <a href="./suakhachhang.html">
+                                            <button style="
+                                                padding: 5px 10px;
+                                                font-size: 0.8rem;
+                                                border: none;
+                                                border-radius: 4px;
+                                                background-color: #FFD700;
+                                                color: black;
+                                                cursor: pointer;
+                                            ">Sửa</button>
+                                        </a>
+                                        <button onclick="myFunction()" style="
+                                            padding: 5px 10px;
+                                            font-size: 0.8rem;
+                                            border: none;
+                                            border-radius: 4px;
+                                            background-color: #FF4500;
+                                            color: white;
+                                            cursor: pointer;
+                                        ">Khóa</button>
+                                        <script>
+                                            function myFunction() {
+                                                const confirmation = confirm("Bạn có chắc chắn muốn khóa người dùng này ??? ");
+                                                if (confirmation) {
+                                                    alert("Khóa người dùng thành công!!")
+                                                    window.location.href = '#';
+                                                }
                                             }
-                                        }
-                                    </script>
+                                        </script>
+                                    </div>
                                 </td>
                             </tr>
-
-
-
-
+                    
+                            <tr>
+                                <td style="padding: 10px; border: 1px solid #ddd;">3</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;"><a href="./thongtinnnguoidung.html">Trump</a></td>
+                                <td style="padding: 10px; border: 1px solid #ddd;"><a href="./thongtinnnguoidung.html">Trump</a></td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">heoconlonton@gmail.com</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;" id="premium">Kim cương</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">07/09/2023</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">
+                                    <div style="display: flex; justify-content: center; align-items: center; gap: 5px;">
+                                        <button style="
+                                            padding: 5px 10px;
+                                            font-size: 0.8rem;
+                                            border: none;
+                                            border-radius: 4px;
+                                            background-color: #32CD32;
+                                            color: white;
+                                            cursor: pointer;
+                                        ">
+                                            <a href="./thongtinnnguoidung.html" style="color: white; text-decoration: none;">Chi tiết</a>
+                                        </button>
+                                        <a href="./suakhachhang.html">
+                                            <button style="
+                                                padding: 5px 10px;
+                                                font-size: 0.8rem;
+                                                border: none;
+                                                border-radius: 4px;
+                                                background-color: #FFD700;
+                                                color: black;
+                                                cursor: pointer;
+                                            ">Sửa</button>
+                                        </a>
+                                        <button onclick="myFunction()" style="
+                                            padding: 5px 10px;
+                                            font-size: 0.8rem;
+                                            border: none;
+                                            border-radius: 4px;
+                                            background-color: #FF4500;
+                                            color: white;
+                                            cursor: pointer;
+                                        ">Khóa</button>
+                                        <script>
+                                            function myFunction() {
+                                                const confirmation = confirm("Bạn có chắc chắn muốn khóa người dùng này ??? ");
+                                                if (confirmation) {
+                                                    alert("Khóa người dùng thành công!!")
+                                                    window.location.href = '#';
+                                                }
+                                            }
+                                        </script>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- Các hàng khác tiếp theo -->
                         </tbody>
                     </table>
+                    
                 </div>
                 <div class="pagination">
                     <li class="hientai">1</li>

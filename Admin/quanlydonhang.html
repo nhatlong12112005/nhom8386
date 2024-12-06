@@ -73,137 +73,477 @@
                 </div>
                 <div class="search">
                     <label>
-                        <input type="text" placeholder="Tìm kiếm chức năng quản trị">
-                        <a href="#" onclick="find()"><ion-icon name="search-outline"></ion-icon></a>
+                        <input type="text" placeholder="Tìm kiếm ">
+                        <a href="find.html"><ion-icon name="search-outline"></ion-icon></a>
                     </label>
                 </div>
             </div>
-  
+            
             <div class="search-bar">
-                <input type="text" placeholder="Tìm kiếm theo mã đơn hàng" />
-                <button onclick="find()">Tìm kiếm</button>
-                <select class="filter-select">
-                    <option>Hôm nay</option>
-                    <option>Tuần này</option>
-                    <option>Tháng này</option>
-                    <option>Năm nay</option>
-                </select>
+                    
+                <div style="display: flex; flex-direction: row; align-items: center; gap: 0.5rem; flex: 2 1 250px;">
+                    <label for="start" style="font-size: 1rem;">Từ:</label>
+                    <input type="date" id="start" name="start" value="2023-11-24" min="2018-01-01" max="2023-12-31" style="
+                        flex: 1;
+                        padding: 0.5rem;
+                        border: 1px solid #ccc;
+                        border-radius: 4px;
+                        font-size: 1rem;
+                    ">
+                    <label for="end" style="font-size: 1rem;">đến</label>
+                    <input type="date" id="end" name="end" value="2023-11-30" min="2018-01-01" max="2023-12-31" style="
+                        flex: 1;
+                        padding: 0.5rem;
+                        border: 1px solid #ccc;
+                        border-radius: 4px;
+                        font-size: 1rem;
+                    ">
+                </div  >
+                <div style="display: flex; flex-direction: column; flex: 1 1 150px;">
+                    <!-- <label for="status" style="font-size: 1rem; margin-bottom: 0.25rem;">Trạng thái</label> -->
+                    <select id="status" name="status" style="
+                        padding: 0.5rem;
+                        border: 1px solid #ccc;
+                        border-radius: 4px;
+                        font-size: 1rem;
+                        background-color: #fff;
+                        color: #333;
+                        appearance: none;
+                        cursor: pointer;
+                    ">
+                        <option value="" disabled selected>Trạng thái <i class="fa-solid fa-caret-down"></i></option>
+                        <option value="pending">Đang xử lý <i class="fa-solid fa-caret-down"></i></option>
+                        <option value="shipped">Đã giao <i class="fa-solid fa-caret-down"></i></option>
+                        <option value="completed">Hoàn tất <i class="fa-solid fa-caret-down"></i></option>
+                        <option value="cancelled">Đã hủy <i class="fa-solid fa-caret-down"></i></option>
+                    </select>
+                </div>
+                <input type="text" placeholder="Nhập mã đơn hàng" style="
+                flex: 15;
+                padding: 0.5rem;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                font-size: 1rem;
+            " />
+                <button onclick="find()">Lọc</button>
             </div>
             <!-- ================ LÀM QUẢN LÝ ĐƠN HÀNG Ở ĐÂY ================= -->
             <div class="order">
                 <!-- ================ LÀM BANNER ================= -->
 
                 <div class="order-table">
-                    <table>
+                    <table style="width: 100%; border-collapse: collapse; table-layout: fixed; text-align: center;">
                         <thead>
-                            <tr>
-                                <td>STT</td>
-                                <td>Mã đơn hàng</td>
-                                <td>Người đặt</td>
-                                <td>SĐT</td>
-                                <td>Thời gian</td>
-                                <td>Trạng thái</td>
-                                <td>Chức năng</td>
+                            <tr style="background-color: #c5cc69; color: white;">
+                                <td style="padding: 10px; border: 1px solid #ddd;">STT</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">Mã đơn hàng</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">Người đặt</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">SĐT</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">Thời gian</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">Trạng thái</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">Chức năng</td>
                             </tr>
                         </thead>
                         <tbody>
-                            <!-- Hàng 1 -->
                             <tr>
-                                <td>1</td>
-                                <td><a href="./chitietdonhang.html"> ĐH 5728319</a></td>
-                                <td><a href="./thongtinnnguoidung.html">Trump</a></td>
-                                <td>0987654321</td>
-                                <td>14/10/2023</td>
-                                <td>
-                                    <button id="xoanguoidung" class="status-toggle">Chưa xử lý</button>
+                                <td style="padding: 10px; border: 1px solid #ddd;">1</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">
+                                    <a href="./chitietdonhang.html" style="color: blue; text-decoration: none;">ĐH 5728319</a>
                                 </td>
-                                <td>
-                                    <button id= "chuyen" onclick="toggleStatus(this)" class="transfer-button">Chuyển</button>
-                                    <button id="chitiet"><a href="./chitietdonhang.html">Chi tiết</a></button>
-                                    <button onclick="cancelOrder()" id="huydonhang">Hủy</button>
+                                <td style="padding: 10px; border: 1px solid #ddd;">
+                                    <a href="./thongtinnnguoidung.html" style="color: blue; text-decoration: none;">Trump</a>
+                                </td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">0987654321</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">14/10/2023</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">
+                                    <select id="status" name="status" style="
+                                        width: 100px;
+                                        padding: 5px;
+                                        font-size: 0.8rem;
+                                        border: 1px solid #ccc;
+                                        border-radius: 4px;
+                                        background-color: #f9f9f9;
+                                        color: #555;
+                                        appearance: none;
+                                        cursor: pointer;
+                                        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                                        transition: all 0.3s ease;
+                                    " onchange="updateSelectColor(this)">
+                                        <option value="" disabled selected>Trạng thái</option>
+                                        <option value="pending" data-color="#FFD700">Đang xử lý</option>
+                                        <option value="shipped" data-color="#00BFFF">Đã giao</option>
+                                        <option value="completed" data-color="#32CD32">Hoàn tất</option>
+                                        <option value="cancelled" data-color="#FF4500">Đã hủy</option>
+                                    </select>
+                                    <script>
+                                        function updateSelectColor(selectElement) {
+                                            const selectedOption = selectElement.options[selectElement.selectedIndex];
+                                            const color = selectedOption.getAttribute('data-color') || '#f9f9f9';
+                                            selectElement.style.backgroundColor = color;
+                                            selectElement.style.color = '#fff';
+                                        }
+                                    </script>
+                                </td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">
+                                    
+                                    <button style="
+                                        padding: 5px 10px;
+                                        font-size: 0.8rem;
+                                        border: none;
+                                        border-radius: 4px;
+                                        background-color: #32CD32;
+                                        color: white;
+                                        cursor: pointer;
+                                        margin: 2px;
+                                    ">
+                                        <a href="./chitietdonhang.html" style="color: white; text-decoration: none;">Chi tiết</a>
+                                    </button>
+                                    <button onclick="cancelOrder()" style="
+                                        padding: 5px 10px;
+                                        font-size: 0.8rem;
+                                        border: none;
+                                        border-radius: 4px;
+                                        background-color: #FF4500;
+                                        color: white;
+                                        cursor: pointer;
+                                        margin: 2px;
+                                    ">Hủy</button>
                                 </td>
                             </tr>
+                    
+                    
                 
                             <!-- Hàng 2 -->
                             <tr>
-                                <td>2</td>
-                                <td><a href="./chitietdonhang.html"> ĐH 5728320</a></td>
-                                <td><a href="./thongtinnnguoidung.html">John</a></td>
-                                <td>0987654322</td>
-                                <td>15/10/2023</td>
-                                <td>
-                                    <button id="xoanguoidung" class="status-toggle">Chưa xử lý</button>
+                                <td style="padding: 10px; border: 1px solid #ddd;">1</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">
+                                    <a href="./chitietdonhang.html" style="color: blue; text-decoration: none;">ĐH 5728319</a>
                                 </td>
-                                <td>
-                                    <button id= "chuyen" onclick="toggleStatus(this)" class="transfer-button">Chuyển</button>
-                                    <button id="chitiet"><a href="./chitietdonhang.html">Chi tiết</a></button>
-                                    <button onclick="cancelOrder()" id="huydonhang">Hủy</button>
+                                <td style="padding: 10px; border: 1px solid #ddd;">
+                                    <a href="./thongtinnnguoidung.html" style="color: blue; text-decoration: none;">Trump</a>
+                                </td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">0987654321</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">14/10/2023</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">
+                                    <select id="status" name="status" style="
+                                        width: 100px;
+                                        padding: 5px;
+                                        font-size: 0.8rem;
+                                        border: 1px solid #ccc;
+                                        border-radius: 4px;
+                                        background-color: #f9f9f9;
+                                        color: #555;
+                                        appearance: none;
+                                        cursor: pointer;
+                                        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                                        transition: all 0.3s ease;
+                                    " onchange="updateSelectColor(this)">
+                                        <option value="" disabled selected>Trạng thái</option>
+                                        <option value="pending" data-color="#FFD700">Đang xử lý</option>
+                                        <option value="shipped" data-color="#00BFFF">Đã giao</option>
+                                        <option value="completed" data-color="#32CD32">Hoàn tất</option>
+                                        <option value="cancelled" data-color="#FF4500">Đã hủy</option>
+                                    </select>
+                                    <script>
+                                        function updateSelectColor(selectElement) {
+                                            const selectedOption = selectElement.options[selectElement.selectedIndex];
+                                            const color = selectedOption.getAttribute('data-color') || '#f9f9f9';
+                                            selectElement.style.backgroundColor = color;
+                                            selectElement.style.color = '#fff';
+                                        }
+                                    </script>
+                                </td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">
+                                    
+                                    <button style="
+                                        padding: 5px 10px;
+                                        font-size: 0.8rem;
+                                        border: none;
+                                        border-radius: 4px;
+                                        background-color: #32CD32;
+                                        color: white;
+                                        cursor: pointer;
+                                        margin: 2px;
+                                    ">
+                                        <a href="./chitietdonhang.html" style="color: white; text-decoration: none;">Chi tiết</a>
+                                    </button>
+                                    <button onclick="cancelOrder()" style="
+                                        padding: 5px 10px;
+                                        font-size: 0.8rem;
+                                        border: none;
+                                        border-radius: 4px;
+                                        background-color: #FF4500;
+                                        color: white;
+                                        cursor: pointer;
+                                        margin: 2px;
+                                    ">Hủy</button>
                                 </td>
                             </tr>
                 
                             <!-- Hàng 3 -->
                             <tr>
-                                <td>3</td>
-                                <td><a href="./chitietdonhang.html"> ĐH 5728321</a></td>
-                                <td><a href="./thongtinnnguoidung.html">Doe</a></td>
-                                <td>0987654323</td>
-                                <td>16/10/2023</td>
-                                <td>
-                                    <button id="xoanguoidung" class="status-toggle">Chưa xử lý</button>
+                                <td style="padding: 10px; border: 1px solid #ddd;">1</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">
+                                    <a href="./chitietdonhang.html" style="color: blue; text-decoration: none;">ĐH 5728319</a>
                                 </td>
-                                <td>
-                                    <button id= "chuyen" onclick="toggleStatus(this)" class="transfer-button">Chuyển</button>
-                                    <button id="chitiet"><a href="./chitietdonhang.html">Chi tiết</a></button>
-                                    <button onclick="cancelOrder()" id="huydonhang">Hủy</button>
+                                <td style="padding: 10px; border: 1px solid #ddd;">
+                                    <a href="./thongtinnnguoidung.html" style="color: blue; text-decoration: none;">Trump</a>
+                                </td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">0987654321</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">14/10/2023</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">
+                                    <select id="status" name="status" style="
+                                        width: 100px;
+                                        padding: 5px;
+                                        font-size: 0.8rem;
+                                        border: 1px solid #ccc;
+                                        border-radius: 4px;
+                                        background-color: #f9f9f9;
+                                        color: #555;
+                                        appearance: none;
+                                        cursor: pointer;
+                                        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                                        transition: all 0.3s ease;
+                                    " onchange="updateSelectColor(this)">
+                                        <option value="" disabled selected>Trạng thái</option>
+                                        <option value="pending" data-color="#FFD700">Đang xử lý</option>
+                                        <option value="shipped" data-color="#00BFFF">Đã giao</option>
+                                        <option value="completed" data-color="#32CD32">Hoàn tất</option>
+                                        <option value="cancelled" data-color="#FF4500">Đã hủy</option>
+                                    </select>
+                                    <script>
+                                        function updateSelectColor(selectElement) {
+                                            const selectedOption = selectElement.options[selectElement.selectedIndex];
+                                            const color = selectedOption.getAttribute('data-color') || '#f9f9f9';
+                                            selectElement.style.backgroundColor = color;
+                                            selectElement.style.color = '#fff';
+                                        }
+                                    </script>
+                                </td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">
+                                    
+                                    <button style="
+                                        padding: 5px 10px;
+                                        font-size: 0.8rem;
+                                        border: none;
+                                        border-radius: 4px;
+                                        background-color: #32CD32;
+                                        color: white;
+                                        cursor: pointer;
+                                        margin: 2px;
+                                    ">
+                                        <a href="./chitietdonhang.html" style="color: white; text-decoration: none;">Chi tiết</a>
+                                    </button>
+                                    <button onclick="cancelOrder()" style="
+                                        padding: 5px 10px;
+                                        font-size: 0.8rem;
+                                        border: none;
+                                        border-radius: 4px;
+                                        background-color: #FF4500;
+                                        color: white;
+                                        cursor: pointer;
+                                        margin: 2px;
+                                    ">Hủy</button>
                                 </td>
                             </tr>
                             <tr>
-                                <td>1</td>
-                                <td><a href="./chitietdonhang.html"> ĐH 5728319</a></td>
-                                <td><a href="./thongtinnnguoidung.html">Trump</a></td>
-                                <td>0987654321</td>
-                                <td>14/10/2023</td>
-                                <td>
-                                    <button id="xoanguoidung" class="status-toggle">Chưa xử lý</button>
+                                <td style="padding: 10px; border: 1px solid #ddd;">1</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">
+                                    <a href="./chitietdonhang.html" style="color: blue; text-decoration: none;">ĐH 5728319</a>
                                 </td>
-                                <td>
-                                    <button id= "chuyen" onclick="toggleStatus(this)" class="transfer-button">Chuyển</button>
-                                    <button id="chitiet"><a href="./chitietdonhang.html">Chi tiết</a></button>
-                                    <button onclick="cancelOrder()" id="huydonhang">Hủy</button>
+                                <td style="padding: 10px; border: 1px solid #ddd;">
+                                    <a href="./thongtinnnguoidung.html" style="color: blue; text-decoration: none;">Trump</a>
+                                </td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">0987654321</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">14/10/2023</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">
+                                    <select id="status" name="status" style="
+                                        width: 100px;
+                                        padding: 5px;
+                                        font-size: 0.8rem;
+                                        border: 1px solid #ccc;
+                                        border-radius: 4px;
+                                        background-color: #f9f9f9;
+                                        color: #555;
+                                        appearance: none;
+                                        cursor: pointer;
+                                        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                                        transition: all 0.3s ease;
+                                    " onchange="updateSelectColor(this)">
+                                        <option value="" disabled selected>Trạng thái</option>
+                                        <option value="pending" data-color="#FFD700">Đang xử lý</option>
+                                        <option value="shipped" data-color="#00BFFF">Đã giao</option>
+                                        <option value="completed" data-color="#32CD32">Hoàn tất</option>
+                                        <option value="cancelled" data-color="#FF4500">Đã hủy</option>
+                                    </select>
+                                    <script>
+                                        function updateSelectColor(selectElement) {
+                                            const selectedOption = selectElement.options[selectElement.selectedIndex];
+                                            const color = selectedOption.getAttribute('data-color') || '#f9f9f9';
+                                            selectElement.style.backgroundColor = color;
+                                            selectElement.style.color = '#fff';
+                                        }
+                                    </script>
+                                </td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">
+                                    
+                                    <button style="
+                                        padding: 5px 10px;
+                                        font-size: 0.8rem;
+                                        border: none;
+                                        border-radius: 4px;
+                                        background-color: #32CD32;
+                                        color: white;
+                                        cursor: pointer;
+                                        margin: 2px;
+                                    ">
+                                        <a href="./chitietdonhang.html" style="color: white; text-decoration: none;">Chi tiết</a>
+                                    </button>
+                                    <button onclick="cancelOrder()" style="
+                                        padding: 5px 10px;
+                                        font-size: 0.8rem;
+                                        border: none;
+                                        border-radius: 4px;
+                                        background-color: #FF4500;
+                                        color: white;
+                                        cursor: pointer;
+                                        margin: 2px;
+                                    ">Hủy</button>
                                 </td>
                             </tr>
                 
                             <!-- Hàng 2 -->
                             <tr>
-                                <td>2</td>
-                                <td><a href="./chitietdonhang.html"> ĐH 5728320</a></td>
-                                <td><a href="./thongtinnnguoidung.html">John</a></td>
-                                <td>0987654322</td>
-                                <td>15/10/2023</td>
-                                <td>
-                                    <button id="xoanguoidung" class="status-toggle">Chưa xử lý</button>
+                                <td style="padding: 10px; border: 1px solid #ddd;">1</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">
+                                    <a href="./chitietdonhang.html" style="color: blue; text-decoration: none;">ĐH 5728319</a>
                                 </td>
-                                <td>
-                                    <button id= "chuyen" onclick="toggleStatus(this)" class="transfer-button">Chuyển</button>
-                                    <button id="chitiet"><a href="./chitietdonhang.html">Chi tiết</a></button>
-                                    <button onclick="cancelOrder()" id="huydonhang">Hủy</button>
+                                <td style="padding: 10px; border: 1px solid #ddd;">
+                                    <a href="./thongtinnnguoidung.html" style="color: blue; text-decoration: none;">Trump</a>
+                                </td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">0987654321</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">14/10/2023</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">
+                                    <select id="status" name="status" style="
+                                        width: 100px;
+                                        padding: 5px;
+                                        font-size: 0.8rem;
+                                        border: 1px solid #ccc;
+                                        border-radius: 4px;
+                                        background-color: #f9f9f9;
+                                        color: #555;
+                                        appearance: none;
+                                        cursor: pointer;
+                                        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                                        transition: all 0.3s ease;
+                                    " onchange="updateSelectColor(this)">
+                                        <option value="" disabled selected>Trạng thái</option>
+                                        <option value="pending" data-color="#FFD700">Đang xử lý</option>
+                                        <option value="shipped" data-color="#00BFFF">Đã giao</option>
+                                        <option value="completed" data-color="#32CD32">Hoàn tất</option>
+                                        <option value="cancelled" data-color="#FF4500">Đã hủy</option>
+                                    </select>
+                                    <script>
+                                        function updateSelectColor(selectElement) {
+                                            const selectedOption = selectElement.options[selectElement.selectedIndex];
+                                            const color = selectedOption.getAttribute('data-color') || '#f9f9f9';
+                                            selectElement.style.backgroundColor = color;
+                                            selectElement.style.color = '#fff';
+                                        }
+                                    </script>
+                                </td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">
+                                    
+                                    <button style="
+                                        padding: 5px 10px;
+                                        font-size: 0.8rem;
+                                        border: none;
+                                        border-radius: 4px;
+                                        background-color: #32CD32;
+                                        color: white;
+                                        cursor: pointer;
+                                        margin: 2px;
+                                    ">
+                                        <a href="./chitietdonhang.html" style="color: white; text-decoration: none;">Chi tiết</a>
+                                    </button>
+                                    <button onclick="cancelOrder()" style="
+                                        padding: 5px 10px;
+                                        font-size: 0.8rem;
+                                        border: none;
+                                        border-radius: 4px;
+                                        background-color: #FF4500;
+                                        color: white;
+                                        cursor: pointer;
+                                        margin: 2px;
+                                    ">Hủy</button>
                                 </td>
                             </tr>
                 
                             <!-- Hàng 3 -->
                             <tr>
-                                <td>3</td>
-                                <td><a href="./chitietdonhang.html"> ĐH 5728321</a></td>
-                                <td><a href="./thongtinnnguoidung.html">Doe</a></td>
-                                <td>0987654323</td>
-                                <td>16/10/2023</td>
-                                <td>
-                                    <button id="xoanguoidung" class="status-toggle">Chưa xử lý</button>
+                                <td style="padding: 10px; border: 1px solid #ddd;">1</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">
+                                    <a href="./chitietdonhang.html" style="color: blue; text-decoration: none;">ĐH 5728319</a>
                                 </td>
-                                <td>
-                                    <button id= "chuyen" onclick="toggleStatus(this)" class="transfer-button">Chuyển</button>
-                                    <button id="chitiet"><a href="./chitietdonhang.html">Chi tiết</a></button>
-                                    <button onclick="cancelOrder()" id="huydonhang">Hủy</button>
+                                <td style="padding: 10px; border: 1px solid #ddd;">
+                                    <a href="./thongtinnnguoidung.html" style="color: blue; text-decoration: none;">Trump</a>
+                                </td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">0987654321</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">14/10/2023</td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">
+                                    <select id="status" name="status" style="
+                                        width: 100px;
+                                        padding: 5px;
+                                        font-size: 0.8rem;
+                                        border: 1px solid #ccc;
+                                        border-radius: 4px;
+                                        background-color: #f9f9f9;
+                                        color: #555;
+                                        appearance: none;
+                                        cursor: pointer;
+                                        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                                        transition: all 0.3s ease;
+                                    " onchange="updateSelectColor(this)">
+                                        <option value="" disabled selected>Trạng thái</option>
+                                        <option value="pending" data-color="#FFD700">Đang xử lý</option>
+                                        <option value="shipped" data-color="#00BFFF">Đã giao</option>
+                                        <option value="completed" data-color="#32CD32">Hoàn tất</option>
+                                        <option value="cancelled" data-color="#FF4500">Đã hủy</option>
+                                    </select>
+                                    <script>
+                                        function updateSelectColor(selectElement) {
+                                            const selectedOption = selectElement.options[selectElement.selectedIndex];
+                                            const color = selectedOption.getAttribute('data-color') || '#f9f9f9';
+                                            selectElement.style.backgroundColor = color;
+                                            selectElement.style.color = '#fff';
+                                        }
+                                    </script>
+                                </td>
+                                <td style="padding: 10px; border: 1px solid #ddd;">
+                                    
+                                    <button style="
+                                        padding: 5px 10px;
+                                        font-size: 0.8rem;
+                                        border: none;
+                                        border-radius: 4px;
+                                        background-color: #32CD32;
+                                        color: white;
+                                        cursor: pointer;
+                                        margin: 2px;
+                                    ">
+                                        <a href="./chitietdonhang.html" style="color: white; text-decoration: none;">Chi tiết</a>
+                                    </button>
+                                    <button onclick="cancelOrder()" style="
+                                        padding: 5px 10px;
+                                        font-size: 0.8rem;
+                                        border: none;
+                                        border-radius: 4px;
+                                        background-color: #FF4500;
+                                        color: white;
+                                        cursor: pointer;
+                                        margin: 2px;
+                                    ">Hủy</button>
+                                    
                                 </td>
                             </tr>
                         </tbody>
@@ -249,11 +589,7 @@
             </div>
         </div>
     </div>
-    <script>
-        function find() {
-          alert('Không tìm thấy');
-        }
-      </script>
+    
       <script src="suasanpham.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

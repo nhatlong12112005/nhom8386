@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ quản trị</title>
+    <link rel="shortcut icon" href="../images/logo13.png" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="../images/logo13.png" />
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="./css/indexadmin.css">
+    <link rel="stylesheet" href="./css/quanlysanpham.css">
+</head>
+
+<body>
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="../index.html">
+                        <span class="logo">
+                            <img src="../images/logo13xoanen.png">
+                        </span>
+                        <span class="title">Vựa rau sạch</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./index.html" >
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Bảng điều khiển</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./quanlydonhang.html">
+                        <span class="icon">
+                            <ion-icon name="cart-outline"></ion-icon>
+                        </span>
+                        <span class="title">Quản lý đơn hàng</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./quanlysanpham.html">
+                        <span class="icon">
+                            <ion-icon name="book-outline"></ion-icon>
+                        </span>
+                        <span class="title">Quản lý sản phẩm</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./quanlykhachhang.html">
+                        <span class="icon">
+                            <ion-icon name="people-outline"></ion-icon>
+                        </span>
+                        <span class="title">Quản lý khách hàng</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ========================= Main ==================== -->
+        <div class="main">
+            <div class="topbar">
+                <div class="hello">
+                    <p>Tìm kiếm</p>
+                </div>
+                <div class="search" >
+                    <label>
+                        <input type="text" placeholder="Tìm kiếm ">
+                       <a href="./find.html" ><ion-icon name="search-outline"></ion-icon></a>
+                    </label>
+                </div>
+            </div>
+            <!-- ======================= Cards ================== -->
+            
+            <div class="alert alert-success">Kết quả : Tìm thấy <strong>20</strong> sản phẩm phù hợp với yêu cầu tìm kiếm</div>
+            <div class="user-table">
+                <table style="border-collapse: collapse; width: 100%; text-align: center;">
+                    <thead>
+                        <tr style="background-color: #d1e7dd; color: #333;">
+                            <td style="padding: 10px; border: 1px solid #ddd;">STT</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Mã SP</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Ảnh</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Tên SP</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Loại</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Giá</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Tồn kho</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Ngày cập nhật</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Thao tác</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid #ddd;">1</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;"><a href="./chitietsanpham.html">KSN49</a></td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">
+                                <img src="../images/rau/BongcaiXanh.jpg" style="width: 50px; height: 50px; object-fit: cover;">
+                            </td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Bông cải xanh</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Rau tươi</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">200.000đ</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">1000</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">29/7/2023 11:11</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">
+                                <div style="display: flex; justify-content: center; align-items: center; gap: 5px;">
+                                    <button style="
+                                        padding: 5px 10px;
+                                        font-size: 0.8rem;
+                                        border: none;
+                                        border-radius: 4px;
+                                        background-color: #32CD32;
+                                        color: white;
+                                        cursor: pointer;
+                                    ">
+                                        <a href="./chitietsanpham.html" style="color: white; text-decoration: none;">Chi tiết</a>
+                                    </button>
+                                    <a href="./suasanpham.html">
+                                        <button style="
+                                            padding: 5px 10px;
+                                            font-size: 0.8rem;
+                                            border: none;
+                                            border-radius: 4px;
+                                            background-color: #FFD700;
+                                            color: black;
+                                            cursor: pointer;
+                                        ">Sửa</button>
+                                    </a>
+                                    <button onclick="myFunction()" style="
+                                        padding: 5px 10px;
+                                        font-size: 0.8rem;
+                                        border: none;
+                                        border-radius: 4px;
+                                        background-color: #FF4500;
+                                        color: white;
+                                        cursor: pointer;
+                                    ">Xóa</button>
+                                    <script>
+                                        function myFunction() {
+                                            const confirmation = confirm("Bạn có chắc chắn xóa sản phẩm này không?");
+                                            if (confirmation) {
+                                                alert("Đã xóa sản phẩm thành công!");
+                                            }
+                                        }
+                                    </script>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid #ddd;">1</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;"><a href="./chitietsanpham.html">KSN49</a></td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">
+                                <img src="../images/rau/BongcaiXanh.jpg" style="width: 50px; height: 50px; object-fit: cover;">
+                            </td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Bông cải xanh</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Rau tươi</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">200.000đ</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">1000</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">29/7/2023 11:11</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">
+                                <div style="display: flex; justify-content: center; align-items: center; gap: 5px;">
+                                    <button style="
+                                        padding: 5px 10px;
+                                        font-size: 0.8rem;
+                                        border: none;
+                                        border-radius: 4px;
+                                        background-color: #32CD32;
+                                        color: white;
+                                        cursor: pointer;
+                                    ">
+                                        <a href="./chitietsanpham.html" style="color: white; text-decoration: none;">Chi tiết</a>
+                                    </button>
+                                    <a href="./suasanpham.html">
+                                        <button style="
+                                            padding: 5px 10px;
+                                            font-size: 0.8rem;
+                                            border: none;
+                                            border-radius: 4px;
+                                            background-color: #FFD700;
+                                            color: black;
+                                            cursor: pointer;
+                                        ">Sửa</button>
+                                    </a>
+                                    <button onclick="myFunction()" style="
+                                        padding: 5px 10px;
+                                        font-size: 0.8rem;
+                                        border: none;
+                                        border-radius: 4px;
+                                        background-color: #FF4500;
+                                        color: white;
+                                        cursor: pointer;
+                                    ">Xóa</button>
+                                    <script>
+                                        function myFunction() {
+                                            const confirmation = confirm("Bạn có chắc chắn xóa sản phẩm này không?");
+                                            if (confirmation) {
+                                                alert("Đã xóa sản phẩm thành công!");
+                                            }
+                                        }
+                                    </script>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid #ddd;">1</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;"><a href="./chitietsanpham.html">KSN49</a></td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">
+                                <img src="../images/rau/BongcaiXanh.jpg" style="width: 50px; height: 50px; object-fit: cover;">
+                            </td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Bông cải xanh</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Rau tươi</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">200.000đ</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">1000</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">29/7/2023 11:11</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">
+                                <div style="display: flex; justify-content: center; align-items: center; gap: 5px;">
+                                    <button style="
+                                        padding: 5px 10px;
+                                        font-size: 0.8rem;
+                                        border: none;
+                                        border-radius: 4px;
+                                        background-color: #32CD32;
+                                        color: white;
+                                        cursor: pointer;
+                                    ">
+                                        <a href="./chitietsanpham.html" style="color: white; text-decoration: none;">Chi tiết</a>
+                                    </button>
+                                    <a href="./suasanpham.html">
+                                        <button style="
+                                            padding: 5px 10px;
+                                            font-size: 0.8rem;
+                                            border: none;
+                                            border-radius: 4px;
+                                            background-color: #FFD700;
+                                            color: black;
+                                            cursor: pointer;
+                                        ">Sửa</button>
+                                    </a>
+                                    <button onclick="myFunction()" style="
+                                        padding: 5px 10px;
+                                        font-size: 0.8rem;
+                                        border: none;
+                                        border-radius: 4px;
+                                        background-color: #FF4500;
+                                        color: white;
+                                        cursor: pointer;
+                                    ">Xóa</button>
+                                    <script>
+                                        function myFunction() {
+                                            const confirmation = confirm("Bạn có chắc chắn xóa sản phẩm này không?");
+                                            if (confirmation) {
+                                                alert("Đã xóa sản phẩm thành công!");
+                                            }
+                                        }
+                                    </script>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid #ddd;">1</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;"><a href="./chitietsanpham.html">KSN49</a></td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">
+                                <img src="../images/rau/BongcaiXanh.jpg" style="width: 50px; height: 50px; object-fit: cover;">
+                            </td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Bông cải xanh</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Rau tươi</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">200.000đ</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">1000</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">29/7/2023 11:11</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">
+                                <div style="display: flex; justify-content: center; align-items: center; gap: 5px;">
+                                    <button style="
+                                        padding: 5px 10px;
+                                        font-size: 0.8rem;
+                                        border: none;
+                                        border-radius: 4px;
+                                        background-color: #32CD32;
+                                        color: white;
+                                        cursor: pointer;
+                                    ">
+                                        <a href="./chitietsanpham.html" style="color: white; text-decoration: none;">Chi tiết</a>
+                                    </button>
+                                    <a href="./suasanpham.html">
+                                        <button style="
+                                            padding: 5px 10px;
+                                            font-size: 0.8rem;
+                                            border: none;
+                                            border-radius: 4px;
+                                            background-color: #FFD700;
+                                            color: black;
+                                            cursor: pointer;
+                                        ">Sửa</button>
+                                    </a>
+                                    <button onclick="myFunction()" style="
+                                        padding: 5px 10px;
+                                        font-size: 0.8rem;
+                                        border: none;
+                                        border-radius: 4px;
+                                        background-color: #FF4500;
+                                        color: white;
+                                        cursor: pointer;
+                                    ">Xóa</button>
+                                    <script>
+                                        function myFunction() {
+                                            const confirmation = confirm("Bạn có chắc chắn xóa sản phẩm này không?");
+                                            if (confirmation) {
+                                                alert("Đã xóa sản phẩm thành công!");
+                                            }
+                                        }
+                                    </script>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid #ddd;">1</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;"><a href="./chitietsanpham.html">KSN49</a></td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">
+                                <img src="../images/rau/BongcaiXanh.jpg" style="width: 50px; height: 50px; object-fit: cover;">
+                            </td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Bông cải xanh</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Rau tươi</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">200.000đ</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">1000</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">29/7/2023 11:11</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">
+                                <div style="display: flex; justify-content: center; align-items: center; gap: 5px;">
+                                    <button style="
+                                        padding: 5px 10px;
+                                        font-size: 0.8rem;
+                                        border: none;
+                                        border-radius: 4px;
+                                        background-color: #32CD32;
+                                        color: white;
+                                        cursor: pointer;
+                                    ">
+                                        <a href="./chitietsanpham.html" style="color: white; text-decoration: none;">Chi tiết</a>
+                                    </button>
+                                    <a href="./suasanpham.html">
+                                        <button style="
+                                            padding: 5px 10px;
+                                            font-size: 0.8rem;
+                                            border: none;
+                                            border-radius: 4px;
+                                            background-color: #FFD700;
+                                            color: black;
+                                            cursor: pointer;
+                                        ">Sửa</button>
+                                    </a>
+                                    <button onclick="myFunction()" style="
+                                        padding: 5px 10px;
+                                        font-size: 0.8rem;
+                                        border: none;
+                                        border-radius: 4px;
+                                        background-color: #FF4500;
+                                        color: white;
+                                        cursor: pointer;
+                                    ">Xóa</button>
+                                    <script>
+                                        function myFunction() {
+                                            const confirmation = confirm("Bạn có chắc chắn xóa sản phẩm này không?");
+                                            if (confirmation) {
+                                                alert("Đã xóa sản phẩm thành công!");
+                                            }
+                                        }
+                                    </script>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid #ddd;">1</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;"><a href="./chitietsanpham.html">KSN49</a></td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">
+                                <img src="../images/rau/BongcaiXanh.jpg" style="width: 50px; height: 50px; object-fit: cover;">
+                            </td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Bông cải xanh</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Rau tươi</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">200.000đ</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">1000</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">29/7/2023 11:11</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">
+                                <div style="display: flex; justify-content: center; align-items: center; gap: 5px;">
+                                    <button style="
+                                        padding: 5px 10px;
+                                        font-size: 0.8rem;
+                                        border: none;
+                                        border-radius: 4px;
+                                        background-color: #32CD32;
+                                        color: white;
+                                        cursor: pointer;
+                                    ">
+                                        <a href="./chitietsanpham.html" style="color: white; text-decoration: none;">Chi tiết</a>
+                                    </button>
+                                    <a href="./suasanpham.html">
+                                        <button style="
+                                            padding: 5px 10px;
+                                            font-size: 0.8rem;
+                                            border: none;
+                                            border-radius: 4px;
+                                            background-color: #FFD700;
+                                            color: black;
+                                            cursor: pointer;
+                                        ">Sửa</button>
+                                    </a>
+                                    <button onclick="myFunction()" style="
+                                        padding: 5px 10px;
+                                        font-size: 0.8rem;
+                                        border: none;
+                                        border-radius: 4px;
+                                        background-color: #FF4500;
+                                        color: white;
+                                        cursor: pointer;
+                                    ">Xóa</button>
+                                    <script>
+                                        function myFunction() {
+                                            const confirmation = confirm("Bạn có chắc chắn xóa sản phẩm này không?");
+                                            if (confirmation) {
+                                                alert("Đã xóa sản phẩm thành công!");
+                                            }
+                                        }
+                                    </script>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid #ddd;">1</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;"><a href="./chitietsanpham.html">KSN49</a></td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">
+                                <img src="../images/rau/BongcaiXanh.jpg" style="width: 50px; height: 50px; object-fit: cover;">
+                            </td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Bông cải xanh</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Rau tươi</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">200.000đ</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">1000</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">29/7/2023 11:11</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">
+                                <div style="display: flex; justify-content: center; align-items: center; gap: 5px;">
+                                    <button style="
+                                        padding: 5px 10px;
+                                        font-size: 0.8rem;
+                                        border: none;
+                                        border-radius: 4px;
+                                        background-color: #32CD32;
+                                        color: white;
+                                        cursor: pointer;
+                                    ">
+                                        <a href="./chitietsanpham.html" style="color: white; text-decoration: none;">Chi tiết</a>
+                                    </button>
+                                    <a href="./suasanpham.html">
+                                        <button style="
+                                            padding: 5px 10px;
+                                            font-size: 0.8rem;
+                                            border: none;
+                                            border-radius: 4px;
+                                            background-color: #FFD700;
+                                            color: black;
+                                            cursor: pointer;
+                                        ">Sửa</button>
+                                    </a>
+                                    <button onclick="myFunction()" style="
+                                        padding: 5px 10px;
+                                        font-size: 0.8rem;
+                                        border: none;
+                                        border-radius: 4px;
+                                        background-color: #FF4500;
+                                        color: white;
+                                        cursor: pointer;
+                                    ">Xóa</button>
+                                    <script>
+                                        function myFunction() {
+                                            const confirmation = confirm("Bạn có chắc chắn xóa sản phẩm này không?");
+                                            if (confirmation) {
+                                                alert("Đã xóa sản phẩm thành công!");
+                                            }
+                                        }
+                                    </script>
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- Các hàng khác -->
+                    </tbody>
+                </table>
+                
+
+            
+
+                         
+            </div>
+            <div class="pagination">
+                <li class="hientai">1</li>
+                <li><a href="quanlysanpham1.html" style="color: black;">2</a></li></a>
+                <li><a href="quanlysanpham1.html" style="color: black;">NEXT</a></li>
+            </div>
+        </div>
+    </div>
+            
+            
+            <script>
+                function update() {
+                    alert('Sản phẩm đã được cập nhật!');
+                }
+            </script>
+            
+            
+            <script>
+                function add() {
+                    alert('Đã thêm sản phẩm!');
+                }
+            </script>
+            
+            
+             
+              <script>
+                function find() {
+                  alert('Không tìm thấy');
+                }
+              </script>
+              <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+              <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        </body>
+</html>
