@@ -138,13 +138,16 @@
             <ul>
               <!-- Icon tìm kiếm -->
               <li class="search">
-                <a href="./gallery.html" class="search-toggle">
+                <a href="#" class="search-toggle">
                   <i class="fa fa-search"></i>
                 </a>
                 <!-- Thanh tìm kiếm ẩn -->
-                <div class="search-bar">
-                  <input type="text" class="form-control" placeholder="Tìm kiếm..." />
-                </div>
+                <form action="./search.html" class="search-bar ">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Tìm kiếm..." />
+                    <button type="submit" class="btn-search"><i class="fa fa-search"></i></button>
+                  </div>
+                </form>
               </li>
               <!-- Icon giỏ hàng -->
               <li class="side-menu">
@@ -475,12 +478,26 @@
             </div>
           </div>
         </div>
+        <div>
+          <ul style="display: flex; justify-content: center; padding: 0; margin: 20px 0; list-style: none;">
+            <!-- Mục phân trang hiện tại với inline style -->
+            <li style="margin: 0 10px; font-weight: bold; background-color: #b0b435; color: white; padding: 8px 16px; border-radius: 5px;">1</li>
+            <!-- Liên kết phân trang -->
+            <li style="margin: 0 10px;">
+              <a href="#" style="text-decoration: none; color: black; font-size: 16px; padding: 8px 16px; border: 2px solid transparent; border-radius: 5px; transition: background-color 0.3s, color 0.3s;">2</a>
+            </li>
+            <!-- Liên kết "NEXT" -->
+            <li style="margin: 0 10px;">
+              <a href="#" style="text-decoration: none; color: #b0b435; font-weight: bold; padding: 8px 16px; border: 2px solid transparent; border-radius: 5px; transition: background-color 0.3s, color 0.3s;">NEXT</a>
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="col-xl-3 col-lg-3 col-sm-12 col-xs-12 sidebar-shop-left">
         <div class="product-categori">
           <div class="search-container">
             <h2><b>TÌM KIẾM NÂNG CAO</b></h2>
-            <form action="#">
+            <form action="./search.html">
                 <label for="product-name"><b>Tên sản phẩm</b></label>
                 <input type="text" id="product-name" name="product-name" placeholder="Aa">
                 
@@ -498,7 +515,7 @@
                     <input type="number" id="price-max" name="price-max" value="" placeholder="Giá lớn nhất">
                 </div>
                 
-                <button type="submit" onclick="search('')">TÌM KIẾM</button>
+                <button type="submit">TÌM KIẾM</button>
             </form>
         </div>
       </div>
@@ -585,7 +602,7 @@
                   <li><a href="./about.html">Về chúng tôi</a></li>
                   <li>
                     <a
-                      href="https://www.google.com/maps/place/HUTECH+-+%C4%90%E1%BA%A1i+h%E1%BB%8Dc+C%C3%B4ng+ngh%E1%BB%87+TP.HCM+(Sai+Gon+Campus)/@10.8016175,106.6382382,13z/data=!4m10!1m2!2m1!1zxJHhuqFpIGjhu41jIGh1dGVjaA!3m6!1s0x317528a459cb43ab:0x6c3d29d370b52a7e!8m2!3d10.8016175!4d106.7144559!15sChPEkeG6oWkgaOG7jWMgaHV0ZWNokgEScHJpdmF0ZV91bml2ZXJzaXR54AEA!16s%2Fg%2F124xvbfmg?entry=ttu&g_ep=EgoyMDI0MTExMS4wIKXMDSoASAFQAw%3D%3D"
+                      href="https://www.google.com/maps/place/Tr%C6%B0%E1%BB%9Dng+%C4%90%E1%BA%A1i+h%E1%BB%8Dc+S%C3%A0i+G%C3%B2n/@10.7599224,106.679678,17z/data=!3m1!4b1!4m6!3m5!1s0x31752f1b7c3ed289:0xa06651894598e488!8m2!3d10.7599171!4d106.6822583!16s%2Fm%2F02qvnkv?entry=ttu&g_ep=EgoyMDI0MTIwMi4wIKXMDSoASAFQAw%3D%3D"
                       >Địa chỉ</a
                     >
                   </li>
@@ -633,11 +650,7 @@
       >&uarr;</a
     >
 
-    <script>
-      function search(timkiem){
-       alert('Đã tìm ' + timkiem +'thấy 10 sản phẩm')
-     }
-   </script>
+   
 
   <!-- ALL JS FILES -->
   <script src="js/jquery-3.2.1.min.js"></script>

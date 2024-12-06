@@ -2727,14 +2727,7 @@ button:hover {
   background-color: #b0b435;
 }
 /* CSS cơ bản */
-.attr-nav ul {
-  display: flex;
-  align-items: center;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
+/* Chỉnh giao diện cho phần tử tìm kiếm */
 .attr-nav ul li {
   position: relative; /* Đặt để định vị các phần tử con */
   margin-right: 15px;
@@ -2767,6 +2760,7 @@ button:hover {
   border: 1px solid #ccc;
   border-radius: 5px;
   outline: none;
+  margin-bottom: 0;
 }
 
 .search-bar input:focus {
@@ -2774,10 +2768,24 @@ button:hover {
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
+.search-bar button {
+  width: 15%; /* Điều chỉnh chiều rộng của button */
+  padding: 8px;
+  font-size: 16px;
+  display: inline-block;
+  margin-left: 5px;
+  width: 50px;
+}
 /* Hiển thị thanh tìm kiếm khi có focus */
 .search:hover .search-bar,
 .search:focus-within .search-bar {
   display: block;
 }
-
-
+input.form-control:focus {
+  border-color: #b0b435;
+  box-shadow: none;
+}
+.alert {
+  border-radius: 10px;
+  margin-bottom: 50px;
+}

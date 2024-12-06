@@ -34,6 +34,43 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <style>
+      .dropdown {
+        position: relative;
+      }
+
+      .dropdown-menu {
+        display: none; /* Ẩn danh sách theo mặc định */
+        position: absolute;
+        top: 100%; /* Hiển thị dưới nút chính */
+        left: 0;
+        background-color: #b0b435;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        padding: 10px 0;
+        margin: 0;
+        list-style: none;
+        z-index: 1000;
+        border: 1px solid #b0b435;
+      }
+
+      .dropdown-menu li {
+        padding: 5px 20px;
+      }
+
+      .dropdown-menu li a {
+        color: #333;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown-menu li a:hover {
+        background-color: #b0b435;
+      }
+
+      .dropdown:hover .dropdown-menu {
+        display: block; /* Hiển thị danh sách khi người dùng bấm hoặc di chuột */
+      }
+    </style>
   </head>
 
   <body>
@@ -47,11 +84,22 @@
             </div>
             <div class="our-link">
               <ul>
-                <li>
-                  <a href="../signupsignin.html"
-                    ><i class="fa fa-user s_color"></i> Tài Khoản
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle">
+                    <i class="fa fa-user s_color"></i> Donal Trum
                   </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="./thongtinnguoidung.html">Thông tin cá nhân</a>
+                    </li>
+                    <li>
+                      <a href="./history.html">Lịch sử mua hàng</a>
+                    </li>
+                    <li><a href="./doimatkhau.html">Đổi mật khẩu</a></li>
+                    <li><a href="../index.html">Đăng xuất</a></li>
+                  </ul>
                 </li>
+
                 <li>
                   <a
                     href="https://www.google.com/maps/place/Tr%C6%B0%E1%BB%9Dng+%C4%90%E1%BA%A1i+h%E1%BB%8Dc+S%C3%A0i+G%C3%B2n/@10.7599224,106.679678,17z/data=!3m1!4b1!4m6!3m5!1s0x31752f1b7c3ed289:0xa06651894598e488!8m2!3d10.7599171!4d106.6822583!16s%2Fm%2F02qvnkv?entry=ttu&g_ep=EgoyMDI0MTEyNC4xIKXMDSoASAFQAw%3D%3D"
@@ -136,17 +184,22 @@
             <ul>
               <!-- Icon tìm kiếm -->
               <li class="search">
-                <a href="../gallery.html" class="search-toggle">
+                <a href="#" class="search-toggle">
                   <i class="fa fa-search"></i>
                 </a>
                 <!-- Thanh tìm kiếm ẩn -->
-                <div class="search-bar">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Tìm kiếm..."
-                  />
-                </div>
+                <form action="./searchlogin.html" class="search-bar">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Tìm kiếm..."
+                    />
+                    <button type="submit" class="btn-search">
+                      <i class="fa fa-search"></i>
+                    </button>
+                  </div>
+                </form>
               </li>
               <!-- Icon giỏ hàng -->
               <li class="side-menu">
@@ -214,7 +267,7 @@
         class="order"
         style="border: 1px solid #ddd; padding: 15px; margin-bottom: 15px"
       >
-        <h3 style="color: #b0b435">Đã đặt</h3>
+        <h3 style="color: #b0b435">Đã giao</h3>
         <p style="margin: 0">Thời gian: 2:53 2024/11/04</p>
         <p style="margin: 0">Mã đơn: ahihidongoc</p>
         <p style="margin: 0">Tên người nhận: Donal Trump</p>
@@ -246,7 +299,7 @@
         class="order"
         style="border: 1px solid #ddd; padding: 15px; margin-bottom: 15px"
       >
-        <h3 style="color: #b0b435">Đã được chuẩn bị</h3>
+        <h3 style="color: #b0b435">Đang giao</h3>
         <p style="margin: 0">Thời gian: 22:53 2024/11/12</p>
         <p style="margin: 0">Mã đơn: khongphaicha</p>
         <p style="margin: 0">Tên người nhận: Donal Trump</p>

@@ -16,17 +16,17 @@
     <meta name="author" content="" />
 
     <!-- Site Icons -->
-    <link rel="shortcut icon" href="images/logo13.png" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="images/logo13.png" />
+    <link rel="shortcut icon" href="../images/logo13.png" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="../images/logo13.png" />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
     <!-- Site CSS -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
     <!-- Responsive CSS -->
-    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="../css/custom.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -34,10 +34,43 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <style>
+      .dropdown {
+        position: relative;
+      }
+
+      .dropdown-menu {
+        display: none; /* Ẩn danh sách theo mặc định */
+        position: absolute;
+        top: 100%; /* Hiển thị dưới nút chính */
+        left: 0;
+        background-color: #b0b435;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        padding: 10px 0;
+        margin: 0;
+        list-style: none;
+        z-index: 1000;
+        border: 1px solid #b0b435;
+      }
+
+      .dropdown-menu li {
+        padding: 5px 20px;
+      }
+
+      .dropdown-menu li a {
+        color: #333;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown-menu li a:hover {
+        background-color: #b0b435;
+      }
+
+      .dropdown:hover .dropdown-menu {
+        display: block; /* Hiển thị danh sách khi người dùng bấm hoặc di chuột */
+      }
+    </style>
   </head>
 
   <body>
@@ -51,19 +84,26 @@
             </div>
             <div class="our-link">
               <ul>
-                <li>
-                  <a href="./signupsignin.html"><i class="fa fa-user s_color"></i> Tài Khoản </a>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle">
+                    <i class="fa fa-user s_color"></i> Donal Trum
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a href="./thongtinnguoidung.html">Thông tin cá nhân</a></li>
+                    <li><a href="./history.html">Lịch sử mua hàng</a></li>
+                    <li><a href="./doimatkhau.html">Đổi mật khẩu</a></li>
+                    <li><a href="../index.html">Đăng xuất</a></li>
+                  </ul>
                 </li>
                 <li>
                   <a
-                    href="https://www.google.com/maps/place/Tr%C6%B0%E1%BB%9Dng+%C4%90%E1%BA%A1i+h%E1%BB%8Dc+S%C3%A0i+G%C3%B2n/@10.7599224,106.679678,17z/data=!3m1!4b1!4m6!3m5!1s0x31752f1b7c3ed289:0xa06651894598e488!8m2!3d10.7599171!4d106.6822583!16s%2Fm%2F02qvnkv?entry=ttu&g_ep=EgoyMDI0MTEyNC4xIKXMDSoASAFQAw%3D%3D"
-                    target="_blank"
+                  href="https://www.google.com/maps/place/Tr%C6%B0%E1%BB%9Dng+%C4%90%E1%BA%A1i+h%E1%BB%8Dc+S%C3%A0i+G%C3%B2n/@10.7599224,106.679678,17z/data=!3m1!4b1!4m6!3m5!1s0x31752f1b7c3ed289:0xa06651894598e488!8m2!3d10.7599171!4d106.6822583!16s%2Fm%2F02qvnkv?entry=ttu&g_ep=EgoyMDI0MTEyNC4xIKXMDSoASAFQAw%3D%3D"                    target="_blank"
                     ><i class="fas fa-location-arrow"></i> Địa chỉ</a
                   >
                 </li>
                 <li>
-                  <a href="./contact-us.html"
-                    ><i class="fas fa-headset"></i>Hỗ trợ</a
+                  <a href="./contact_uslogin.html"
+                    ><i class="fas fa-headset"></i> Hỗ trợ</a
                   >
                 </li>
               </ul>
@@ -72,6 +112,7 @@
         </div>
       </div>
     </div>
+
     <!-- End Main Top -->
 
     <!-- Start Main Top -->
@@ -108,26 +149,26 @@
               data-out="fadeOutUp"
             >
               <li class="nav-item ">
-                <a class="nav-link" href="index.html">Trang Chủ</a>
+                <a class="nav-link" href="./indexlogin.html">Trang Chủ</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="about.html">Về chúng tôi</a>
+                <a class="nav-link" href="./aboutlogin.html">Về chúng tôi</a>
               </li>
-      
-              <li class="nav-item">
-                <a class="nav-link" href="gallery.html">Rau tươi</a>
+
+              <li class="nav-item ">
+                <a class="nav-link" href="./rautuoilogin.html">Rau tươi</a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="cu_tuoi.html">Củ tươi</a>
-              </li>
-
-              <li class="nav-item active">
-                <a class="nav-link" href="nam_tuoi.html">Nấm tươi</a>
+                <a class="nav-link" href="./cutuoilogin.html">Củ tươi</a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="contact-us.html">Hỗ trợ</a>
+                <a class="nav-link" href="./namtuoilogin.html">Nấm tươi</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="contact_uslogin.html">Hỗ trợ</a>
               </li>
             </ul>
           </div>
@@ -142,7 +183,7 @@
                   <i class="fa fa-search"></i>
                 </a>
                 <!-- Thanh tìm kiếm ẩn -->
-                <form action="./search.html" class="search-bar ">
+                <form action="./searchlogin.html" class="search-bar ">
                   <div class="form-group">
                     <input type="text" class="form-control" placeholder="Tìm kiếm..." />
                     <button type="submit" class="btn-search"><i class="fa fa-search"></i></button>
@@ -151,7 +192,7 @@
               </li>
               <!-- Icon giỏ hàng -->
               <li class="side-menu">
-                <a href="./signupsignin.html">
+                <a href="./cart.html">
                   <i class="fa fa-shopping-bag"></i>
                   <span class="badge">3</span>
                   <p>Giỏ Hàng</p>
@@ -161,35 +202,35 @@
           </div>
           <!-- End Atribute Navigation -->
         </div>
-   
       </nav>
       <!-- End Navigation -->
     </header>
     <!-- End Main Top -->
 
+    
 
-
-    <!-- Start All Title Box -->
-    <div class="all-title-box">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <h2>Nấm tươi</h2>
-            <ul class="breadcrumb">
-              <li class="breadcrumb-item">
-                <a href="./index.html">Trang chủ</a>
-              </li>
-              <li class="breadcrumb-item active">Nấm tươi</li>
-            </ul>
-          </div>
+   <!-- Start All Title Box -->
+   <div class="all-title-box">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h2>Tim kiếm</h2>
+          <ul class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="./indexlogin.html">Trang chủ</a>
+            </li>
+            <li class="breadcrumb-item active">Tìm kiếm</li>
+          </ul>
         </div>
       </div>
     </div>
-    <!-- End All Title Box -->
+  </div>
+  <!-- End All Title Box -->
 
  <!-- Start Shop Page  -->
  <div class="shop-box-inner">
   <div class="container">
+    <div class="alert alert-success">Kết quả : Tìm thấy <strong>20</strong> sản phẩm phù hợp với yêu cầu tìm kiếm</div>
     <div class="row">
       <div class="col-xl-9 col-lg-9 col-sm-12 col-xs-12 shop-content-right">
         <div class="right-product-box">
@@ -207,15 +248,15 @@
                     <div class="products-single fix">
                       <div class="box-img-hover">
                         <img
-                        src="./images/nam/nammeo.jpg"
+                        src="../images/rau/bi-ngoi-huu-co.jpg"
                         class="img-fluid"
-                        alt="Nấm mèo"
+                        alt="Bí ngòi hữu cơ"
                       />
                       <div class="mask-icon">
                         <ul>
                           <li>
                             <a
-                              href="./signupsignin.html"
+                              href="../products/bi-ngo-huu-co.html"
                               data-toggle="tooltip"
                               data-placement="right"
                               title="View"
@@ -224,11 +265,11 @@
                           </li>
             
                         </ul>
-                        <a class="cart" href="./signupsignin.html">Thêm vào giỏ hàng</a>
+                        <a class="cart" href="#" onclick="addToCart('')">Thêm vào giỏ hàng</a>
                       </div>
                     </div>
                     <div class="why-text">
-                      <h4>Nấm mèo</h4>
+                      <h4>Bí ngòi hữu cơ</h4>
                       <h5>40.000 VNĐ</h5>
                       </div>
                     </div>
@@ -237,15 +278,15 @@
                     <div class="products-single fix">
                       <div class="box-img-hover">
                         <img
-                        src="./images/nam/b-namduiga.jpg"
+                        src="../images/rau/xa-lach-bup-my.jpg"
                         class="img-fluid"
-                        alt="Nấm đùi gà"
+                        alt="Xà lách"
                       />
                       <div class="mask-icon">
                         <ul>
                           <li>
                             <a
-                              href="./signupsignin.html"
+                              href="../products/rau-xa-lach-bup-my.html"
                               data-toggle="tooltip"
                               data-placement="right"
                               title="View"
@@ -254,11 +295,11 @@
                           </li>
             
                         </ul>
-                        <a class="cart" href="./signupsignin.html">Thêm vào giỏ hàng</a>
+                        <a class="cart" href="#" onclick="addToCart('')">Thêm vào giỏ hàng</a>
                       </div>
                     </div>
                     <div class="why-text">
-                      <h4>Nấm đùi gà</h4>
+                      <h4>Xà lách</h4>
                       <h5>40.000 VNĐ</h5>
                       </div>
                     </div>
@@ -267,15 +308,15 @@
                     <div class="products-single fix">
                       <div class="box-img-hover">
                         <img
-                        src="./images/nam/c-namhoangkim.jpg"
+                        src="../images/rau/cai-dun-huu-co.jpg"
                         class="img-fluid"
-                        alt="Nấm hoàng kim"
+                        alt="Cải dún"
                       />
                       <div class="mask-icon">
                         <ul>
                           <li>
                             <a
-                              href="./signupsignin.html"
+                              href="../products/rau-xa-lach-bup-my.html"
                               data-toggle="tooltip"
                               data-placement="right"
                               title="View"
@@ -284,11 +325,11 @@
                           </li>
             
                         </ul>
-                        <a class="cart" href="./signupsignin.html">Thêm vào giỏ hàng</a>
+                        <a class="cart" href="#" onclick="addToCart('')">Thêm vào giỏ hàng</a>
                       </div>
                     </div>
                     <div class="why-text">
-                      <h4>Nấm hoàng kim</h4>
+                      <h4>Cải dún</h4>
                       <h5>40.000 VNĐ</h5>
                       </div>
                     </div>
@@ -297,15 +338,15 @@
                     <div class="products-single fix">
                       <div class="box-img-hover">
                         <img
-                        src="./images/nam/namrom.jpg"
+                        src="../images/rau/cai-thia-huu-co_32d27534b5824cedaed997aaf9adb451_1024x1024.jpg"
                         class="img-fluid"
-                        alt="Nấm rom"
+                        alt="Cải thìa"
                       />
                       <div class="mask-icon">
                         <ul>
                           <li>
                             <a
-                              href="./signupsignin.html"
+                              href="../products/bi-ngo-huu-co.html"
                               data-toggle="tooltip"
                               data-placement="right"
                               title="View"
@@ -314,11 +355,11 @@
                           </li>
             
                         </ul>
-                        <a class="cart" href="./signupsignin.html">Thêm vào giỏ hàng</a>
+                        <a class="cart" href="#" onclick="addToCart('')">Thêm vào giỏ hàng</a>
                       </div>
                     </div>
                     <div class="why-text">
-                      <h4>Nấm rom</h4>
+                      <h4>Cải thìa</h4>
                       <h5>40.000 VNĐ</h5>
                       </div>
                     </div>
@@ -327,15 +368,15 @@
                     <div class="products-single fix">
                       <div class="box-img-hover">
                         <img
-                        src="./images/nam/namkimchamr.jpg"
+                        src="../images/rau/cai-kale-huu-co.jpg"
                         class="img-fluid"
-                        alt="Nấm kim châm"
+                        alt="Cải kale"
                       />
                       <div class="mask-icon">
                         <ul>
                           <li>
                             <a
-                              href="./signupsignin.html"
+                              href="../products/bi-ngo-huu-co.html"
                               data-toggle="tooltip"
                               data-placement="right"
                               title="View"
@@ -344,11 +385,11 @@
                           </li>
             
                         </ul>
-                        <a class="cart" href="./signupsignin.html">Thêm vào giỏ hàng</a>
+                        <a class="cart" href="#" onclick="addToCart('')">Thêm vào giỏ hàng</a>
                       </div>
                     </div>
                     <div class="why-text">
-                      <h4>Nấm kim châm</h4>
+                      <h4>Cải kale</h4>
                       <h5>40.000 VNĐ</h5>
                       </div>
                     </div>
@@ -357,15 +398,15 @@
                     <div class="products-single fix">
                       <div class="box-img-hover">
                         <img
-                        src="./images/nam/nambaonguxam.jpg"
+                        src="../images/rau/dot_rau_lang_organic.jpg"
                         class="img-fluid"
-                        alt="Nấm bào ngư xám"
+                        alt="Rau lang"
                       />
                       <div class="mask-icon">
                         <ul>
                           <li>
                             <a
-                              href="./signupsignin.html"
+                              href="../products/rau-xa-lach-bup-my.html"
                               data-toggle="tooltip"
                               data-placement="right"
                               title="View"
@@ -374,11 +415,11 @@
                           </li>
             
                         </ul>
-                        <a class="cart" href="./signupsignin.html">Thêm vào giỏ hàng</a>
+                        <a class="cart" href="#" onclick="addToCart('')">Thêm vào giỏ hàng</a>
                       </div>
                     </div>
                     <div class="why-text">
-                      <h4>Nấm bào ngư xám</h4>
+                      <h4>Rau lang</h4>
                       <h5>40.000 VNĐ</h5>
                       </div>
                     </div>
@@ -387,15 +428,15 @@
                     <div class="products-single fix">
                       <div class="box-img-hover">
                         <img
-                        src="./images/nam/namlinhchitrang.jpg"
+                        src="../images/rau/cai_be_trang.jpg"
                         class="img-fluid"
-                        alt="Nấm linh chi trắng"
+                        alt="Cải bẹ trắng"
                       />
                       <div class="mask-icon">
                         <ul>
                           <li>
                             <a
-                              href="./signupsignin.html"
+                              href="../products/rau-xa-lach-bup-my.html"
                               data-toggle="tooltip"
                               data-placement="right"
                               title="View"
@@ -404,11 +445,11 @@
                           </li>
             
                         </ul>
-                        <a class="cart" href="./signupsignin.html">Thêm vào giỏ hàng</a>
+                        <a class="cart" href="#" onclick="addToCart('')">Thêm vào giỏ hàng</a>
                       </div>
                     </div>
                     <div class="why-text">
-                      <h4>Nấm linh chi trắng</h4>
+                      <h4>Cải bẹ trắng</h4>
                       <h5>40.000 VNĐ</h5>
                       </div>
                     </div>
@@ -417,15 +458,15 @@
                     <div class="products-single fix">
                       <div class="box-img-hover">
                         <img
-                        src="./images/nam/nam-hong-ngoc.jpg"
+                        src="../images/rau/cai_ro_huu_co.jpg"
                         class="img-fluid"
-                        alt="Nấm hồng ngọc"
+                        alt="Cải rổ"
                       />
                       <div class="mask-icon">
                         <ul>
                           <li>
                             <a
-                              href="./signupsignin.html"
+                              href="../products/rau-xa-lach-bup-my.html"
                               data-toggle="tooltip"
                               data-placement="right"
                               title="View"
@@ -434,11 +475,11 @@
                           </li>
             
                         </ul>
-                        <a class="cart" href="./signupsignin.html">Thêm vào giỏ hàng</a>
+                        <a class="cart" href="#" onclick="addToCart('')">Thêm vào giỏ hàng</a>
                       </div>
                     </div>
                     <div class="why-text">
-                      <h4>Nấm hồng ngọc</h4>
+                      <h4>Cải rổ</h4>
                       <h5>40.000 VNĐ</h5>
                       </div>
                     </div>
@@ -447,15 +488,15 @@
                     <div class="products-single fix">
                       <div class="box-img-hover">
                         <img
-                        src="./images/nam/nammoiden.jpg"
+                        src="../images/rau/cai-mam-huu-co.jpg"
                         class="img-fluid"
-                        alt="Nấm mối đen"
+                        alt="Cải mầm"
                       />
                       <div class="mask-icon">
                         <ul>
                           <li>
                             <a
-                              href="./signupsignin.html"
+                              href="../products/rau-xa-lach-bup-my.html"
                               data-toggle="tooltip"
                               data-placement="right"
                               title="View"
@@ -464,40 +505,40 @@
                           </li>
             
                         </ul>
-                        <a class="cart" href="./signupsignin.html">Thêm vào giỏ hàng</a>
+                        <a class="cart" href="#" onclick="addToCart('')">Thêm vào giỏ hàng</a>
                       </div>
                     </div>
                     <div class="why-text">
-                      <h4>Nấm mối đen</h4>
+                      <h4>Cải mầm</h4>
                       <h5>40.000 VNĐ</h5>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+              <div>
+                <ul style="display: flex; justify-content: center; padding: 0; margin: 20px 0; list-style: none;">
+                  <!-- Mục phân trang hiện tại với inline style -->
+                  <li style="margin: 0 10px; font-weight: bold; background-color: #b0b435; color: white; padding: 8px 16px; border-radius: 5px;">1</li>
+                  <!-- Liên kết phân trang -->
+                  <li style="margin: 0 10px;">
+                    <a href="#" style="text-decoration: none; color: black; font-size: 16px; padding: 8px 16px; border: 2px solid transparent; border-radius: 5px; transition: background-color 0.3s, color 0.3s;">2</a>
+                  </li>
+                  <!-- Liên kết "NEXT" -->
+                  <li style="margin: 0 10px;">
+                    <a href="#" style="text-decoration: none; color: #b0b435; font-weight: bold; padding: 8px 16px; border: 2px solid transparent; border-radius: 5px; transition: background-color 0.3s, color 0.3s;">NEXT</a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-        <div>
-          <ul style="display: flex; justify-content: center; padding: 0; margin: 20px 0; list-style: none;">
-            <!-- Mục phân trang hiện tại với inline style -->
-            <li style="margin: 0 10px; font-weight: bold; background-color: #b0b435; color: white; padding: 8px 16px; border-radius: 5px;">1</li>
-            <!-- Liên kết phân trang -->
-            <li style="margin: 0 10px;">
-              <a href="#" style="text-decoration: none; color: black; font-size: 16px; padding: 8px 16px; border: 2px solid transparent; border-radius: 5px; transition: background-color 0.3s, color 0.3s;">2</a>
-            </li>
-            <!-- Liên kết "NEXT" -->
-            <li style="margin: 0 10px;">
-              <a href="#" style="text-decoration: none; color: #b0b435; font-weight: bold; padding: 8px 16px; border: 2px solid transparent; border-radius: 5px; transition: background-color 0.3s, color 0.3s;">NEXT</a>
-            </li>
-          </ul>
         </div>
       </div>
       <div class="col-xl-3 col-lg-3 col-sm-12 col-xs-12 sidebar-shop-left">
         <div class="product-categori">
           <div class="search-container">
             <h2><b>TÌM KIẾM NÂNG CAO</b></h2>
-            <form action="./search.html">
+            <form action="#">
                 <label for="product-name"><b>Tên sản phẩm</b></label>
                 <input type="text" id="product-name" name="product-name" placeholder="Aa">
                 
@@ -515,7 +556,7 @@
                     <input type="number" id="price-max" name="price-max" value="" placeholder="Giá lớn nhất">
                 </div>
                 
-                <button type="submit" >TÌM KIẾM</button>
+                <button type="submit">TÌM KIẾM</button>
             </form>
         </div>
       </div>
@@ -599,11 +640,10 @@
               <div class="footer-link">
                 <h4>Thông tin</h4>
                 <ul>
-                  <li><a href="./about.html">Về chúng tôi</a></li>
+                  <li><a href="./aboutlogin.html">Về chúng tôi</a></li>
                   <li>
                     <a
-                      href="https://www.google.com/maps/place/Tr%C6%B0%E1%BB%9Dng+%C4%90%E1%BA%A1i+h%E1%BB%8Dc+S%C3%A0i+G%C3%B2n/@10.7599224,106.679678,17z/data=!3m1!4b1!4m6!3m5!1s0x31752f1b7c3ed289:0xa06651894598e488!8m2!3d10.7599171!4d106.6822583!16s%2Fm%2F02qvnkv?entry=ttu&g_ep=EgoyMDI0MTEyNC4xIKXMDSoASAFQAw%3D%3D"
-                      >Địa chỉ</a
+                    href="https://www.google.com/maps/place/Tr%C6%B0%E1%BB%9Dng+%C4%90%E1%BA%A1i+h%E1%BB%8Dc+S%C3%A0i+G%C3%B2n/@10.7599224,106.679678,17z/data=!3m1!4b1!4m6!3m5!1s0x31752f1b7c3ed289:0xa06651894598e488!8m2!3d10.7599171!4d106.6822583!16s%2Fm%2F02qvnkv?entry=ttu&g_ep=EgoyMDI0MTEyNC4xIKXMDSoASAFQAw%3D%3D"                      >Địa chỉ</a
                     >
                   </li>
                   <li><a href="./checkout.html">Thông tin giỏ hàng</a></li>
@@ -612,7 +652,7 @@
             </div>
             <div class="col-lg-4 col-md-12 col-sm-12">
               <div class="footer-link-contact">
-                <h4>liên hệ chúng tôi</h4>
+                <h4>Liên hệ chúng tôi</h4>
                 <ul>
                   <li>
                     <p>
@@ -644,12 +684,19 @@
     </footer>
     <!-- End Footer  -->
 
+ 
 
     <a href="#" id="back-to-top" title="Back to top" style="display: none"
       >&uarr;</a
     >
 
-  
+
+    <script>
+      function addToCart(productName) {
+        alert('Sản phẩm ' + productName + ' đã được thêm vào giỏ hàng!');
+      }
+    
+    </script>
   <!-- ALL JS FILES -->
   <script src="js/jquery-3.2.1.min.js"></script>
   <!-- ALL PLUGINS -->
