@@ -116,36 +116,6 @@ a {
   cursor: pointer;
 }
 
-.search {
-  position: relative;
-  width: 450px;
-  margin: 0 10px;
-}
-
-.search label {
-  position: relative;
-  width: 100%;
-  cursor: pointer;
-}
-
-.search label input {
-  width: 100%;
-  height: 40px;
-  border-radius: 40px;
-  padding: 5px 20px;
-  padding-left: 25px;
-  font-size: 18px;
-  outline: none;
-  border: 1px solid var(--black2);
-}
-
-.search label ion-icon {
-  position: absolute;
-  top: 0;
-  left: 410px;
-  font-size: 1.2rem;
-}
-
 .hello {
   position: relative;
   overflow: hidden;
@@ -359,67 +329,105 @@ a {
 }
 
 /* CSS cho bảng */
-#reportResult table {
+/* Định dạng chung */
+#reportResult {
   width: 95%;
-  margin-left: 20px;
-  border-collapse: collapse;
-  border: 1px solid #ddd;
+  margin: auto;
 }
 
-#reportResult th,
-#reportResult td {
-  border: 1px solid #ddd;
+.input-box {
   padding: 8px;
-  text-align: left;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  flex: 1 1 auto;
+  min-width: 150px;
+  margin: 0 10px;
+}
+
+.date-filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.date-input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Nút Thống kê */
+.thongke {
+  padding: 10px 15px;
+  background-color: #b0b435;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
   text-align: center;
 }
 
-#reportResult thead:not(:nth-child(2)) {
+.thongke a {
+  color: white;
+  text-decoration: none;
+}
+
+.thongke:hover {
+  background-color: #b0b435;
+}
+
+/* Bảng */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+thead {
   background-color: #b0b435;
   color: white;
 }
 
+.status.premium {
+  color: red;
+  font-weight: bold;
+}
+
+.status.basic {
+  color: #b0b435;
+  font-weight: bold;
+}
+
+/* Phân trang */
 .pagination {
-  text-align: center;
-  list-style: none;
-  font-weight: lighter;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
 }
 
 .pagination li {
-  padding: 10px;
   display: inline-block;
-  margin: 5px 3px;
+  padding: 10px;
+  background-color: #ddd;
+  border-radius: 5px;
   cursor: pointer;
 }
 
-.pagination .hientai {
-  border-bottom: 3px solid rgb(0, 0, 0);
+.pagination li.hientai {
+  background-color: #b0b435;
+  color: white;
 }
 
-.pagination li:not(.hientai):hover {
-  background-color: rgb(143, 142, 142);
-  border-radius: 10px;
-}
-
-#basic {
-  color: green;
-}
-
-#premium {
-  color: red;
-}
-
-.filter {
-  width: 90%;
-  align-items: center;
-  margin: 20px;
-  font-size: 16px;
-}
-
-.filter input[type="radio"] {
-  width: 15px;
-  height: 15px;
-  cursor: pointer;
+.pagination li:hover:not(.hientai) {
+  background-color: #bbb;
 }
 
 .filter span {
@@ -447,14 +455,15 @@ a {
 }
 .thongke {
   padding: 10px;
-  background-color: #000000;
-  border: 2px solid black;
+  background-color: #b0b435;
+  border: 2px solid #b0b435;
   border-radius: 3px;
+  margin-left: 10px;
 }
 .thongke a {
   color: #fff;
 }
 .thongke:hover {
-  background-color: #c92127;
-  border: 2px solid #c92127;
+  background-color: #b0b435;
+  border: 2px solid #b0b435;
 }

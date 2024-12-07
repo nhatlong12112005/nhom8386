@@ -1,229 +1,208 @@
-.banner{
-    margin: 20px;
-      display: flex;
-      background-color: black;
-      justify-content: space-between;
-      padding: 10px;
-  }
-  #month, #find, #chon{
-    padding: 10px;
-    border: 1px solid #ccc;
-    background-color: #fff;
-    font-size: 16px;
-    border-radius: 10px;
-  }
-  #customDate {
-    position: fixed;
-    border: 1px solid #ccc;
-    background-color: #fff;
-    padding: 10px;
-    margin-left: 375px;
-    margin-top: 40px;
-    border-radius: 5px;
-    display: none;
-    z-index: 1;
+.banner {
+  margin: 20px;
+  display: flex;
+  background-color: black;
+  justify-content: space-between;
+  padding: 10px;
+}
+#month,
+#find,
+#chon {
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  font-size: 16px;
+  border-radius: 10px;
+}
+#customDate {
+  position: fixed;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  padding: 10px;
+  margin-left: 375px;
+  margin-top: 40px;
+  border-radius: 5px;
+  display: none;
+  z-index: 1;
 }
 
 #customDate label {
-    display: block;
-    margin-bottom: 5px;
-    font-size: 13px;
+  display: block;
+  margin-bottom: 5px;
+  font-size: 13px;
 }
 
 #customDate input[type="date"],
 #customDate input[type="submit"] {
-    padding: 5px;
-    margin-bottom: 10px;
+  padding: 5px;
+  margin-bottom: 10px;
 }
 
-  option:focus {
-    outline: none;
-    border-color: #3498db;
-    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
-  }
-  option {
-    background-color: #fff;
-    color: #333;
-  }
-  
-  option:hover {
-    background-color: #f2f2f2;
-    color: #333;
-  }
-  
-  option:checked {
-    background-color: #3498db;
-    color: #fff;
-  }
-  .chartsBx{
-    margin-left: 20px;
-    display: flex;
-    justify-content: space-between;
-  }
-  .chartsBx .chart{
-    position: relative;
-    background: #fff;
-    margin: 10px;
-    padding: 20px;
-    width: 48%;
-    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
-    border-radius: 20px;
-    border: 1px solid var(--blue);
-  }
-  .order-table {
-    position: relative;
-    background: var(--white);
-    padding: 20px;
-    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
-    border-radius: 20px;
-  }
-  .order-table{
-    padding: 30px;
-  }
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-    text-align: left;
-  }
-  table thead td {
-    font-weight: 600;
-    background-color: #b0b435;;
-    color: #fff;
-  }
-  .order-table table tr {
-    color: var(--black1);
-    border-bottom: 1px solid rgba(146, 100, 100, 0.1);
-    font-weight: lighter;
-  }
-  .order-table table tbody tr:hover {
-    background-color: #9c9595;
-    color: var(--white);
-  }
-  .order-table table tr td {
-    padding: 10px;
-    text-align: center;
-  }
-  #chuyen{
-    padding: 4px;
+option:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+option {
+  background-color: #fff;
+  color: #333;
+}
+
+option:hover {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+option:checked {
+  background-color: #3498db;
+  color: #fff;
+}
+.chartsBx {
+  margin-left: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.chartsBx .chart {
+  position: relative;
+  background: #fff;
+  margin: 10px;
+  padding: 20px;
+  width: 48%;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  border: 1px solid var(--blue);
+}
+.order-table {
+  position: relative;
+  background: var(--white);
+  padding: 20px;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+}
+.order-table {
+  padding: 30px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  text-align: left;
+}
+table thead td {
+  font-weight: 600;
+  background-color: #b0b435;
+  color: #fff;
+}
+.order-table table tr {
+  color: var(--black1);
+  border-bottom: 1px solid rgba(146, 100, 100, 0.1);
+  font-weight: lighter;
+}
+.order-table table tbody tr:hover {
+  background-color: #9c9595;
+  color: var(--white);
+}
+.order-table table tr td {
+  padding: 10px;
+  text-align: center;
+}
+#chuyen {
+  padding: 4px;
   background-color: rgb(221, 200, 36);
   color: white;
   border-radius: 4px;
   border-color: rgb(221, 200, 36);
-  }
-  #huydonhang{
-    padding: 4px;
+}
+#huydonhang {
+  padding: 4px;
   background-color: rgb(16, 113, 224);
   color: white;
   border-radius: 4px;
   border-color: rgb(16, 113, 224);
-  }
-  #chitiet{
-    padding: 4px;
+}
+#chitiet {
+  padding: 4px;
   background-color: rgb(131, 206, 11);
   color: white;
   border-radius: 4px;
   border-color: rgb(131, 206, 11);
-  }
-  #xoanguoidung{
-    padding: 4px;
+}
+#xoanguoidung {
+  padding: 4px;
   background-color: red;
   color: white;
   border-radius: 4px;
   border-color: rgb(248, 246, 246);
-  }
-  #suanguoidung{
-    padding: 4px;
+}
+#suanguoidung {
+  padding: 4px;
   background-color: green;
   color: white;
   border-radius: 4px;
   border-color: green;
-  }
- 
-  .pagination {
-    padding: 10px;
-    text-align: center;
-    list-style: none;
-    font-weight: lighter;
-  }
-  
-  .pagination li {
-    padding: 20px;
-    display: inline-block;
-    margin: 20px 10px;
-    cursor: pointer;
-  }
-  
-  .pagination .hientai {
-    border-bottom: 3px solid rgb(0, 0, 0);
-  }
-  
-  .pagination li:not(.hientai):hover {
-    background-color: rgb(152, 50, 50);
-    border-radius: 10px;
-  }
+}
 
-  .search-bar {
-    display: flex;
-    align-items: center;
-    gap: 10px; /* Tạo khoảng cách giữa các phần tử */
-    background-color: #fff; /* Nền trắng */
-    padding: 10px 20px; /* Khoảng cách bên trong */
-    border-radius: 25px; /* Bo góc mềm mại */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng */
-    border: 1px solid #ddd; /* Đường viền nhạt */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Tạo khoảng cách giữa các phần tử */
+  background-color: #fff; /* Nền trắng */
+  padding: 10px 20px; /* Khoảng cách bên trong */
+  border-radius: 25px; /* Bo góc mềm mại */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng */
+  border: 1px solid #ddd; /* Đường viền nhạt */
 }
 
 .search-bar input[type="text"] {
-    flex: 1;
-    border: none;
-    outline: none;
-    padding: 10px 15px;
-    font-size: 16px;
-    border-radius: 20px;
-    background-color: #f9f9f9; /* Nền nhạt */
-    transition: all 0.3s ease; /* Hiệu ứng chuyển đổi */
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 20px;
+  background-color: #f9f9f9; /* Nền nhạt */
+  transition: all 0.3s ease; /* Hiệu ứng chuyển đổi */
 }
 
 .search-bar input[type="text"]:focus {
-    background-color: #fff; /* Nền sáng hơn khi focus */
-    box-shadow: 0 0 10px rgba(0, 123, 255, 0.2); /* Hiệu ứng ánh sáng */
-    border: 1px solid #b0b435; /* Đường viền đổi màu */
+  background-color: #fff; /* Nền sáng hơn khi focus */
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.2); /* Hiệu ứng ánh sáng */
+  border: 1px solid #b0b435; /* Đường viền đổi màu */
 }
 
 .search-bar button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 15px;
-    background-color: #b0b435; /* Màu tím dịu */
-    color: #fff; /* Màu chữ trắng */
-    border: none;
-    border-radius: 20px; /* Bo góc mềm mại */
-    font-size: 16px;
-    cursor: pointer;
-    transition: all 0.3s ease; /* Hiệu ứng mượt khi hover */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px;
+  background-color: #b0b435; /* Màu tím dịu */
+  color: #fff; /* Màu chữ trắng */
+  border: none;
+  border-radius: 20px; /* Bo góc mềm mại */
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Hiệu ứng mượt khi hover */
 }
 
 .search-bar button:hover {
-    background-color: #b0b435; /* Màu tối hơn khi hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bóng rõ hơn */
+  background-color: #b0b435; /* Màu tối hơn khi hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bóng rõ hơn */
 }
 
 .filter-select {
-    border: 1px solid #ddd;
-    border-radius: 20px;
-    padding: 10px;
-    background-color: #f9f9f9; /* Nền nhạt */
-    color: #333; /* Màu chữ đen */
-    transition: all 0.3s ease; /* Hiệu ứng chuyển đổi */
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: #f9f9f9; /* Nền nhạt */
+  color: #333; /* Màu chữ đen */
+  transition: all 0.3s ease; /* Hiệu ứng chuyển đổi */
 }
 
 .filter-select:hover {
-    background-color: #f1f1f1; /* Nền sáng hơn khi hover */
+  background-color: #f1f1f1; /* Nền sáng hơn khi hover */
 }
 
 .filter-select:focus {
-    background-color: #fff; /* Nền sáng hơn khi focus */
-    border: 1px solid #b0b435; /* Đổi màu đường viền khi focus */
+  background-color: #fff; /* Nền sáng hơn khi focus */
+  border: 1px solid #b0b435; /* Đổi màu đường viền khi focus */
 }

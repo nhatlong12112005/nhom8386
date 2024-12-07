@@ -11,6 +11,13 @@
     <!-- ======= Styles ====== -->
     <link rel="stylesheet" href="./css/indexadmin.css">
     <link rel="stylesheet" href="./css/quanlysanpham.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
 </head>
 
 <body>
@@ -68,21 +75,21 @@
         <div class="main">
             <div class="topbar">
                 <div class="hello">
-                    <p>Trang Quản Trị Khách Hàng</p>
+                    <p style="color: #b0b435;">Quản lý sản phẩm</p>
                 </div>
-                <div class="search">
-                    <label>
-                        <input type="text" placeholder="Tìm kiếm ">
-                        <a href="./find.html"><ion-icon name="search-outline"></ion-icon></a>
-                    </label>
+                <div class="admin" style="padding: 10px; margin-right: 10px;">
+                    <i class="fa-solid fa-user" style="border-radius: 100%; background: #b0b435;padding: 10px; color: aliceblue;"></i>
+                    <span style="margin-right: 10px; font-size: 15px;">Admin</span>
+                    <i class="fa-solid fa-right-from-bracket" style="border-radius: 100%; background: #b0b435;padding: 10px; color: aliceblue;"></i>
+                    <a href="./login" style="color: black; font-size: 15px;">Đăng xuất</a>
                 </div>
             </div>
             <!-- ================ LÀM QUẢN LÝ SẢN PHẨM Ở ĐÂY ================= -->
             <div class="user">
                 <div class="banner">
-                    <button id="adduser"><a href="./themsanpham.html">+ Thêm sản phẩm</a></button>
+                    <button id="adduser"><a href="./themsanpham.html" style="color: black;">+ Thêm sản phẩm</a></button>
                 </div>
-                <div class="search-bar">
+                <div class="search-bar" style="margin: 10px;">
                     
                     <div style="display: flex; flex-direction: row; align-items: center; gap: 0.5rem; flex: 2 1 250px;">
                         <label for="start" style="font-size: 1rem;">Từ:</label>

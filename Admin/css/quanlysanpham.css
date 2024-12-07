@@ -1,11 +1,9 @@
 .user {
   font-family: Arial, Helvetica, sans-serif;
-
 }
 
 .banner {
   display: flex;
-  background-color: #b0b435;;
   gap: 60px;
   padding: 10px;
   margin: 20px;
@@ -14,7 +12,7 @@
 .banner #adduser {
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #fffbfb;
+  background-color: #b0b435;
   color: rgb(0, 0, 0);
   border: none;
   border-radius: 5px;
@@ -32,7 +30,6 @@
   width: auto;
   /* Thay đổi giá trị này */
   height: 100px;
-
 }
 
 .boxsuauser {
@@ -51,8 +48,7 @@
   z-index: 1001;
   overflow: auto;
 }
-.boxsuauser button
-{
+.boxsuauser button {
   margin-left: 450px;
   border: 2px solid grey;
   font-size: larger;
@@ -60,7 +56,6 @@
   width: 30px; /* Độ rộng của nút tròn */
   height: 30px;
   cursor: pointer;
-
 }
 .boxsuauser h2 {
   text-align: center;
@@ -69,9 +64,7 @@
 
 .boxsuauser .form-group {
   margin-bottom: 15px;
-
 }
-
 
 .boxsuauser label {
   display: block;
@@ -89,23 +82,21 @@
   margin-top: 5px;
 }
 textarea {
-  width: 100%; 
-  height: 130px; 
-  resize: vertical; 
+  width: 100%;
+  height: 130px;
+  resize: vertical;
   padding: 5px;
   border-radius: 5px;
   border: 1px solid #ccc;
   margin-top: 5px;
 }
 
-.boxsuauser .form-group textarea
-{
+.boxsuauser .form-group textarea {
   margin-top: 5px;
- font-size: 14px;
- padding: 10px; /* Điều chỉnh padding để thêm khoảng trắng giữa văn bản và viền */
- border: 1px solid #ccc; /* Thêm viền cho textarea */
- border-radius: 5px; /* Tùy chọn: Thêm góc cong cho textarea */
-
+  font-size: 14px;
+  padding: 10px; /* Điều chỉnh padding để thêm khoảng trắng giữa văn bản và viền */
+  border: 1px solid #ccc; /* Thêm viền cho textarea */
+  border-radius: 5px; /* Tùy chọn: Thêm góc cong cho textarea */
 }
 
 .edit-button {
@@ -133,7 +124,7 @@ textarea {
   font-size: 14px;
   border-radius: 10px;
 }
-.finder{
+.finder {
   text-align: left;
 }
 .finder select {
@@ -157,18 +148,15 @@ textarea {
   color: #333;
 }
 
-
 #timnguoidung:focus {
   outline: none;
   border-color: #3498db;
   box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
 }
 
-
 #timnguoidung::placeholder {
   color: #aaa;
 }
-
 
 #timnguoidung[type="text"] {
   width: 200px;
@@ -195,9 +183,8 @@ textarea {
 
 .user table thead td {
   font-weight: 600;
-  background-color: #b0b435;;
+  background-color: #b0b435;
   color: #fff;
-
 }
 
 .user .user-table table tr {
@@ -214,29 +201,6 @@ textarea {
 .user .user-table table tr td {
   padding: 10px;
   text-align: center;
-}
-
-.pagination {
-  padding: 10px;
-  text-align: center;
-  list-style: none;
-  font-weight: lighter;
-}
-
-.pagination li {
-  padding: 20px;
-  display: inline-block;
-  margin: 20px 10px;
-  cursor: pointer;
-}
-
-.pagination .hientai {
-  border-bottom: 3px solid rgb(0, 0, 0);
-}
-
-.pagination li:not(.hientai):hover {
-  background-color: rgb(152, 50, 50);
-  border-radius: 10px;
 }
 
 .xoanguoidung {
@@ -282,69 +246,68 @@ textarea {
   border-radius: 20px;
   border: 1px solid var(--blue);
 }
-.change_img img{
-  width:auto;
+.change_img img {
+  width: auto;
 }
 
-.change_img{
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
+.change_img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.change_action{
-display: flex;
+.change_action {
+  display: flex;
 }
 
-.change_button{
-width: 100px;
-text-align: center;
-padding: 4px 3px;
-margin: 20px 10px 20px 0;
-border: none;
-border-radius: 3px;
-background-color: #333;
+.change_button {
+  width: 100px;
+  text-align: center;
+  padding: 4px 3px;
+  margin: 20px 10px 20px 0;
+  border: none;
+  border-radius: 3px;
+  background-color: #333;
   color: white;
-cursor: pointer;
+  cursor: pointer;
 }
 
-.change_button:hover{
-background-color: #DCDCDC;
+.change_button:hover {
+  background-color: #dcdcdc;
   color: #333;
 }
 
 .edit label {
-display: inline-block;
-width: 150px;
-text-align: right;
-font-size: 18px;
-  margin:10px 0;
+  display: inline-block;
+  width: 150px;
+  text-align: right;
+  font-size: 18px;
+  margin: 10px 0;
   font-weight: bold;
 }
-input[type="file"]{
-	display: none;
+input[type="file"] {
+  display: none;
 }
-.update{
+.update {
   margin: 30px;
   margin-left: auto;
 }
-.update a{
-
-	color: rgb(255, 255, 255);
-	border: 2px solid #333;
+.update a {
+  color: rgb(255, 255, 255);
+  border: 2px solid #333;
   background-color: #333;
-	width: 100px;
-	padding: 5px 10px;
-	border-radius: 4px;
-	text-decoration: none;
-	
-	cursor: pointer;
+  width: 100px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  text-decoration: none;
+
+  cursor: pointer;
 }
 
-.update a:hover{
-	border: 1px solid #C92127;
-	background-color: #C92127;
+.update a:hover {
+  border: 1px solid #c92127;
+  background-color: #c92127;
   color: #fff;
 }
 .overlay {
@@ -354,12 +317,12 @@ input[type="file"]{
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
-  z-index: 999; 
-  display: none; 
+  z-index: 999;
+  display: none;
 }
 
 .show-overlay {
-  display: block; 
+  display: block;
 }
 .no-scroll {
   overflow: hidden;
@@ -428,11 +391,10 @@ input[type="file"]{
   background-color: #fff; /* Nền sáng hơn khi focus */
   border: 1px solid #b0b435; /* Đổi màu đường viền khi focus */
 }
-#chitiet{
+#chitiet {
   padding: 4px;
-background-color: rgb(131, 206, 11);
-color: rgb(243, 238, 238);
-border-radius: 4px;
-border-color: rgb(150, 219, 38);
+  background-color: rgb(131, 206, 11);
+  color: rgb(243, 238, 238);
+  border-radius: 4px;
+  border-color: rgb(150, 219, 38);
 }
-

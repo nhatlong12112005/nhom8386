@@ -10,6 +10,28 @@
     <link rel="apple-touch-icon" href="../images/logo13.png" />
     <!-- ======= Styles ====== -->
     <link rel="stylesheet" href="./css/indexadmin.css">
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <style>
+  .alert {
+    position: relative;
+    padding: 0.75rem 1.25rem;
+    margin: 15px 0;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+}
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+  </style>
 </head>
 
 <body>
@@ -68,13 +90,13 @@
         <div class="main">
             <div class="topbar">
                 <div class="hello">
-                    <p>Trang Quản Trị Khách Hàng</p>
+                    <p style="color: #b0b435;">Thống kê</p>
                 </div>
-                <div class="search" >
-                    <label>
-                        <input type="text" placeholder="Tìm kiếm ">
-                       <a href="./find.html"><ion-icon name="search-outline"></ion-icon></a>
-                    </label>
+                <div class="admin" style="padding: 10px; margin-right: 10px;">
+                    <i class="fa-solid fa-user" style="border-radius: 100%; background: #b0b435;padding: 10px; color: aliceblue;"></i>
+                    <span style="margin-right: 10px; font-size: 15px;">Admin</span>
+                    <i class="fa-solid fa-right-from-bracket" style="border-radius: 100%; background: #b0b435;padding: 10px; color: aliceblue;"></i>
+                    <a href="./login" style="color: black; font-size: 15px;">Đăng xuất</a>
                 </div>
             </div>
             <!-- ======================= Cards ================== -->
@@ -82,7 +104,8 @@
             
              <div id="reportResult">
                 <div id="reportResult">
-                    <h2>Đã thống kê: </h2>
+                    <h2 style="text-align: center; color: #b0b435;">Bảng thống kê </h2>
+                    <div class="alert alert-success">Đã thống đơn hàng từ ngày 01/01/2024 đến 31/12/2024</div>
                 <table>
                     <thead>
                         <tr>
@@ -161,13 +184,169 @@
                     </tbody>
 
                 </table>
+
                 <div> <br></div>
-                <!-- <div class="pagination">
-                    <li class="hientai">1</li>
-                    <li><a href="#" style="color: black;">2</a></li></a> 
-                    <li><a href="#" style="color: black;" >NEXT</a></li>
-                </div> -->
+                <div class="pagination">
+                    <li class="hientai">Thêm</li>
+                </div>
+
             </div>
+            <div id="reportResult">
+                <div id="reportResult">
+                    <h2 style="text-align: center; color: #b0b435;">Top 5 người dùng</h2>
+                    <div class="alert alert-success">Top 5 người dùng mua nhiều nhất từ ngày 01/01/2024 đến 31/12/2024</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Mã Khách hàng</th>
+                            <th>Họ và Tên</th>
+                            <th>Email</th>
+                            <th>Gói</th>
+                            <th>Tổng tiền</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><a href="./thongtinnnguoidung.html"></a>111</td>
+                            <td><a href="./thongtinnnguoidung.html">Trump</a></td>
+                            <td>tranthaihien02@gmail.com</td>
+                            <td id="premium">Kim cương</td>
+                            <td>1.000.000 VNĐ</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><a href="./thongtinnnguoidung.html"></a>111</td>
+                            <td><a href="./thongtinnnguoidung.html">Trump</a></td>
+                            <td>tranthaihien02@gmail.com</td>
+                            <td id="premium">Kim cương</td>
+                            <td>1.000.000 VNĐ</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><a href="./thongtinnnguoidung.html"></a>111</td>
+                            <td><a href="./thongtinnnguoidung.html">Trump</a></td>
+                            <td>tranthaihien02@gmail.com</td>
+                            <td id="premium">Kim cương</td>
+                            <td>1.000.000 VNĐ</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><a href="./thongtinnnguoidung.html"></a>111</td>
+                            <td><a href="./thongtinnnguoidung.html">Trump</a></td>
+                            <td>tranthaihien02@gmail.com</td>
+                            <td id="premium">Kim cương</td>
+                            <td>1.000.000 VNĐ</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td><a href="./thongtinnnguoidung.html"></a>111</td>
+                            <td><a href="./thongtinnnguoidung.html">Trump</a></td>
+                            <td>tranthaihien02@gmail.com</td>
+                            <td id="premium">Kim cương</td>
+                            <td>1.000.000 VNĐ</td>
+                            
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+                <div> <br></div>
+            </div>
+            <div id="reportResult">
+                <div id="reportResult">
+                    <h2 style="text-align: center; color: #b0b435;">Top 5 sản phẩm bán chạy nhất</h2>
+                    <div class="alert alert-success">Top 5 sản phẩm bán chạy nhất từ ngày 01/01/2024 đến 31/12/2024</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Mã SP</th>
+                            <th>Ảnh</th>
+                            <th>Tên SP</th>
+                            <th>Số lượng đã bán</th>
+                            <th>Tồn kho</th>
+                            <th>Tổng doanh thu</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><a href="./chitietsanpham.html"></a>KSN49</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">
+                                <img src="../images/rau/BongcaiXanh.jpg" style="width: 50px; height: 50px; object-fit: cover;">
+                            </td>
+                            <td>Bông cải xanh</td>
+                            <td >150</td>
+                            <td>50</td>
+                            <td>3.000.000 VNĐ</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><a href="./chitietsanpham.html"></a>KSN49</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">
+                                <img src="../images/rau/BongcaiXanh.jpg" style="width: 50px; height: 50px; object-fit: cover;">
+                            </td>
+                            <td>Bông cải xanh</td>
+                            <td >150</td>
+                            <td>50</td>
+                            <td>3.000.000 VNĐ</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><a href="./chitietsanpham.html"></a>KSN49</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">
+                                <img src="../images/rau/BongcaiXanh.jpg" style="width: 50px; height: 50px; object-fit: cover;">
+                            </td>
+                            <td>Bông cải xanh</td>
+                            <td >150</td>
+                            <td>50</td>
+                            <td>3.000.000 VNĐ</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><a href="./chitietsanpham.html"></a>KSN49</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">
+                                <img src="../images/rau/BongcaiXanh.jpg" style="width: 50px; height: 50px; object-fit: cover;">
+                            </td>
+                            <td>Bông cải xanh</td>
+                            <td >150</td>
+                            <td>50</td>
+                            <td>3.000.000 VNĐ</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td><a href="./chitietsanpham.html"></a>KSN49</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">
+                                <img src="../images/rau/BongcaiXanh.jpg" style="width: 50px; height: 50px; object-fit: cover;">
+                            </td>
+                            <td>Bông cải xanh</td>
+                            <td >150</td>
+                            <td>50</td>
+                            <td>3.000.000 VNĐ</td>
+                            
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+                <div> <br></div>
+              
+            </div>
+            
             
             <script>
                 function update() {
