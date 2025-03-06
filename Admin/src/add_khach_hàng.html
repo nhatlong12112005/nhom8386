@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi tiết khách hàng</title>
+    <link href="./output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+</html>
+<body>
+  <header
+    class="bg-primary text-white p-4 flex justify-between items-center w-full"
+  >
+    <a href="san_pham.html">
+      <img
+        class="max-w-[150px] h-16 ml-10"
+        src="../../images/logo13xoanen.png"
+        alt="Vựa Rau Sạch"
+      />
+    </a>
+    <ul class="flex items-center space-x-6 mr-10">
+      <li class="flex items-center pl-4">
+        <i class="fa-solid fa-circle-user text-2xl font-black"></i>
+        <span class="font-medium text-lg ml-2">Trump</span>
+      </li>
+    </ul>
+  </header>
+  <div class="flex w-full">
+    <!-- Sidebar -->
+    <nav
+      class="w-1/5 bg-white p-6 shadow-md min-h-screen text-lg font-semibold"
+    >
+      <ul>
+        <li class="py-3 text-center hover:text-primary">
+          <a href="./san_pham.html">Quản lý sản phẩm</a>
+        </li>
+        <li class="py-3 text-center hover:text-primary">
+          <a href="./don_hang.html">Quản lý đơn hàng</a>
+        </li>
+        <li class="py-3 text-center hover:text-primary">
+          <a href="./khach_hang.html">Quản lý Khách hàng</a>
+        </li>
+        <li class="py-3 text-center hover:text-primary">
+          <a href="./thong_ke_san_pham.html">Thống kê Sản phẩm</a>
+        </li>
+        <li class="py-3 text-center hover:text-primary">
+          <a href="./thong_ke_khach_hang.html">Thống kê Khách hàng</a>
+        </li>
+      </ul>
+    </nav>
+    <main class="w-4/5 p-6">
+      <h1 class="text-primary mb-4 font-semibold text-center text-[24px]">
+        Thêm khách hàng
+      </h1>
+      <section class="flex justify-center items-center">
+        <div class="bg-white p-6 rounded-lg shadow-md w-full max-w-lg">
+          <label class="block font-semibold">Tên khách hàng:</label>
+          <input type="text" class="w-full border p-2 rounded mb-4" value="" />
+
+          <label class="block font-semibold">Email:</label>
+          <input type="text" class="w-full border p-2 rounded mb-4" value="" />
+
+          <label class="block font-semibold">Địa chỉ:</label>
+          <input type="text" class="w-full border p-2 rounded mb-4" value="" />
+          <label class="block font-semibold">Trạng thái:</label>
+          <select
+            class="w-full border p-2 rounded appearance-none bg-none pr-4"
+          >
+            <option>Đang hoạt động</option>
+            <option>Ngừng hoạt động</option>
+          </select>
+
+          <a href="./khach_hang.html"
+            ><button
+              onclick="add()"
+              class="w-full bg-primary text-white p-3 rounded font-semibold mt-4"
+            >
+              Xác nhận
+            </button></a
+          >
+        </div>
+      </section>
+    </main>
+  </div>
+  <script>
+    function add() {
+      alert("Đã thêm khách hàng!");
+    }
+  </script>
+</body>

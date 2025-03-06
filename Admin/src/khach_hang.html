@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Khách hàng</title>
+    <link href="./output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+</html>
+<body>
+  <header
+  class="bg-primary text-white p-4 flex justify-between items-center w-full"
+>
+  <a href="san_pham.html">
+    <img
+      class="max-w-[150px] h-20 ml-10"
+      src="../../images/logo13xoanen.png"
+      alt="Vựa Rau Sạch"
+    />
+  </a>
+  <ul class="flex items-center space-x-6 mr-10">
+    <li class="flex items-center pl-4">
+      <i class="fa-solid fa-circle-user text-2xl font-black"></i>
+      <span class="font-medium text-lg ml-2">Trump</span>
+    </li>
+  </ul>
+</header>
+  <!-- nav -->
+  <div class="flex w-full">
+    <!-- Sidebar -->
+    <nav class="w-1/5 bg-white p-6 shadow-md min-h-screen text-lg font-semibold">
+        <ul>
+            <li class="py-3 text-center hover:text-primary "><a href="./san_pham.html">Quản lý sản phẩm</a></li>
+            <li class="py-3 text-center hover:text-primary "><a href="./don_hang.html">Quản lý đơn hàng</a></li>
+            <li class="py-3 text-center hover:text-primary text-primary"><a href="#">Quản lý Khách hàng</a></li>
+            <li class="py-3 text-center hover:text-primary"><a href="./thong_ke_san_pham.html">Thống kê Sản phẩm</a></li>
+            <li class="py-3 text-center hover:text-primary"><a href="./thong_ke_khach_hang.html">Thống kê Khách hàng</a></li>
+        </ul>
+    </nav>
+     <!-- Main Content -->
+     <main class="w-4/5 p-6">
+      <h1 class="text-primary mb-4 font-semibold text-center text-[24px]">Quản lý khách hàng</h1>
+      <button class="bg-primary text-white px-4 py-2 rounded mb-4"><a href="./add_khach_hàng.html">+ Thêm khách hàng</a></button>
+    
+    <!-- Bộ lọc tìm kiếm -->
+    <div class="bg-white p-4 rounded shadow mb-4 flex items-center space-x-4">
+        <label for="from-date">Từ:</label>
+        <input type="date" id="from-date" class="border p-2 rounded w-40">
+        <label for="to-date">đến</label>
+        <input type="date" id="to-date" class="border p-2 rounded w-40">
+        
+        <select class="border p-2 rounded w-40 appearance-none bg-none pr-4">
+            <option>Gói</option>
+            <option>Kim cương</option>
+            <option>Vàng</option>
+            <option>Bạc</option>
+            <option>Đồng</option>
+        </select>
+        
+        <input type="text" placeholder="Nhập mã khách hàng" class="border p-2 rounded flex-grow">
+        <button class="bg-primary text-white px-4 py-2 rounded">Lọc</button>
+    </div>
+        <!-- Bảng sản phẩm -->
+        <div class="bg-white p-4 shadow rounded-md">
+            <table class="w-full text-center border-collapse">
+                <thead>
+                    <tr class="bg-primary text-white">
+                        <th class="py-3 border border-gray-300">Mã khách hàng</th>
+                        <th class="py-3 border border-gray-300">Tên đăng nhập</th>
+                        <th class="py-3 border border-gray-300">Họ và tên</th>
+                        <th class="py-3 border border-gray-300">Email</th>
+                        <th class="py-3 border border-gray-300">Gói</th>
+                        <th class="py-3 border border-gray-300">Ngày đăng ký</th>
+                        <th class="py-3 border border-gray-300">Chức năng</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="border-b">
+                        <td class="py-3 border border-gray-300">1</td>
+                        <td class="py-3 border border-gray-300 text-primary">Trump</td>
+                        <td class="py-3 border border-gray-300 text-primary">Trump</td>
+                        <td class="py-3 border border-gray-300">trump123@gmail.com</td>
+                        <td class="py-3 border border-gray-300">Kim cương</td>
+                        <td class="py-3 border border-gray-300">14/10/2023</td>
+                        <td class="py-3 border border-gray-300 space-x-2">
+                          <a href="./chi_tiet_khach_hang.html"> <button class="bg-green-500 text-white px-3 py-1 rounded">Chi tiết</button></a>
+                          <a href="./edit_khach_hang.html"> <button class="bg-red-500 text-white px-3 py-1 rounded">Sửa</button></a>
+                            <button onclick="myFunction()" class="bg-yellow-500 text-white px-3 py-1 rounded">Khóa</button>
+                        </td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="py-3 border border-gray-300">1</td>
+                        <td class="py-3 border border-gray-300 text-primary">Trump</td>
+                        <td class="py-3 border border-gray-300 text-primary">Trump</td>
+                        <td class="py-3 border border-gray-300">trump123@gmail.com</td>
+                        <td class="py-3 border border-gray-300">Kim cương</td>
+                        <td class="py-3 border border-gray-300">14/10/2023</td>
+                        <td class="py-3 border border-gray-300 space-x-2">
+                          <a href="./chi_tiet_khach_hang.html"> <button class="bg-green-500 text-white px-3 py-1 rounded">Chi tiết</button></a>
+                          <a href="./edit_khach_hang.html"> <button class="bg-red-500 text-white px-3 py-1 rounded">Sửa</button></a>
+                            <button onclick="myFunction()" class="bg-yellow-500 text-white px-3 py-1 rounded">Khóa</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- Phân trang -->
+    <div class="flex justify-center mt-4 space-x-2">
+        <button class="px-4 py-2 bg-gray-300 rounded">&lt;</button>
+        <button class="px-4 py-2 bg-primary text-white rounded">1</button>
+        <button class="px-4 py-2 bg-gray-300 rounded">2</button>
+        <button class="px-4 py-2 bg-gray-300 rounded">&gt;</button>
+    </div>
+    <script>
+      function myFunction() {
+          const confirmation = confirm("Bạn có chắc chắn muốn khóa người dùng này ??? ");
+          if (confirmation) {
+              alert("Khóa người dùng thành công!!")
+              window.location.href = '#';
+          }
+      }
+  </script>
+    </main>
+</body>

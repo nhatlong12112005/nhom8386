@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sản Phẩm</title>
+    <link href="./output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+</html>
+<body>
+  <header
+      class="bg-primary text-white p-4 flex justify-between items-center w-full"
+    >
+      <a href="san_pham.html">
+        <img
+          class="max-w-[150px] h-20 ml-10"
+          src="../../images/logo13xoanen.png"
+          alt="Vựa Rau Sạch"
+        />
+      </a>
+      <ul class="flex items-center space-x-6 mr-10">
+        <li class="flex items-center pl-4">
+          <i class="fa-solid fa-circle-user text-2xl font-black"></i>
+          <span class="font-medium text-lg ml-2">Trump</span>
+        </li>
+      </ul>
+    </header>
+  <!-- nav -->
+  <div class="flex w-full">
+    <!-- Sidebar -->
+    <nav class="w-1/5 bg-white p-6 shadow-md min-h-screen text-lg font-semibold">
+        <ul>
+            <li class="py-3 text-center hover:text-primary text-primary"><a href="./san_pham.html">Quản lý sản phẩm</a></li>
+            <li class="py-3 text-center hover:text-primary"><a href="./don_hang.html">Quản lý đơn hàng</a></li>
+            <li class="py-3 text-center hover:text-primary"><a href="./khach_hang.html">Quản lý khách hàng</a></li>
+            <li class="py-3 text-center hover:text-primary"><a href="./thong_ke_san_pham.html">Thống kê Sản phẩm</a></li>
+            <li class="py-3 text-center hover:text-primary"><a href="./thong_ke_khach_hang.html">Thống kê Khách hàng</a></li>
+        </ul>
+    </nav>
+     <!-- Main Content -->
+     <main class="w-4/5 p-6">
+      <h1 class="text-primary mb-4 font-semibold text-center text-[24px]">Quản lý sản phẩm</h1>
+      <button class="bg-primary text-white px-4 py-2 rounded mb-4"><a href="./add_san_pham.html">+ Thêm sản phẩm</a></button>
+    
+    <!-- Bộ lọc tìm kiếm -->
+    <div class="bg-white p-4 rounded shadow mb-4 flex items-center space-x-4">
+        <label for="from-date">Từ:</label>
+        <input type="date" id="from-date" class="border p-2 rounded w-40">
+        <label for="to-date">đến</label>
+        <input type="date" id="to-date" class="border p-2 rounded w-40">
+        <select class="border p-2 rounded w-40 appearance-none bg-none pr-4">
+            <option>Loại</option>
+            <option>Rau tươi</option>
+            <option>Củ tươi</option>
+            <option>Nấm tươi</option>
+        </select>
+        <input type="text" placeholder="Nhập mã sản phẩm" class="border p-2 rounded flex-grow">
+        <button class="bg-primary text-white px-4 py-2 rounded">Lọc</button>
+    </div>
+        <!-- Bảng sản phẩm -->
+        <div class="bg-white p-4 shadow rounded-md">
+            <table class="w-full text-center border-collapse">
+                <thead>
+                    <tr class="bg-primary text-white">
+                        <th class="py-3 border border-gray-300">STT</th>
+                        <th class="py-3 border border-gray-300">Mã SP</th>
+                        <th class="py-3 border border-gray-300">Ảnh</th>
+                        <th class="py-3 border border-gray-300">Tên SP</th>
+                        <th class="py-3 border border-gray-300">Loại</th>
+                        <th class="py-3 border border-gray-300">Giá</th>
+                        <th class="py-3 border border-gray-300">Tồn kho</th>
+                        <th class="py-3 border border-gray-300">Ngày cập nhật</th>
+                        <th class="py-3 border border-gray-300">Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="border-b">
+                        <td class="py-3 border border-gray-300">1</td>
+                        <td class="py-3 border border-gray-300 text-primary">KSN49</td>
+                        <td class="py-3 border border-gray-300"><img src="../../images/rau/BongcaiXanh.jpg" alt="Bông cải xanh" class="h-12 mx-auto"></td>
+                        <td class="py-3 border border-gray-300">Bông cải xanh</td>
+                        <td class="py-3 border border-gray-300">Rau tươi</td>
+                        <td class="py-3 border border-gray-300">200.000đ</td>
+                        <td class="py-3 border border-gray-300">1000</td>
+                        <td class="py-3 border border-gray-300">29/7/2023 11:11</td>
+                        <td class="py-3 border border-gray-300 space-x-2">
+                          <a href="./chi_tiet_san_pham.html"> <button class="bg-green-500 text-white px-3 py-1 rounded">Chi tiết</button></a>
+                          <a href="./edit_san_pham.html"><button class="bg-yellow-500 text-white px-3 py-1 rounded">Sửa</button></a>
+                            <button onclick="myFunction()" class="bg-red-500 text-white px-3 py-1 rounded">Xóa</button>
+                        </td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="py-3 border border-gray-300">2</td>
+                        <td class="py-3 border border-gray-300 text-primary">KSN50</td>
+                        <td class="py-3 border border-gray-300"><img src="../../images/cu/bi_dao_huu_co.png" alt="Bí đao" class="h-12 mx-auto"></td>
+                        <td class="py-3 border border-gray-300">Bí đao</td>
+                        <td class="py-3 border border-gray-300">Củ tươi</td>
+                        <td class="py-3 border border-gray-300">200.000đ</td>
+                        <td class="py-3 border border-gray-300">1000</td>
+                        <td class="py-3 border border-gray-300">29/7/2023 11:11</td>
+                        <td class="py-3 border border-gray-300 space-x-2">
+                          <a href="./chi_tiet_san_pham.html"> <button class="bg-green-500 text-white px-3 py-1 rounded">Chi tiết</button></a>
+                          <a href="./edit_san_pham.html"><button class="bg-yellow-500 text-white px-3 py-1 rounded">Sửa</button></a>
+                            <button onclick="myFunction()" class="bg-red-500 text-white px-3 py-1 rounded">Xóa</button>
+                        </td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="py-3 border border-gray-300">3</td>
+                        <td class="py-3 border border-gray-300 text-primary">KSN51</td>
+                        <td class="py-3 border border-gray-300"><img src="../../images/nam/nammeo.jpg" alt="Nấm mèo" class="h-12 mx-auto"></td>
+                        <td class="py-3 border border-gray-300">Nấm mèo</td>
+                        <td class="py-3 border border-gray-300">Nấm tươi</td>
+                        <td class="py-3 border border-gray-300">200.000đ</td>
+                        <td class="py-3 border border-gray-300">1000</td>
+                        <td class="py-3 border border-gray-300">29/7/2023 11:11</td>
+                        <td class="py-3 border border-gray-300 space-x-2">
+                          <a href="./chi_tiet_san_pham.html"> <button class="bg-green-500 text-white px-3 py-1 rounded">Chi tiết</button></a>
+                          <a href="./edit_san_pham.html"><button class="bg-yellow-500 text-white px-3 py-1 rounded">Sửa</button></a>
+                            <button onclick="myFunction()" class="bg-red-500 text-white px-3 py-1 rounded">Xóa</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- Phân trang -->
+    <div class="flex justify-center mt-4 space-x-2">
+        <button class="px-4 py-2 bg-gray-300 rounded">&lt;</button>
+        <button class="px-4 py-2 bg-primary text-white rounded">1</button>
+        <button class="px-4 py-2 bg-gray-300 rounded">2</button>
+        <button class="px-4 py-2 bg-gray-300 rounded">&gt;</button>
+    </div>
+    <script>
+      function myFunction() {
+          const confirmation = confirm("Bạn có chắc chắn xóa sản phẩm này không?");
+          if (confirmation) {
+              alert("Đã xóa sản phẩm thành công!");
+          }
+      }
+  </script>
+    </main>
+</body>
