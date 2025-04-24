@@ -28,13 +28,19 @@
                 // Duyệt qua dữ liệu top5kh từ hàm top5khachhang
                 $stt = 1; // Khởi tạo số thứ tự
                 foreach ($top5kh as $row) {
+                    $link = "index.php?act=ctkhtk&bill_name={$row['bill_name']}";
+                    if (!empty($from_date ) && !empty($to_date)) {
+                        $link .= "&from_date={$from_date}&to_date={$to_date}";
+                    }
                     echo "<tr class='border-b'>";
                     echo "<td class='py-3 border border-gray-300'>{$stt}</td>";
                     echo "<td class='py-3 border border-gray-300'>{$row['bill_name']}</td>";
                     echo "<td class='py-3 border border-gray-300'>{$row['total_orders']}</td>";
                     echo "<td class='py-3 border border-gray-300'>" . number_format($row['total_spent'], 3, '.', '') . " VNĐ</td>";
                     echo "<td class='py-3 border border-gray-300 space-x-2'>
-                            <a href='index.php?act=ctkhtk&bill_name={$row['bill_name']}'><button class='bg-primary text-white px-3 py-1 rounded'>Xem chi tiết</button></a>
+                             <a href='$link'>
+                    <button class='bg-primary text-white px-3 py-1 rounded'>Xem chi tiết</button>
+                </a>
                           </td>";
                     echo "</tr>";
                     $stt++; // Tăng số thứ tự
@@ -44,9 +50,7 @@
         </table>
     </div>
     <div class="flex justify-center mt-4 space-x-2">
-    <?php 
-        echo isset($hienthisotrang) ? $hienthisotrang : "";       
-    ?>
+   
     </div>
 </main>
 

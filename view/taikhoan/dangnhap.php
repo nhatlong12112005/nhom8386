@@ -12,9 +12,9 @@
                 <button type="submit" name="dangnhap" value="1" style="flex: 1; padding: 5px; background-color: #4caf50; color: #fff; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; font-size: 14px;">
                     Đăng Nhập
                 </button>
-                <a href="index.php?act=quenmatkhau" style="flex: 1; padding: 5px; background-color: #4caf50; color: #fff; text-align: center; border-radius: 5px; font-weight: bold; text-decoration: none; font-size: 14px;">
+                <!-- <a href="index.php?act=quenmk" style="flex: 1; padding: 5px; background-color: #4caf50; color: #fff; text-align: center; border-radius: 5px; font-weight: bold; text-decoration: none; font-size: 14px;">
                     Quên mật khẩu
-                </a>
+                </a> -->
                 <a href="index.php?act=dangky" style="flex: 1; padding: 5px; background-color: #4caf50; color: #fff; text-align: center; border-radius: 5px; font-weight: bold; text-decoration: none; font-size: 14px;">
                     Đăng Ký
                 </a>

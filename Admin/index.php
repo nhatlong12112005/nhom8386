@@ -376,15 +376,19 @@
                                     include "src/thong_ke_khach_hang.php";
                                     break;
                                 
-                                case 'ctkhtk':
-                                    if (isset($_GET['bill_name'])) {  // Chỉnh lại 'bill_name' thay vì 'biil_name'
-                                        $bill_name = $_GET['bill_name'];
-                                        $listbill = load_bill_dh_admin($bill_name); // Gọi hàm để lấy dữ liệu
-                                    }
-            
-                                    include "src/chitiet_kh.php";
-                                    break;
-                                
+                                    case 'ctkhtk':
+                                        if (isset($_GET['bill_name'])) {
+                                            $bill_name = $_GET['bill_name'];
+                                    
+                                            $from_date = isset($_GET['from_date']) ? $_GET['from_date'] . ' 00:00:00' : null;
+                                            $to_date = isset($_GET['to_date']) ? $_GET['to_date'] . ' 23:59:59' : null;
+                                    
+                                            $listbill = load_bill_dh_admin($bill_name, $from_date, $to_date);
+                                        }
+                                    
+                                        include "src/chitiet_kh.php";
+                                        break;
+                                    
                                                         
 
             default:

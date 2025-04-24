@@ -13,8 +13,8 @@
             $sql_update = "UPDATE sanpham SET status = 0 WHERE id = ?";
             pdo_execute($sql_update, $id);
         } else {
-            // Sản phẩm chưa bán, thực hiện xóa sản phẩm hoàn toàn
-            $sql_delete = "DELETE FROM sanpham WHERE id = ?";
+            
+            $sql_delete = "UPDATE sanpham SET status = 0 WHERE id = ?";
             pdo_execute($sql_delete, $id);
         }
     }

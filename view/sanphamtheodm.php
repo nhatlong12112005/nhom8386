@@ -99,8 +99,8 @@ foreach($dssp as $sp){
 
     <label><b>Giá (VND)</b></label>
     <div style="display: flex; gap: 8px;">
-        <input type="number" name="price-min" placeholder="Từ" step="0.001" min="0" required style="flex: 1; padding: 8px;">
-        <input type="number" name="price-max" placeholder="Đến" step="0.001" min="0" required style="flex: 1; padding: 8px;">
+        <input type="number" name="price-min" placeholder="Từ" step="0.001" min="0" style="flex: 1; padding: 8px;">
+        <input type="number" name="price-max" placeholder="Đến" step="0.001" min="0" style="flex: 1; padding: 8px;">
     </div>
 
     <input type="submit" value="Tìm kiếm" style="padding: 10px; background-color: #b0b435; color: white; border: none; cursor: pointer;">

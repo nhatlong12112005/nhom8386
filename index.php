@@ -26,8 +26,8 @@
                     include "view/home.php";  // Nếu không có id hợp lệ, quay về trang chủ
                 }
                 break;
-                var_dump(headers_list());
-exit();
+//                 var_dump(headers_list());
+// exit();
 
             case 'sanpham':
                 $kyw = isset($_GET['kyw']) ? trim($_GET['kyw']) : ""; // Khởi tạo $kyw
@@ -60,46 +60,77 @@ exit();
                     $page = isset($_GET['page']) ? intval($_GET['page']) : 1;
                     $soluongsp = isset($_GET['soluong']) ? intval($_GET['soluong']) : 8;
                 
-                    $dssp = loadall_sanpham_timkiem($kyw, $iddm, $price_min, $price_max, $page, $soluongsp);
-                    $tongsosp = all_sanpham($kyw, $iddm, $price_min, $price_max);
-                    $count = count($tongsosp);
-                
-                    // Định dạng giá tiền hiển thị
-                    $gia_min = number_format($price_min, 3, '.', '') . " VND";
-                    $gia_max = number_format($price_max, 3, '.', '') . " VND";
-                    $hienthisotrang = "";
-                    if (count($tongsosp) > 0) {
-                        $hienthisotrang = hien_thi_so_trang_timkiem($tongsosp, $soluongsp, $kyw, $iddm, $price_min, $price_max);
-                    }
-                
-                    if ($count > 0) {
-                        $thongbao = "<div style='margin-top: 10px; padding: 10px; background: #dff0d8; color: #3c763d; border-radius: 5px; font-size: 16px; text-align: center;'> 
-                            Đã tìm thấy <b>$count</b> sản phẩm liên quan đến từ khóa: <b>$kyw</b>";
-                        
-                        // Thêm điều kiện kiểm tra khoảng giá
-                        if ($price_min > 0 || $price_max > 0) {
-                            $thongbao .= " trong khoảng giá từ <b>$gia_min</b> đến <b>$gia_max</b>.";
-                        } else {
-                            $thongbao .= ".";
-                        }
-                
-                        $thongbao .= "</div>";
-                    } else {
+                    // Nếu không nhập gì -> trả về danh sách rỗng
+                    if (empty($kyw) && $iddm == 0 && $price_min == 0 && $price_max == 0) {
+                        $dssp = [];
+                        $tongsosp = [];
+                        $count = 0;
+                        $hienthisotrang = "";
                         $thongbao = "<div style='margin-top: 10px; padding: 10px; background: #f8d7da; color: #721c24; border-radius: 5px; font-size: 16px; text-align: center;'> 
-                            Không tìm thấy sản phẩm nào phù hợp";
-                        
-                        // Thêm điều kiện kiểm tra khoảng giá
-                        if ($price_min > 0 || $price_max > 0) {
-                            $thongbao .= " trong khoảng giá từ <b>$gia_min</b> đến <b>$gia_max</b>.";
-                        } else {
-                            $thongbao .= ".";
+                                        Vui lòng nhập từ khóa, chọn danh mục hoặc nhập khoảng giá để tìm kiếm sản phẩm.
+                                    </div>";
+                    } else {
+                        // Nếu nhập min lớn hơn max thì tự hoán đổi
+                        if ($price_min > 0 && $price_max > 0 && $price_min > $price_max) {
+                            $temp = $price_min;
+                            $price_min = $price_max;
+                            $price_max = $temp;
                         }
                 
-                        $thongbao .= "</div>";
+                        $dssp = loadall_sanpham_timkiem($kyw, $iddm, $price_min, $price_max, $page, $soluongsp);
+                        $tongsosp = all_sanpham($kyw, $iddm, $price_min, $price_max);
+                        $count = count($tongsosp);
+                
+                        $gia_min = number_format($price_min, 3, '.', '.') . " VND"; // 0 là số chữ số thập phân
+                        $gia_max = number_format($price_max, 3, '.', '.') . " VND";
+                        
+                        $hienthisotrang = "";
+                
+                        if ($count > 0) {
+                            if (count($tongsosp) > 0) {
+                                $hienthisotrang = hien_thi_so_trang_timkiem($tongsosp, $soluongsp, $kyw, $iddm, $price_min, $price_max);
+                            }
+                
+                            $thongbao = "<div style='margin-top: 10px; padding: 10px; background: #dff0d8; color: #3c763d; border-radius: 5px; font-size: 16px; text-align: center;'> 
+                                        Đã tìm thấy <b>$count</b> sản phẩm";
+                
+                            if (!empty($kyw)) {
+                                $thongbao .= " liên quan đến từ khóa: <b>$kyw</b>";
+                            }
+                
+                            // Xử lý thông báo khoảng giá đẹp
+                            if ($price_min > 0 && $price_max > 0) {
+                                $thongbao .= " trong khoảng giá từ <b>$gia_min</b> đến <b>$gia_max</b>.";
+                            } elseif ($price_min > 0) {
+                                $thongbao .= " với giá từ <b>$gia_min</b> trở lên.";
+                            } elseif ($price_max > 0) {
+                                $thongbao .= " với giá tối đa <b>$gia_max</b>.";
+                            } else {
+                                $thongbao .= ".";
+                            }
+                
+                            $thongbao .= "</div>";
+                        } else {
+                            $thongbao = "<div style='margin-top: 10px; padding: 10px; background: #f8d7da; color: #721c24; border-radius: 5px; font-size: 16px; text-align: center;'> 
+                                        Không tìm thấy sản phẩm nào phù hợp";
+                
+                            if ($price_min > 0 && $price_max > 0) {
+                                $thongbao .= " trong khoảng giá từ <b>$gia_min</b> đến <b>$gia_max</b>.";
+                            } elseif ($price_min > 0) {
+                                $thongbao .= " với giá từ <b>$gia_min</b> trở lên.";
+                            } elseif ($price_max > 0) {
+                                $thongbao .= " với giá tối đa <b>$gia_max</b>.";
+                            } else {
+                                $thongbao .= ".";
+                            }
+                
+                            $thongbao .= "</div>";
+                        }
                     }
                 
                     include "view/timkiemp.php";
                     break;
+                
                 
     
             case 'dangky':

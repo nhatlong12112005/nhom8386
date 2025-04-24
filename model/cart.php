@@ -114,77 +114,98 @@ function show_chitiet_bill_admin($listbill) {
     </tr>';
 } 
 
+function viewcart($del) {
+    $tong = 0;
+    $i = 0;
+
+    if ($del == 1) {
+        $xoasp_th = '<th>Thao tác</th>';
+    } else {
+        $xoasp_th = '';
+    }
+
+    echo '<thead>
+              <tr>
+                <th>Hình</th>
+                <th>Tên sản phẩm</th>
+                <th>Giá</th>
+                <th>Số lượng</th>
+                <th>Tổng</th>
+                ' . $xoasp_th . '
+              </tr>
+          </thead>';
+
+    foreach ($_SESSION['mycart'] as $i => $cart) {
+        $hinh = $cart[2];
+        $ttien = $cart[3] * $cart[4]; 
+        $tong += $ttien;
+
+        if ($del == 1) {
+            $xoasp_td = '<a href="index.php?act=delcart&idcart=' . $i . '"><input type="button" value="Xóa" style="font-size:12px;padding:5px 10px;" /></a>';
+        } else {
+            $xoasp_td = '';
+        }
+
+        echo '<tbody>
+                <tr>
+                    <td>
+                        <img src="' . $hinh . '" alt="" style="width:60px;height:60px;object-fit:cover;border-radius:8px;" />
+                    </td>
+                    <td>' . $cart[1] . '</td>
+                    <td>
+                        <p>' . number_format($cart[3], 3, '.', '') . ' VNĐ</p>
+                    </td>
+                    <td>';
+
+        if ($del == 1) {
+            // Nếu có quyền sửa (del == 1) thì hiện form để chỉnh số lượng
+            echo '<form action="index.php?act=addtocart" method="POST" style="display: flex; align-items: center; gap: 5px;">
+                    <input 
+                        type="number" 
+                        name="new_quantity" 
+                        value="' . $cart[4] . '" 
+                        min="1" 
+                        style="width:50px; padding:2px 5px;"
+                        onchange="this.form.submit()"
+                    />
+                    <input type="hidden" name="idcart" value="' . $i . '"/>
+                  </form>';
+        } else {
+            // Nếu del == 0 thì chỉ hiện số lượng dạng text
+            echo '<p style="margin: 0;">' . $cart[4] . '</p>';
+        }
+
+        echo '</td>
+                    <td>
+                        <p>' . number_format($ttien, 3, '.', '') . ' VNĐ</p>
+                    </td>
+                    <td>' . $xoasp_td . '</td>
+                </tr>
+              </tbody>';
+    }
+
+    echo '<tr>
+            <td colspan="4" style="font-weight: bold;">Tổng đơn hàng</td>
+            <td colspan="2" style="font-weight: bold;">' . number_format($tong, 3, '.', '') . ' VNĐ</td>
+          </tr>';
+}
+
+// Xử lý cập nhật số lượng
+if (isset($_POST['new_quantity']) && isset($_POST['idcart'])) {
+    $idcart = $_POST['idcart'];
+    $new_quantity = $_POST['new_quantity'];
+
+    if ($new_quantity > 0) {
+        $_SESSION['mycart'][$idcart][4] = $new_quantity;
+    }
+
+    header("Location: index.php?act=addtocart");
+    exit();
+}
 
 
 
-
- function viewcart($del){
-                
-                    $tong = 0;
-                    $i = 0;
-                    if ($del == 1){
-                        $xoasp_th = '<th>Thao tác</th>';
-                        $xoa_td2 = '<td><td>';
-                    }else{
-                        $xoasp_th = '';
-                        $xoasp_td2='';
-                    }
-                    echo '<thead>
-                  <tr>
-                    <th>Hình</th>
-                    <th>Tên sản phẩm</th>
-                    <th>Giá</th>
-                    <th>Số lượng</th>
-                    <th>Tổng</th>
-                    '.$xoasp_th.'
-                  </tr>
-                </thead>';
-                    foreach ($_SESSION['mycart'] as $cart){
-                      $hinh = $cart[2];
-                      $ttien = $cart[3] * $cart[4];
-                      $ttien = number_format($ttien, 3, '.', ''); 
-                      $tong += $ttien;
-                      $tong = number_format($tong, 3, '.', '');
-                      if ($del == 1){
-                      $xoasp_td = '<a href="index.php?act=delcart&idcart='.$i.'"><input type="button" value="Xóa" style="font-size: 12px; padding: 5px 10px;"/></a>';
-                      }else{
-                        $xoasp_td = '';
-                      }
-                      echo '<tbody>
-                  <tr>
-                    <td class="thumbnail-img">
-                        <img
-                          class="img-fluid"
-                          src="'.$hinh.'"
-                          alt=""
-                          style="width: 60px; height: 60px; object-fit: cover; border-radius: 8px;"
-                        />
-                    </td>
-                    <td class="name-pr">'.$cart[1].'</td>
-                    <td class="price-pr">
-                      <p>'.$cart[3].' VNĐ</p>
-                    </td>
-                    <td class="quantity-box">'.$cart['4'].'</td>
-                    <td class="total-pr">
-                      <p>'.number_format($ttien, 3, '.', '').' VNĐ</p>
-                    </td>
-                    <td class="remove-pr">
-                     '.$xoasp_td.'
-                    </td>
-                  </tr>
-                      
-                </tbody>';
-                $i += 1;
-                    }
-                    echo  '<tr>
-                    <td colspan="4" style="font-weight: bold;">Tổng đơn hàng</td>
-                    <td class="total-pr">
-                        <p style="font-weight: bold;">'.number_format($tong, 3, '.', '').' VNĐ</p>
-                    </td>
-                </tr>';
-                  
-                
- }
+ 
  function tongdonhang(){
                 
     $tong = 0;
@@ -407,19 +428,19 @@ function loadone_product($id) {
 
 
 function top5khachhang($from_date = null, $to_date = null) {
-    // Câu lệnh SQL để lấy thông tin top 5 khách hàng, có hỗ trợ lọc theo thời gian
     $sql = "
         SELECT 
             bill_name,
-            SUM(total) AS total_spent, 
-            COUNT(*) AS total_orders, 
-            COUNT(CASE WHEN bil_status = '2' THEN 1 END) AS successful_deliveries
+            SUM(CASE WHEN bil_status = '2' THEN total ELSE 0 END) AS total_spent, 
+            COUNT(CASE WHEN bil_status = '2' THEN 1 END) AS total_orders
         FROM bill
     ";
 
-    // Nếu có lọc theo thời gian, thêm điều kiện vào SQL
+    // Nếu có lọc theo thời gian, thêm điều kiện
     if ($from_date && $to_date) {
         $sql .= " WHERE ngaydathang BETWEEN ? AND ?";
+    } else {
+        $sql .= " WHERE 1"; // thêm WHERE 1 để có thể nối điều kiện sau dễ dàng
     }
 
     // Tiến hành nhóm theo bill_name và sắp xếp theo tổng tiền mua
@@ -431,11 +452,12 @@ function top5khachhang($from_date = null, $to_date = null) {
 
     // Trả về kết quả
     if ($from_date && $to_date) {
-        return pdo_query($sql, $from_date, $to_date);  // Truyền tham số lọc ngày
+        return pdo_query($sql, $from_date, $to_date);
     } else {
-        return pdo_query($sql);  // Nếu không lọc theo ngày
+        return pdo_query($sql);
     }
 }
+
 
 function hien_thi_so_trang_admin($listsanpham, $soluongsp) {
     $tongsanpham = count($listsanpham);
@@ -468,23 +490,37 @@ function all_bill($kyw, $from_date, $to_date) {
 }
 
 
-function load_bill_dh_admin($bill_name) {
-    // Câu lệnh SQL để lấy thông tin hóa đơn liên quan đến sản phẩm
-    $sql = "SELECT 
-                b.id, 
-                b.ngaydathang, 
-                SUM(c.soluong) AS soluong,    -- Tính tổng số lượng cho mỗi hóa đơn
-                SUM(c.thanhtien) AS thanhtien, -- Tính tổng tiền cho mỗi hóa đơn
-                b.bil_status
-            FROM cart c
-            JOIN bill b ON c.idbill = b.id
-            WHERE b.bill_name = ?  -- Dùng tham số $bill_name trong truy vấn
-            GROUP BY b.id, b.ngaydathang, b.bil_status  -- Nhóm theo từng hóa đơn
-            ORDER BY b.ngaydathang DESC";
+function load_bill_dh_admin($bill_name, $from_date = null, $to_date = null) {
+    $sql = "
+        SELECT 
+            b.id, 
+            b.ngaydathang, 
+            SUM(c.soluong) AS soluong,    
+            SUM(c.thanhtien) AS thanhtien, 
+            b.bil_status
+        FROM bill b
+        INNER JOIN cart c ON b.id = c.idbill
+        WHERE b.bill_name = ? 
+          AND b.bil_status = '2'
+    ";
 
-    // Trả về kết quả
-    return pdo_query($sql, $bill_name);  // pdo_query sẽ trả về mảng các hóa đơn
+    if ($from_date && $to_date) {
+        $sql .= " AND b.ngaydathang BETWEEN ? AND ?";
+    }
+
+    $sql .= "
+        GROUP BY b.id, b.ngaydathang, b.bil_status
+        ORDER BY b.ngaydathang DESC
+    ";
+
+    if ($from_date && $to_date) {
+        return pdo_query($sql, $bill_name, $from_date, $to_date);
+    } else {
+        return pdo_query($sql, $bill_name);
+    }
 }
+
+
 
 
 
