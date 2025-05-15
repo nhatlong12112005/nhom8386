@@ -28,22 +28,29 @@
                 $listdanhmuc = loadall_danhmuc(); 
                 include "src/listdm.php"; 
                 break;
-            case 'suadm':
-                if(isset($_GET['id'])){
-                $dm = loadone_danhmuc($_GET['id']);
-            }
-                include "src/updatedm.php";
-                break;
+                case 'suadm':
+                    if (isset($_GET['id'])) {
+                        $dm = loadone_danhmuc($_GET['id']);
+                    }
+                    include "src/updatedm.php";
+                    break;
+                
                 case 'updatedm':
                     if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
                         $id = $_POST['id']; 
                         $tenloai = $_POST['tenloai']; 
-                        update_danhmuc($id,$tenloai); 
+                        update_danhmuc($id, $tenloai); 
                         $thongbao = "Cập nhật thành công"; 
                     }
-                   
-                    include "src/updatedm.php"; // Gọi trang cập nhật danh mục
+                
+                    // Sau khi cập nhật xong, bạn có thể lấy lại dữ liệu để hiển thị lại form
+                    if (isset($_POST['id'])) {
+                        $dm = loadone_danhmuc($_POST['id']);
+                    }
+                
+                    include "src/updatedm.php";
                     break;
+                
                 
                 
             case 'xoadm':

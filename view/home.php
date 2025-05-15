@@ -5,7 +5,7 @@
                 <h2>Trang chủ</h2>
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item">
-                        <a href="./index.html">Trang chủ</a>
+                        <a href="index.php">Trang chủ</a>
                     </li>
                 </ul>
             </div>
